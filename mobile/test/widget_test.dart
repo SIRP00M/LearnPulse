@@ -1,30 +1,46 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:learn_pulse/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Learn Pulse app loads successfully', (tester) async {
+    await tester.pumpWidget(const LearnPulseApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Good morning'), findsOneWidget);
+    expect(find.text('Let’s keep learning!'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    expect(find.text('Home'), findsOneWidget);
+    expect(find.text('Courses'), findsOneWidget);
+    expect(find.text('Tasks'), findsOneWidget);
+    expect(find.text('Profile'), findsOneWidget);
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('Navigation opens courses page', (tester) async {
+    await tester.pumpWidget(const LearnPulseApp());
+
+    await tester.tap(find.text('Courses'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('My courses'), findsOneWidget);
+    expect(find.text('Track lessons and learning progress'), findsOneWidget);
+  });
+
+  testWidgets('Navigation opens tasks page', (tester) async {
+    await tester.pumpWidget(const LearnPulseApp());
+
+    await tester.tap(find.text('Tasks'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Stay focused on what matters today'), findsOneWidget);
+    expect(find.text('3 tasks remaining'), findsOneWidget);
+  });
+
+  testWidgets('Navigation opens profile page', (tester) async {
+    await tester.pumpWidget(const LearnPulseApp());
+
+    await tester.tap(find.text('Profile'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Learn Pulse User'), findsOneWidget);
+    expect(find.text('About Learn Pulse'), findsOneWidget);
   });
 }
