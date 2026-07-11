@@ -52,7 +52,7 @@ class TeacherDashboardPage extends StatelessWidget {
             physics: const NeverScrollableScrollPhysics(),
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
-            childAspectRatio: 1.15,
+            childAspectRatio: 0.95,
             children: const [
               StatCard(
                 label: 'Courses',
