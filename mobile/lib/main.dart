@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_pulse/app.dart';
+import 'app.dart';
 
 void main() {
   runApp(const LearnPulseApp());

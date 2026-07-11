@@ -2,44 +2,32 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:learn_pulse/app.dart';
 
 void main() {
-  testWidgets('Learn Pulse app loads successfully', (tester) async {
+  testWidgets('role selection loads', (tester) async {
     await tester.pumpWidget(const LearnPulseApp());
 
-    expect(find.text('Good morning'), findsOneWidget);
-    expect(find.text('Let’s keep learning!'), findsOneWidget);
-    expect(find.text('Home'), findsOneWidget);
-    expect(find.text('Courses'), findsOneWidget);
-    expect(find.text('Tasks'), findsOneWidget);
-    expect(find.text('Profile'), findsOneWidget);
+    expect(find.text('Learn Pulse'), findsOneWidget);
+    expect(find.text('Continue as Teacher'), findsOneWidget);
+    expect(find.text('Continue as Student'), findsOneWidget);
   });
 
-  testWidgets('Navigation opens courses page', (tester) async {
+  testWidgets('teacher flow opens dashboard', (tester) async {
     await tester.pumpWidget(const LearnPulseApp());
 
-    await tester.tap(find.text('Courses'));
+    await tester.tap(find.text('Continue as Teacher'));
     await tester.pumpAndSettle();
 
-    expect(find.text('My courses'), findsOneWidget);
-    expect(find.text('Track lessons and learning progress'), findsOneWidget);
+    expect(find.text('Teacher Dashboard'), findsOneWidget);
+    expect(find.text('Courses'), findsWidgets);
+    expect(find.text('Students'), findsWidgets);
   });
 
-  testWidgets('Navigation opens tasks page', (tester) async {
+  testWidgets('student flow opens home', (tester) async {
     await tester.pumpWidget(const LearnPulseApp());
 
-    await tester.tap(find.text('Tasks'));
+    await tester.tap(find.text('Continue as Student'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Stay focused on what matters today'), findsOneWidget);
-    expect(find.text('3 tasks remaining'), findsOneWidget);
-  });
-
-  testWidgets('Navigation opens profile page', (tester) async {
-    await tester.pumpWidget(const LearnPulseApp());
-
-    await tester.tap(find.text('Profile'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Learn Pulse User'), findsOneWidget);
-    expect(find.text('About Learn Pulse'), findsOneWidget);
+    expect(find.text('Welcome back, Alex'), findsOneWidget);
+    expect(find.text('Overall progress'), findsOneWidget);
   });
 }
