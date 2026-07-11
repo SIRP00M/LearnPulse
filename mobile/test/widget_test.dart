@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:learn_pulse/main.dart';
+import 'package:learn_pulse/app.dart';
 
 void main() {
   testWidgets('Learn Pulse app loads successfully', (tester) async {
@@ -7,7 +7,6 @@ void main() {
 
     expect(find.text('Good morning'), findsOneWidget);
     expect(find.text('Let’s keep learning!'), findsOneWidget);
-
     expect(find.text('Home'), findsOneWidget);
     expect(find.text('Courses'), findsOneWidget);
     expect(find.text('Tasks'), findsOneWidget);
