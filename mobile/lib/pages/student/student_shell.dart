@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'student_courses_page.dart';
 import 'student_home_page.dart';
 import 'student_profile_page.dart';
@@ -15,7 +16,7 @@ class StudentShell extends StatefulWidget {
 class _StudentShellState extends State<StudentShell> {
   int selectedIndex = 0;
 
-  final pages = const [
+  final List<Widget> pages = const [
     StudentHomePage(),
     StudentCoursesPage(),
     StudentTasksPage(),
@@ -30,7 +31,9 @@ class _StudentShellState extends State<StudentShell> {
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) {
-          setState(() => selectedIndex = index);
+          setState(() {
+            selectedIndex = index;
+          });
         },
         destinations: const [
           NavigationDestination(
