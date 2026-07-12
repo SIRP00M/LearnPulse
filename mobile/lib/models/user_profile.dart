@@ -11,6 +11,9 @@ class UserProfile {
     this.avatarUrl,
   });
 
+  bool get isTeacher => role == 'teacher';
+  bool get isStudent => role == 'student';
+
   factory UserProfile.fromMap(Map<String, dynamic> map) {
     return UserProfile(
       id: map['id'] as String,

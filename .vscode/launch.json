@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Learn Pulse",
+      "request": "launch",
+      "type": "dart",
+      "program": "mobile/lib/main.dart",
+      "cwd": "${workspaceFolder}",
+      "toolArgs": [
+        "--dart-define=SUPABASE_URL=https://xiyzoyosdzyqoidjrant.supabase.co",
+        "--dart-define=SUPABASE_PUBLISHABLE_KEY=sb_publishable__O6wIc6nS04thmwO0_t7Ew_Lhx2Kdg7"
+      ]
+    }
+  ]
+}

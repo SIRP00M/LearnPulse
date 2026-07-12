@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../role/role_selection_page.dart';
+
 import 'teacher_assignments_page.dart';
 import 'teacher_courses_page.dart';
 import 'teacher_dashboard_page.dart';
@@ -16,19 +16,13 @@ class TeacherShell extends StatefulWidget {
 class _TeacherShellState extends State<TeacherShell> {
   int selectedIndex = 0;
 
-  final pages = const [
+  final List<Widget> pages = const [
     TeacherDashboardPage(),
     TeacherCoursesPage(),
     TeacherStudentsPage(),
     TeacherAssignmentsPage(),
     TeacherProfilePage(),
   ];
-
-  void _switchRole() {
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const RoleSelectionPage()),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +31,9 @@ class _TeacherShellState extends State<TeacherShell> {
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) {
-          if (index == 4 && selectedIndex == 4) {
-            _switchRole();
-            return;
-          }
-          setState(() => selectedIndex = index);
+          setState(() {
+            selectedIndex = index;
+          });
         },
         destinations: const [
           NavigationDestination(

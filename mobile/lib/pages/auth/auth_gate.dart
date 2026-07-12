@@ -15,21 +15,39 @@ class AuthGate extends StatefulWidget {
 }
 
 class _AuthGateState extends State<AuthGate> {
-  final AuthService authService = AuthService();
+  final AuthService _authService = AuthService();
+
+  Future<UserProfile?>? _profileFuture;
+
+  void _loadProfile() {
+    _profileFuture = _authService.getMyProfile();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    if (_authService.currentSession != null) {
+      _loadProfile();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<AuthState>(
-      stream: authService.authStateChanges,
+      stream: _authService.authStateChanges,
       builder: (context, snapshot) {
-        final session = authService.currentSession;
+        final session = _authService.currentSession;
 
         if (session == null) {
+          _profileFuture = null;
           return const LoginPage();
         }
 
+        _profileFuture ??= _authService.getMyProfile();
+
         return FutureBuilder<UserProfile?>(
-          future: authService.getMyProfile(),
+          future: _profileFuture,
           builder: (context, profileSnapshot) {
             if (profileSnapshot.connectionState == ConnectionState.waiting) {
               return const _LoadingPage();
@@ -39,8 +57,11 @@ class _AuthGateState extends State<AuthGate> {
               return _ProfileErrorPage(
                 message: profileSnapshot.error.toString(),
                 onRetry: () {
-                  setState(() {});
+                  setState(() {
+                    _loadProfile();
+                  });
                 },
+                onSignOut: _authService.signOut,
               );
             }
 
@@ -48,14 +69,17 @@ class _AuthGateState extends State<AuthGate> {
 
             if (profile == null) {
               return _ProfileErrorPage(
-                message: 'Profile was not found.',
+                message: 'Your account profile could not be found.',
                 onRetry: () {
-                  setState(() {});
+                  setState(() {
+                    _loadProfile();
+                  });
                 },
+                onSignOut: _authService.signOut,
               );
             }
 
-            if (profile.role == 'teacher') {
+            if (profile.isTeacher) {
               return const TeacherShell();
             }
 
@@ -79,8 +103,13 @@ class _LoadingPage extends StatelessWidget {
 class _ProfileErrorPage extends StatelessWidget {
   final String message;
   final VoidCallback onRetry;
+  final Future<void> Function() onSignOut;
 
-  const _ProfileErrorPage({required this.message, required this.onRetry});
+  const _ProfileErrorPage({
+    required this.message,
+    required this.onRetry,
+    required this.onSignOut,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -89,20 +118,28 @@ class _ProfileErrorPage extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Icon(Icons.error_outline_rounded, size: 52),
-                const SizedBox(height: 14),
-                const Text(
-                  'Unable to load profile',
-                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.w900),
-                ),
-                const SizedBox(height: 8),
-                Text(message, textAlign: TextAlign.center),
-                const SizedBox(height: 18),
-                FilledButton(onPressed: onRetry, child: const Text('Retry')),
-              ],
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 420),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.error_outline_rounded, size: 58),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'Unable to load profile',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(message, textAlign: TextAlign.center),
+                  const SizedBox(height: 24),
+                  FilledButton(onPressed: onRetry, child: const Text('Retry')),
+                  const SizedBox(height: 8),
+                  TextButton(
+                    onPressed: onSignOut,
+                    child: const Text('Sign out'),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

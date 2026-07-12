@@ -7,13 +7,12 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   const supabaseUrl = String.fromEnvironment('SUPABASE_URL');
-  const supabasePublishableKey =
-      String.fromEnvironment('SUPABASE_PUBLISHABLE_KEY');
+  const supabasePublishableKey = String.fromEnvironment(
+    'SUPABASE_PUBLISHABLE_KEY',
+  );
 
   if (supabaseUrl.isEmpty || supabasePublishableKey.isEmpty) {
-    throw StateError(
-      'Missing SUPABASE_URL or SUPABASE_PUBLISHABLE_KEY.',
-    );
+    throw StateError('Missing SUPABASE_URL or SUPABASE_PUBLISHABLE_KEY.');
   }
 
   await Supabase.initialize(
