@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'core/theme/app_theme.dart';
-import 'pages/role/role_selection_page.dart';
+import 'pages/auth/auth_gate.dart';
 
 class LearnPulseApp extends StatelessWidget {
   const LearnPulseApp({super.key});
@@ -11,7 +12,7 @@ class LearnPulseApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Learn Pulse',
       theme: AppTheme.light,
-      home: const RoleSelectionPage(),
+      home: const AuthGate(),
     );
   }
 }
