@@ -12,6 +12,34 @@ class TeacherCourseSummary {
   });
 }
 
+/// ข้อมูล Course พร้อมรายชื่อนักเรียนภายใน Course นั้น
+class TeacherCourseStudents {
+  final String courseId;
+  final String courseTitle;
+  final String courseCode;
+  final List<CourseStudentSummary> students;
+
+  const TeacherCourseStudents({
+    required this.courseId,
+    required this.courseTitle,
+    required this.courseCode,
+    required this.students,
+  });
+}
+
+/// ข้อมูลนักเรียนแบบย่อสำหรับแสดงในหน้า Teacher Students
+class CourseStudentSummary {
+  final String studentId;
+  final String fullName;
+  final DateTime? joinedAt;
+
+  const CourseStudentSummary({
+    required this.studentId,
+    required this.fullName,
+    required this.joinedAt,
+  });
+}
+
 class CourseService {
   final SupabaseClient _client;
 
@@ -96,6 +124,123 @@ class CourseService {
           ),
         );
       }
+    }
+
+    return courses;
+  }
+
+  /// รายชื่อ Course ของ Teacher พร้อมนักเรียนในแต่ละ Course
+  Future<List<TeacherCourseStudents>>
+      fetchTeacherCourseStudents() async {
+    final user = _currentUser;
+
+    final response = await _client
+        .from('courses')
+        .select(
+          '''
+          id,
+          title,
+          course_code,
+          course_members(
+            student_id,
+            joined_at,
+            student:profiles!course_members_student_id_fkey(
+              id,
+              full_name
+            )
+          )
+          ''',
+        )
+        .eq('teacher_id', user.id)
+        .order('title', ascending: true);
+
+    final rows = response as List<dynamic>;
+    final courses = <TeacherCourseStudents>[];
+
+    for (final rawRow in rows) {
+      if (rawRow is! Map) {
+        continue;
+      }
+
+      final row = Map<String, dynamic>.from(rawRow);
+      final students = <CourseStudentSummary>[];
+
+      final rawMembers = row['course_members'];
+
+      if (rawMembers is List) {
+        for (final rawMember in rawMembers) {
+          if (rawMember is! Map) {
+            continue;
+          }
+
+          final member = Map<String, dynamic>.from(
+            rawMember,
+          );
+
+          final rawStudent = member['student'];
+
+          Map<String, dynamic>? studentProfile;
+
+          if (rawStudent is Map) {
+            studentProfile = Map<String, dynamic>.from(
+              rawStudent,
+            );
+          }
+
+          final studentId = (
+            studentProfile?['id'] ??
+            member['student_id'] ??
+            ''
+          ).toString();
+
+          if (studentId.isEmpty) {
+            continue;
+          }
+
+          final fullName =
+              studentProfile?['full_name']
+                      ?.toString()
+                      .trim() ??
+                  '';
+
+          final joinedAtText =
+              member['joined_at']?.toString().trim() ?? '';
+
+          students.add(
+            CourseStudentSummary(
+              studentId: studentId,
+              fullName: fullName.isEmpty
+                  ? 'Unknown student'
+                  : fullName,
+              joinedAt: DateTime.tryParse(joinedAtText),
+            ),
+          );
+        }
+      }
+
+      students.sort(
+        (first, second) {
+          return first.fullName
+              .toLowerCase()
+              .compareTo(
+                second.fullName.toLowerCase(),
+              );
+        },
+      );
+
+      courses.add(
+        TeacherCourseStudents(
+          courseId: row['id']?.toString() ?? '',
+          courseTitle:
+              row['title']?.toString().trim().isNotEmpty ==
+                      true
+                  ? row['title'].toString().trim()
+                  : 'Untitled course',
+          courseCode:
+              row['course_code']?.toString() ?? '',
+          students: students,
+        ),
+      );
     }
 
     return courses;
