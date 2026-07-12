@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-
+import 'student_course_detail_page.dart';
 import '../../models/course.dart';
 import '../../services/course_service.dart';
 import '../../widgets/course_card.dart';
@@ -283,20 +283,18 @@ class _StudentCoursesPageState extends State<StudentCoursesPage> {
                         final course = courses[index];
 
                         return CourseCard(
-                          course: course,
-                          teacherView: false,
-                          onTap: () {
-                            ScaffoldMessenger.of(context)
-                              ..hideCurrentSnackBar()
-                              ..showSnackBar(
-                                SnackBar(
-                                  content: Text(
-                                    'Selected ${course.title}',
-                                  ),
-                                ),
-                              );
-                          },
-                        );
+  course: course,
+  teacherView: false,
+  onTap: () {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => StudentCourseDetailPage(
+          course: course,
+        ),
+      ),
+    );
+  },
+);
                       },
                     ),
                   );
