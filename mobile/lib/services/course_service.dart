@@ -2,127 +2,187 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../models/course.dart';
 
-class CourseService {
-  SupabaseClient get _supabase => Supabase.instance.client;
+class TeacherCourseSummary {
+  final Course course;
+  final int studentCount;
 
-  Future<List<Course>> getMyCourses() async {
-    final user = _supabase.auth.currentUser;
+  const TeacherCourseSummary({
+    required this.course,
+    required this.studentCount,
+  });
+}
+
+class CourseService {
+  final SupabaseClient _client;
+
+  CourseService({SupabaseClient? client})
+      : _client = client ?? Supabase.instance.client;
+
+  User get _currentUser {
+    final user = _client.auth.currentUser;
 
     if (user == null) {
-      throw StateError('User is not signed in.');
+      throw StateError(
+        'You must sign in before accessing courses.',
+      );
     }
 
-    final data = await _supabase
-        .from('courses')
-        .select('''
-          id,
-          teacher_id,
-          title,
-          course_code,
-          description,
-          overview,
-          cover_url,
-          status,
-          created_at,
-          teacher:profiles!courses_teacher_id_fkey(
-            full_name
-          )
-        ''')
-        .eq('status', 'published')
-        .order('created_at', ascending: false);
-
-    return (data as List<dynamic>)
-        .map((item) => Course.fromMap(item as Map<String, dynamic>))
-        .toList();
+    return user;
   }
 
-  Future<List<Course>> getTeacherCourses() async {
-    final user = _supabase.auth.currentUser;
+  /// รายวิชาที่ Teacher คนปัจจุบันเป็นเจ้าของ
+  Future<List<TeacherCourseSummary>> fetchTeacherCourses() async {
+    final user = _currentUser;
 
-    if (user == null) {
-      throw StateError('User is not signed in.');
-    }
-
-    final data = await _supabase
+    final response = await _client
         .from('courses')
-        .select('''
-          id,
-          teacher_id,
-          title,
-          course_code,
-          description,
-          overview,
-          cover_url,
-          status,
-          created_at,
-          teacher:profiles!courses_teacher_id_fkey(
-            full_name
-          )
-        ''')
+        .select(
+          '''
+          *,
+          profiles!courses_teacher_id_fkey(full_name),
+          course_members(count)
+          ''',
+        )
         .eq('teacher_id', user.id)
         .order('created_at', ascending: false);
 
-    return (data as List<dynamic>)
-        .map((item) => Course.fromMap(item as Map<String, dynamic>))
-        .toList();
+    final rows = response as List<dynamic>;
+
+    return rows.map((rawRow) {
+      final row = Map<String, dynamic>.from(
+        rawRow as Map,
+      );
+
+      return TeacherCourseSummary(
+        course: Course.fromMap(row),
+        studentCount: _readStudentCount(
+          row['course_members'],
+        ),
+      );
+    }).toList();
   }
 
-  Future<Course> createCourse({
-    required String title,
-    required String description,
-    required String overview,
-    required String status,
-  }) async {
-    final user = _supabase.auth.currentUser;
+  /// รายวิชาที่ Student คนปัจจุบันเข้าร่วม
+  Future<List<Course>> fetchStudentCourses() async {
+    final user = _currentUser;
 
-    if (user == null) {
-      throw StateError('User is not signed in.');
+    final response = await _client
+        .from('course_members')
+        .select(
+          '''
+          course:courses(
+            *,
+            profiles!courses_teacher_id_fkey(full_name)
+          )
+          ''',
+        )
+        .eq('student_id', user.id)
+        .order('joined_at', ascending: false);
+
+    final rows = response as List<dynamic>;
+    final courses = <Course>[];
+
+    for (final rawRow in rows) {
+      final row = Map<String, dynamic>.from(
+        rawRow as Map,
+      );
+
+      final rawCourse = row['course'];
+
+      if (rawCourse is Map) {
+        courses.add(
+          Course.fromMap(
+            Map<String, dynamic>.from(rawCourse),
+          ),
+        );
+      }
     }
 
-    final data = await _supabase
+    return courses;
+  }
+
+  /// Teacher สร้างรายวิชา
+  ///
+  /// ไม่ส่ง course_code ไปยัง Supabase
+  /// เพราะ PostgreSQL จะสร้างรหัสให้อัตโนมัติจาก DEFAULT
+  Future<Course> createCourse({
+    required String title,
+    String description = '',
+  }) async {
+    final user = _currentUser;
+
+    final normalizedTitle = title.trim();
+    final normalizedDescription = description.trim();
+
+    if (normalizedTitle.isEmpty) {
+      throw ArgumentError(
+        'Course title cannot be empty.',
+      );
+    }
+
+    final response = await _client
         .from('courses')
         .insert({
           'teacher_id': user.id,
-          'title': title.trim(),
-          'description': description.trim(),
-          'overview': overview.trim(),
-          'status': status,
+          'title': normalizedTitle,
+          'description': normalizedDescription,
+          'overview': '',
+          'status': 'draft',
+
+          // ไม่ส่ง course_code
+          // Backend จะสร้างรหัสให้อัตโนมัติ
         })
-        .select('''
-          id,
-          teacher_id,
-          title,
-          course_code,
-          description,
-          overview,
-          cover_url,
-          status,
-          created_at,
-          teacher:profiles!courses_teacher_id_fkey(
-            full_name
-          )
-        ''')
+        .select(
+          '''
+          *,
+          profiles!courses_teacher_id_fkey(full_name)
+          ''',
+        )
         .single();
 
-    return Course.fromMap(data);
+    return Course.fromMap(
+      Map<String, dynamic>.from(response),
+    );
   }
 
-  Future<String> joinCourseByCode(String courseCode) async {
-    final user = _supabase.auth.currentUser;
+  /// Student เข้าร่วมรายวิชาด้วยรหัส Course
+  Future<void> joinCourseByCode(String courseCode) async {
+    final normalizedCode = courseCode.trim().toUpperCase();
 
-    if (user == null) {
-      throw StateError('User is not signed in.');
+    if (normalizedCode.isEmpty) {
+      throw ArgumentError(
+        'Course code cannot be empty.',
+      );
     }
 
-    final result = await _supabase.rpc(
+    await _client.rpc(
       'join_course_by_code',
-      params: {'join_code': courseCode.trim().toUpperCase()},
+      params: {
+        'p_course_code': normalizedCode,
+      },
     );
+  }
 
-    if (result == null) {
-      throw StateError('Unable to join this course.');
+  int _readStudentCount(dynamic rawMembers) {
+    if (rawMembers is! List || rawMembers.isEmpty) {
+      return 0;
     }
 
-    return result.toString();
+    final firstItem = rawMembers.first;
+
+    if (firstItem is! Map) {
+      return 0;
+    }
+
+    final count = firstItem['count'];
+
+    if (count is int) {
+      return count;
+    }
+
+    return int.tryParse(
+          count?.toString() ?? '',
+        ) ??
+        0;
   }
 }

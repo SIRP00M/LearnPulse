@@ -7,10 +7,12 @@ class TeacherProfilePage extends StatefulWidget {
   const TeacherProfilePage({super.key});
 
   @override
-  State<TeacherProfilePage> createState() => _TeacherProfilePageState();
+  State<TeacherProfilePage> createState() =>
+      _TeacherProfilePageState();
 }
 
-class _TeacherProfilePageState extends State<TeacherProfilePage> {
+class _TeacherProfilePageState
+    extends State<TeacherProfilePage> {
   final AuthService _authService = AuthService();
 
   late Future<UserProfile?> _profileFuture;
@@ -46,9 +48,13 @@ class _TeacherProfilePageState extends State<TeacherProfilePage> {
     } catch (error) {
       if (!mounted) return;
 
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Unable to sign out: $error')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Unable to sign out: $error',
+          ),
+        ),
+      );
 
       setState(() {
         _isSigningOut = false;
@@ -81,9 +87,12 @@ class _TeacherProfilePageState extends State<TeacherProfilePage> {
     return FutureBuilder<UserProfile?>(
       future: _profileFuture,
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
+        if (snapshot.connectionState ==
+            ConnectionState.waiting) {
           return const SafeArea(
-            child: Center(child: CircularProgressIndicator()),
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
           );
         }
 
@@ -123,15 +132,23 @@ class _TeacherProfilePageState extends State<TeacherProfilePage> {
           child: RefreshIndicator(
             onRefresh: _refreshProfile,
             child: ListView(
-              physics: const AlwaysScrollableScrollPhysics(),
-              padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
+              physics:
+                  const AlwaysScrollableScrollPhysics(),
+              padding: const EdgeInsets.fromLTRB(
+                20,
+                24,
+                20,
+                28,
+              ),
               children: [
                 Center(
-                  child:
-                      profile.avatarUrl != null && profile.avatarUrl!.isNotEmpty
+                  child: profile.avatarUrl != null &&
+                          profile.avatarUrl!.isNotEmpty
                       ? CircleAvatar(
                           radius: 44,
-                          backgroundImage: NetworkImage(profile.avatarUrl!),
+                          backgroundImage: NetworkImage(
+                            profile.avatarUrl!,
+                          ),
                         )
                       : CircleAvatar(
                           radius: 44,
@@ -157,52 +174,84 @@ class _TeacherProfilePageState extends State<TeacherProfilePage> {
                 Text(
                   roleLabel,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.black54),
+                  style: const TextStyle(
+                    color: Colors.black54,
+                  ),
                 ),
                 const SizedBox(height: 24),
                 Card(
                   child: Column(
                     children: [
                       ListTile(
-                        leading: const Icon(Icons.person_outline_rounded),
-                        title: const Text('Personal information'),
+                        leading: const Icon(
+                          Icons.person_outline_rounded,
+                        ),
+                        title: const Text(
+                          'Personal information',
+                        ),
                         subtitle: Text(displayName),
-                        trailing: const Icon(Icons.chevron_right_rounded),
+                        trailing: const Icon(
+                          Icons.chevron_right_rounded,
+                        ),
                       ),
                       const Divider(height: 1),
                       ListTile(
-                        leading: const Icon(Icons.email_outlined),
+                        leading: const Icon(
+                          Icons.email_outlined,
+                        ),
                         title: const Text('Email'),
                         subtitle: Text(
-                          _authService.currentUser?.email ?? 'No email',
+                          _authService
+                                  .currentUser
+                                  ?.email ??
+                              'No email',
                         ),
                       ),
                       const Divider(height: 1),
                       const ListTile(
-                        leading: Icon(Icons.notifications_none_rounded),
+                        leading: Icon(
+                          Icons
+                              .notifications_none_rounded,
+                        ),
                         title: Text('Notifications'),
-                        trailing: Icon(Icons.chevron_right_rounded),
+                        trailing: Icon(
+                          Icons.chevron_right_rounded,
+                        ),
                       ),
                       const Divider(height: 1),
                       const ListTile(
-                        leading: Icon(Icons.palette_outlined),
+                        leading: Icon(
+                          Icons.palette_outlined,
+                        ),
                         title: Text('Appearance'),
-                        trailing: Icon(Icons.chevron_right_rounded),
+                        trailing: Icon(
+                          Icons.chevron_right_rounded,
+                        ),
                       ),
                     ],
                   ),
                 ),
                 const SizedBox(height: 16),
                 OutlinedButton.icon(
-                  onPressed: _isSigningOut ? null : _signOut,
+                  onPressed:
+                      _isSigningOut ? null : _signOut,
                   icon: _isSigningOut
                       ? const SizedBox(
                           width: 18,
                           height: 18,
-                          child: CircularProgressIndicator(strokeWidth: 2),
+                          child:
+                              CircularProgressIndicator(
+                            strokeWidth: 2,
+                          ),
                         )
-                      : const Icon(Icons.logout_rounded),
-                  label: Text(_isSigningOut ? 'Signing out...' : 'Sign out'),
+                      : const Icon(
+                          Icons.logout_rounded,
+                        ),
+                  label: Text(
+                    _isSigningOut
+                        ? 'Signing out...'
+                        : 'Sign out',
+                  ),
                 ),
               ],
             ),
@@ -217,7 +266,10 @@ class _ProfileErrorView extends StatelessWidget {
   final String message;
   final VoidCallback onRetry;
 
-  const _ProfileErrorView({required this.message, required this.onRetry});
+  const _ProfileErrorView({
+    required this.message,
+    required this.onRetry,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -228,18 +280,29 @@ class _ProfileErrorView extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.error_outline_rounded, size: 54),
+              const Icon(
+                Icons.error_outline_rounded,
+                size: 54,
+              ),
               const SizedBox(height: 14),
               const Text(
                 'Unable to load profile',
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w900),
+                style: TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
               const SizedBox(height: 8),
-              Text(message, textAlign: TextAlign.center),
+              Text(
+                message,
+                textAlign: TextAlign.center,
+              ),
               const SizedBox(height: 18),
               FilledButton.icon(
                 onPressed: onRetry,
-                icon: const Icon(Icons.refresh_rounded),
+                icon: const Icon(
+                  Icons.refresh_rounded,
+                ),
                 label: const Text('Retry'),
               ),
             ],
