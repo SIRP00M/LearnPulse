@@ -36,7 +36,8 @@ class TeacherStudentsPage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => TeacherStudentDetailPage(student: student),
+                      builder: (_) =>
+                          TeacherStudentDetailPage(student: student),
                     ),
                   );
                 },

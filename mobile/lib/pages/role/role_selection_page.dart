@@ -7,15 +7,15 @@ class RoleSelectionPage extends StatelessWidget {
   const RoleSelectionPage({super.key});
 
   void _openTeacher(BuildContext context) {
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const TeacherShell()),
-    );
+    Navigator.of(
+      context,
+    ).pushReplacement(MaterialPageRoute(builder: (_) => const TeacherShell()));
   }
 
   void _openStudent(BuildContext context) {
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const StudentShell()),
-    );
+    Navigator.of(
+      context,
+    ).pushReplacement(MaterialPageRoute(builder: (_) => const StudentShell()));
   }
 
   @override
@@ -43,10 +43,7 @@ class RoleSelectionPage extends StatelessWidget {
               const SizedBox(height: 22),
               const Text(
                 'Learn Pulse',
-                style: TextStyle(
-                  fontSize: 34,
-                  fontWeight: FontWeight.w900,
-                ),
+                style: TextStyle(fontSize: 34, fontWeight: FontWeight.w900),
               ),
               const SizedBox(height: 8),
               const Text(

@@ -78,19 +78,20 @@ class StudentHomePage extends StatelessWidget {
           const SizedBox(height: 24),
           const SectionTitle(title: 'Continue learning'),
           const SizedBox(height: 10),
-          ...MockData.courses.take(2).map(
+          ...MockData.courses
+              .take(2)
+              .map(
                 (course) => Padding(
                   padding: const EdgeInsets.only(bottom: 12),
-                  child: CourseCard(
-                    course: course,
-                    teacherView: false,
-                  ),
+                  child: CourseCard(course: course, teacherView: false),
                 ),
               ),
           const SizedBox(height: 12),
           const SectionTitle(title: 'Upcoming tasks'),
           const SizedBox(height: 10),
-          ...MockData.assignments.take(2).map(
+          ...MockData.assignments
+              .take(2)
+              .map(
                 (assignment) => Padding(
                   padding: const EdgeInsets.only(bottom: 12),
                   child: AssignmentCard(

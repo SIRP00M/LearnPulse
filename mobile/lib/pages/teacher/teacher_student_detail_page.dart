@@ -5,10 +5,7 @@ import '../../widgets/stat_card.dart';
 class TeacherStudentDetailPage extends StatelessWidget {
   final Student student;
 
-  const TeacherStudentDetailPage({
-    required this.student,
-    super.key,
-  });
+  const TeacherStudentDetailPage({required this.student, super.key});
 
   @override
   Widget build(BuildContext context) {

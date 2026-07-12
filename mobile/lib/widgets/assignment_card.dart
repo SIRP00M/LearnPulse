@@ -61,10 +61,7 @@ class AssignmentCard extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     assignment.courseName,
-                    style: const TextStyle(
-                      color: Colors.black54,
-                      fontSize: 12,
-                    ),
+                    style: const TextStyle(color: Colors.black54, fontSize: 12),
                   ),
                   const SizedBox(height: 7),
                   Text(

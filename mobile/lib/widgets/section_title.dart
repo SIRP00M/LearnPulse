@@ -19,17 +19,11 @@ class SectionTitle extends StatelessWidget {
         Expanded(
           child: Text(
             title,
-            style: const TextStyle(
-              fontSize: 19,
-              fontWeight: FontWeight.w800,
-            ),
+            style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w800),
           ),
         ),
         if (actionText != null)
-          TextButton(
-            onPressed: onAction,
-            child: Text(actionText!),
-          ),
+          TextButton(onPressed: onAction, child: Text(actionText!)),
       ],
     );
   }

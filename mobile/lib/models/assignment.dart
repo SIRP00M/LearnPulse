@@ -1,8 +1,4 @@
-enum AssignmentStatus {
-  active,
-  closed,
-  draft,
-}
+enum AssignmentStatus { active, closed, draft }
 
 class Assignment {
   final String id;

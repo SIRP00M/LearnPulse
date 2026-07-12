@@ -24,10 +24,7 @@ class StudentTasksPage extends StatelessWidget {
           ...MockData.assignments.map(
             (assignment) => Padding(
               padding: const EdgeInsets.only(bottom: 12),
-              child: AssignmentCard(
-                assignment: assignment,
-                studentView: true,
-              ),
+              child: AssignmentCard(assignment: assignment, studentView: true),
             ),
           ),
         ],

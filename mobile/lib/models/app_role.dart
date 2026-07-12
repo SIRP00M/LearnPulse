@@ -1,4 +1,1 @@
-enum AppRole {
-  teacher,
-  student,
-}
+enum AppRole { teacher, student }

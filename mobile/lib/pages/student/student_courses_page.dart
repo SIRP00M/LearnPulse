@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../data/mock_data.dart';
 import '../../widgets/course_card.dart';
+import 'student_course_detail_page.dart';
 
 class StudentCoursesPage extends StatelessWidget {
   const StudentCoursesPage({super.key});
@@ -28,14 +29,22 @@ class StudentCoursesPage extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           const Text(
-            'View lessons, assignments, and progress.',
+            'View lessons, assignments, files, and progress.',
             style: TextStyle(color: Colors.black54),
           ),
           const SizedBox(height: 20),
           ...MockData.courses.map(
             (course) => Padding(
               padding: const EdgeInsets.only(bottom: 12),
-              child: CourseCard(course: course, teacherView: false),
+              child: CourseCard(
+                course: course,
+                teacherView: false,
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => StudentCourseDetailPage(course: course),
+                  ),
+                ),
+              ),
             ),
           ),
         ],
@@ -46,36 +55,31 @@ class StudentCoursesPage extends StatelessWidget {
   void _showJoinCourse(BuildContext context) {
     showModalBottomSheet<void>(
       context: context,
-      builder: (context) {
-        return const Padding(
-          padding: EdgeInsets.all(22),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Join a course',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
+      builder: (context) => const Padding(
+        padding: EdgeInsets.all(22),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Join a course',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
+            ),
+            SizedBox(height: 14),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Course code',
+                hintText: 'Example: MAD-401',
               ),
-              SizedBox(height: 14),
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Course code',
-                  hintText: 'Example: MAD-401',
-                ),
-              ),
-              SizedBox(height: 16),
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: null,
-                  child: Text('Join course'),
-                ),
-              ),
-            ],
-          ),
-        );
-      },
+            ),
+            SizedBox(height: 16),
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton(onPressed: null, child: Text('Join course')),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

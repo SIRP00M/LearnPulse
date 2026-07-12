@@ -81,13 +81,9 @@ class TeacherCoursesPage extends StatelessWidget {
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
               ),
               SizedBox(height: 16),
-              TextField(
-                decoration: InputDecoration(labelText: 'Course name'),
-              ),
+              TextField(decoration: InputDecoration(labelText: 'Course name')),
               SizedBox(height: 12),
-              TextField(
-                decoration: InputDecoration(labelText: 'Course code'),
-              ),
+              TextField(decoration: InputDecoration(labelText: 'Course code')),
               SizedBox(height: 12),
               TextField(
                 maxLines: 3,

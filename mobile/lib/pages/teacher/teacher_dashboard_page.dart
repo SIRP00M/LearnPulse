@@ -83,21 +83,25 @@ class TeacherDashboardPage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 26),
-          const SectionTitle(title: 'Course performance', actionText: 'View all'),
+          const SectionTitle(
+            title: 'Course performance',
+            actionText: 'View all',
+          ),
           const SizedBox(height: 12),
-          ...MockData.courses.take(2).map(
+          ...MockData.courses
+              .take(2)
+              .map(
                 (course) => Padding(
                   padding: const EdgeInsets.only(bottom: 12),
                   child: CourseCard(course: course),
                 ),
               ),
           const SizedBox(height: 14),
-          const SectionTitle(
-            title: 'Recent assignments',
-            actionText: 'Manage',
-          ),
+          const SectionTitle(title: 'Recent assignments', actionText: 'Manage'),
           const SizedBox(height: 12),
-          ...MockData.assignments.take(2).map(
+          ...MockData.assignments
+              .take(2)
+              .map(
                 (assignment) => Padding(
                   padding: const EdgeInsets.only(bottom: 12),
                   child: AssignmentCard(assignment: assignment),
