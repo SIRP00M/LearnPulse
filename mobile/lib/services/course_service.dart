@@ -12,7 +12,6 @@ class TeacherCourseSummary {
   });
 }
 
-/// ข้อมูล Course พร้อมรายชื่อนักเรียนภายใน Course นั้น
 class TeacherCourseStudents {
   final String courseId;
   final String courseTitle;
@@ -27,7 +26,6 @@ class TeacherCourseStudents {
   });
 }
 
-/// ข้อมูลนักเรียนแบบย่อสำหรับแสดงในหน้า Teacher Students
 class CourseStudentSummary {
   final String studentId;
   final String fullName;
@@ -43,8 +41,9 @@ class CourseStudentSummary {
 class CourseService {
   final SupabaseClient _client;
 
-  CourseService({SupabaseClient? client})
-      : _client = client ?? Supabase.instance.client;
+  CourseService({
+    SupabaseClient? client,
+  }) : _client = client ?? Supabase.instance.client;
 
   User get _currentUser {
     final user = _client.auth.currentUser;
@@ -58,7 +57,7 @@ class CourseService {
     return user;
   }
 
-  /// รายวิชาที่ Teacher คนปัจจุบันเป็นเจ้าของ
+  /// Course ทั้งหมดที่อาจารย์คนปัจจุบันเป็นเจ้าของ
   Future<List<TeacherCourseSummary>> fetchTeacherCourses() async {
     final user = _currentUser;
 
@@ -67,14 +66,20 @@ class CourseService {
         .select(
           '''
           *,
-          profiles!courses_teacher_id_fkey(full_name),
+          teacher:profiles!courses_teacher_id_fkey(
+            id,
+            full_name
+          ),
           course_members(count)
           ''',
         )
         .eq('teacher_id', user.id)
-        .order('created_at', ascending: false);
+        .order(
+          'created_at',
+          ascending: false,
+        );
 
-    final rows = response as List<dynamic>;
+    final rows = List<dynamic>.from(response);
 
     return rows.map((rawRow) {
       final row = Map<String, dynamic>.from(
@@ -90,7 +95,7 @@ class CourseService {
     }).toList();
   }
 
-  /// รายวิชาที่ Student คนปัจจุบันเข้าร่วม
+  /// Course ทั้งหมดที่นักเรียนคนปัจจุบันเข้าร่วม
   Future<List<Course>> fetchStudentCourses() async {
     final user = _currentUser;
 
@@ -98,23 +103,31 @@ class CourseService {
         .from('course_members')
         .select(
           '''
+          joined_at,
           course:courses(
             *,
-            profiles!courses_teacher_id_fkey(full_name)
+            teacher:profiles!courses_teacher_id_fkey(
+              id,
+              full_name
+            )
           )
           ''',
         )
         .eq('student_id', user.id)
-        .order('joined_at', ascending: false);
+        .order(
+          'joined_at',
+          ascending: false,
+        );
 
-    final rows = response as List<dynamic>;
+    final rows = List<dynamic>.from(response);
     final courses = <Course>[];
 
     for (final rawRow in rows) {
-      final row = Map<String, dynamic>.from(
-        rawRow as Map,
-      );
+      if (rawRow is! Map) {
+        continue;
+      }
 
+      final row = Map<String, dynamic>.from(rawRow);
       final rawCourse = row['course'];
 
       if (rawCourse is Map) {
@@ -129,127 +142,10 @@ class CourseService {
     return courses;
   }
 
-  /// รายชื่อ Course ของ Teacher พร้อมนักเรียนในแต่ละ Course
-  Future<List<TeacherCourseStudents>>
-      fetchTeacherCourseStudents() async {
-    final user = _currentUser;
-
-    final response = await _client
-        .from('courses')
-        .select(
-          '''
-          id,
-          title,
-          course_code,
-          course_members(
-            student_id,
-            joined_at,
-            student:profiles!course_members_student_id_fkey(
-              id,
-              full_name
-            )
-          )
-          ''',
-        )
-        .eq('teacher_id', user.id)
-        .order('title', ascending: true);
-
-    final rows = response as List<dynamic>;
-    final courses = <TeacherCourseStudents>[];
-
-    for (final rawRow in rows) {
-      if (rawRow is! Map) {
-        continue;
-      }
-
-      final row = Map<String, dynamic>.from(rawRow);
-      final students = <CourseStudentSummary>[];
-
-      final rawMembers = row['course_members'];
-
-      if (rawMembers is List) {
-        for (final rawMember in rawMembers) {
-          if (rawMember is! Map) {
-            continue;
-          }
-
-          final member = Map<String, dynamic>.from(
-            rawMember,
-          );
-
-          final rawStudent = member['student'];
-
-          Map<String, dynamic>? studentProfile;
-
-          if (rawStudent is Map) {
-            studentProfile = Map<String, dynamic>.from(
-              rawStudent,
-            );
-          }
-
-          final studentId = (
-            studentProfile?['id'] ??
-            member['student_id'] ??
-            ''
-          ).toString();
-
-          if (studentId.isEmpty) {
-            continue;
-          }
-
-          final fullName =
-              studentProfile?['full_name']
-                      ?.toString()
-                      .trim() ??
-                  '';
-
-          final joinedAtText =
-              member['joined_at']?.toString().trim() ?? '';
-
-          students.add(
-            CourseStudentSummary(
-              studentId: studentId,
-              fullName: fullName.isEmpty
-                  ? 'Unknown student'
-                  : fullName,
-              joinedAt: DateTime.tryParse(joinedAtText),
-            ),
-          );
-        }
-      }
-
-      students.sort(
-        (first, second) {
-          return first.fullName
-              .toLowerCase()
-              .compareTo(
-                second.fullName.toLowerCase(),
-              );
-        },
-      );
-
-      courses.add(
-        TeacherCourseStudents(
-          courseId: row['id']?.toString() ?? '',
-          courseTitle:
-              row['title']?.toString().trim().isNotEmpty ==
-                      true
-                  ? row['title'].toString().trim()
-                  : 'Untitled course',
-          courseCode:
-              row['course_code']?.toString() ?? '',
-          students: students,
-        ),
-      );
-    }
-
-    return courses;
-  }
-
-  /// Teacher สร้างรายวิชา
+  /// อาจารย์สร้าง Course
   ///
-  /// ไม่ส่ง course_code ไปยัง Supabase
-  /// เพราะ PostgreSQL จะสร้างรหัสให้อัตโนมัติจาก DEFAULT
+  /// ไม่ส่ง course_code เพราะ PostgreSQL
+  /// เป็นผู้สร้างรหัสห้องให้อัตโนมัติ
   Future<Course> createCourse({
     required String title,
     String description = '',
@@ -273,14 +169,14 @@ class CourseService {
           'description': normalizedDescription,
           'overview': '',
           'status': 'draft',
-
-          // ไม่ส่ง course_code
-          // Backend จะสร้างรหัสให้อัตโนมัติ
         })
         .select(
           '''
           *,
-          profiles!courses_teacher_id_fkey(full_name)
+          teacher:profiles!courses_teacher_id_fkey(
+            id,
+            full_name
+          )
           ''',
         )
         .single();
@@ -290,7 +186,7 @@ class CourseService {
     );
   }
 
-  /// Student เข้าร่วมรายวิชาด้วยรหัส Course
+  /// นักเรียนเข้าร่วม Course ด้วยรหัสห้อง
   Future<void> joinCourseByCode(String courseCode) async {
     final normalizedCode = courseCode.trim().toUpperCase();
 
@@ -306,6 +202,110 @@ class CourseService {
         'p_course_code': normalizedCode,
       },
     );
+  }
+
+  /// รายชื่อนักเรียน แยกตามแต่ละ Course ของอาจารย์
+  Future<List<TeacherCourseStudents>>
+      fetchTeacherCourseStudents() async {
+    final user = _currentUser;
+
+    final response = await _client
+        .from('courses')
+        .select(
+          '''
+          id,
+          title,
+          course_code,
+          course_members(
+            student_id,
+            joined_at,
+            student:profiles!course_members_student_id_fkey(
+              id,
+              full_name
+            )
+          )
+          ''',
+        )
+        .eq('teacher_id', user.id)
+        .order(
+          'title',
+          ascending: true,
+        );
+
+    final rows = List<dynamic>.from(response);
+    final courses = <TeacherCourseStudents>[];
+
+    for (final rawRow in rows) {
+      if (rawRow is! Map) {
+        continue;
+      }
+
+      final row = Map<String, dynamic>.from(rawRow);
+      final students = <CourseStudentSummary>[];
+      final rawMembers = row['course_members'];
+
+      if (rawMembers is List) {
+        for (final rawMember in rawMembers) {
+          if (rawMember is! Map) {
+            continue;
+          }
+
+          final member = Map<String, dynamic>.from(
+            rawMember,
+          );
+
+          final studentProfile = _readRelatedMap(
+            member['student'],
+          );
+
+          final studentId = _readString(
+            studentProfile?['id'] ??
+                member['student_id'],
+          );
+
+          if (studentId.isEmpty) {
+            continue;
+          }
+
+          final fullName = _readString(
+            studentProfile?['full_name'],
+            fallback: 'Unknown student',
+          );
+
+          students.add(
+            CourseStudentSummary(
+              studentId: studentId,
+              fullName: fullName,
+              joinedAt: _readDateTime(
+                member['joined_at'],
+              ),
+            ),
+          );
+        }
+      }
+
+      students.sort((first, second) {
+        return first.fullName.toLowerCase().compareTo(
+              second.fullName.toLowerCase(),
+            );
+      });
+
+      courses.add(
+        TeacherCourseStudents(
+          courseId: _readString(row['id']),
+          courseTitle: _readString(
+            row['title'],
+            fallback: 'Untitled course',
+          ),
+          courseCode: _readString(
+            row['course_code'],
+          ),
+          students: students,
+        ),
+      );
+    }
+
+    return courses;
   }
 
   int _readStudentCount(dynamic rawMembers) {
@@ -325,9 +325,50 @@ class CourseService {
       return count;
     }
 
+    if (count is num) {
+      return count.toInt();
+    }
+
     return int.tryParse(
           count?.toString() ?? '',
         ) ??
         0;
+  }
+
+  Map<String, dynamic>? _readRelatedMap(
+    dynamic value,
+  ) {
+    if (value is Map) {
+      return Map<String, dynamic>.from(value);
+    }
+
+    if (value is List && value.isNotEmpty) {
+      final first = value.first;
+
+      if (first is Map) {
+        return Map<String, dynamic>.from(first);
+      }
+    }
+
+    return null;
+  }
+
+  String _readString(
+    dynamic value, {
+    String fallback = '',
+  }) {
+    final text = value?.toString().trim() ?? '';
+
+    return text.isEmpty ? fallback : text;
+  }
+
+  DateTime? _readDateTime(dynamic value) {
+    final text = value?.toString().trim() ?? '';
+
+    if (text.isEmpty) {
+      return null;
+    }
+
+    return DateTime.tryParse(text);
   }
 }

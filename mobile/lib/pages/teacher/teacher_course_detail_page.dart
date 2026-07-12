@@ -31,6 +31,10 @@ class TeacherCourseDetailPage extends StatelessWidget {
       icon: Icons.assignment_outlined,
     ),
     _CourseTabData(
+      label: 'Submissions',
+      icon: Icons.assignment_turned_in_outlined,
+    ),
+    _CourseTabData(
       label: 'Students',
       icon: Icons.groups_outlined,
     ),
@@ -64,18 +68,22 @@ class TeacherCourseDetailPage extends StatelessWidget {
                 return const [
                   PopupMenuItem(
                     value: 'edit',
-                    child: ListTile(
-                      contentPadding: EdgeInsets.zero,
-                      leading: Icon(Icons.edit_outlined),
-                      title: Text('Edit course'),
+                    child: Row(
+                      children: [
+                        Icon(Icons.edit_outlined),
+                        SizedBox(width: 12),
+                        Text('Edit course'),
+                      ],
                     ),
                   ),
                   PopupMenuItem(
                     value: 'archive',
-                    child: ListTile(
-                      contentPadding: EdgeInsets.zero,
-                      leading: Icon(Icons.archive_outlined),
-                      title: Text('Archive course'),
+                    child: Row(
+                      children: [
+                        Icon(Icons.archive_outlined),
+                        SizedBox(width: 12),
+                        Text('Archive course'),
+                      ],
                     ),
                   ),
                 ];
@@ -127,14 +135,17 @@ class TeacherCourseDetailPage extends StatelessWidget {
                     icon: Icons.play_lesson_outlined,
                     title: 'No lessons yet',
                     message:
-                        'Create the first lesson for this course.',
+                        'Create lessons and learning materials for this course.',
                   ),
-                  const _CourseEmptyTab(
-                    icon: Icons.assignment_outlined,
-                    title: 'No assignments yet',
-                    message:
-                        'Assignments created for this course will appear here.',
+                  _TeacherAssignmentsTab(
+                    onCreatePressed: () {
+                      _showFeatureMessage(
+                        context,
+                        'Assignment creation will be connected next.',
+                      );
+                    },
                   ),
+                  const _TeacherSubmissionsTab(),
                   _TeacherStudentsTab(
                     studentCount: studentCount,
                   ),
@@ -181,6 +192,13 @@ class TeacherCourseDetailPage extends StatelessWidget {
       _ => 'This option is not available yet.',
     };
 
+    _showFeatureMessage(context, message);
+  }
+
+  void _showFeatureMessage(
+    BuildContext context,
+    String message,
+  ) {
     ScaffoldMessenger.of(context)
       ..hideCurrentSnackBar()
       ..showSnackBar(
@@ -236,7 +254,10 @@ class TeacherCourseDetailPage extends StatelessWidget {
                     'Add learning content',
                   ),
                   onTap: () {
-                    Navigator.pop(sheetContext, 'lesson');
+                    Navigator.pop(
+                      sheetContext,
+                      'lesson',
+                    );
                   },
                 ),
                 ListTile(
@@ -263,7 +284,10 @@ class TeacherCourseDetailPage extends StatelessWidget {
                     'Upload course material',
                   ),
                   onTap: () {
-                    Navigator.pop(sheetContext, 'file');
+                    Navigator.pop(
+                      sheetContext,
+                      'file',
+                    );
                   },
                 ),
               ],
@@ -285,15 +309,10 @@ class TeacherCourseDetailPage extends StatelessWidget {
       _ => 'Content',
     };
 
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(
-        SnackBar(
-          content: Text(
-            '$label creation will be connected next.',
-          ),
-        ),
-      );
+    _showFeatureMessage(
+      context,
+      '$label creation will be connected next.',
+    );
   }
 }
 
@@ -438,19 +457,39 @@ class _TeacherOverviewTab extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           mainAxisSpacing: 12,
           crossAxisSpacing: 12,
-          childAspectRatio: 1.35,
+          childAspectRatio: 1.25,
           children: [
             _CourseStatCard(
               value: '$studentCount',
               label: 'Students',
               icon: Icons.groups_rounded,
             ),
-            _CourseStatCard(
-              value: course.status.toUpperCase(),
-              label: 'Status',
-              icon: Icons.publish_rounded,
+            const _CourseStatCard(
+              value: '0',
+              label: 'Assignments',
+              icon: Icons.assignment_rounded,
+            ),
+            const _CourseStatCard(
+              value: '0',
+              label: 'Submissions',
+              icon: Icons.assignment_turned_in_rounded,
+            ),
+            const _CourseStatCard(
+              value: '—',
+              label: 'Average score',
+              icon: Icons.grade_rounded,
             ),
           ],
+        ),
+        const SizedBox(height: 14),
+        _SectionCard(
+          title: 'Student tracking',
+          icon: Icons.insights_outlined,
+          child: const Text(
+            'Submission rate, missing assignments, late work, '
+            'average scores and student progress will appear here.',
+            style: TextStyle(height: 1.5),
+          ),
         ),
         const SizedBox(height: 14),
         _SectionCard(
@@ -470,6 +509,41 @@ class _TeacherOverviewTab extends StatelessWidget {
   }
 }
 
+class _TeacherAssignmentsTab extends StatelessWidget {
+  final VoidCallback onCreatePressed;
+
+  const _TeacherAssignmentsTab({
+    required this.onCreatePressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionEmptyTab(
+      icon: Icons.assignment_outlined,
+      title: 'No assignments yet',
+      message:
+          'Create an assignment, set its due date and define the maximum score.',
+      buttonLabel: 'Create assignment',
+      buttonIcon: Icons.add_task_rounded,
+      onPressed: onCreatePressed,
+    );
+  }
+}
+
+class _TeacherSubmissionsTab extends StatelessWidget {
+  const _TeacherSubmissionsTab();
+
+  @override
+  Widget build(BuildContext context) {
+    return const _CourseEmptyTab(
+      icon: Icons.assignment_turned_in_outlined,
+      title: 'No submissions yet',
+      message:
+          'Student work will appear here. You will be able to open submissions, give scores and write feedback.',
+    );
+  }
+}
+
 class _TeacherStudentsTab extends StatelessWidget {
   final int studentCount;
 
@@ -479,14 +553,40 @@ class _TeacherStudentsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _CourseEmptyTab(
-      icon: Icons.groups_outlined,
-      title: studentCount == 0
-          ? 'No students yet'
-          : '$studentCount students enrolled',
-      message: studentCount == 0
-          ? 'Share the course code so students can join.'
-          : 'The complete student list is available from the Students page.',
+    if (studentCount == 0) {
+      return const _CourseEmptyTab(
+        icon: Icons.groups_outlined,
+        title: 'No students yet',
+        message:
+            'Share the course code so students can join this course.',
+      );
+    }
+
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 18, 16, 100),
+      children: [
+        _SectionCard(
+          title: 'Enrolled students',
+          icon: Icons.groups_outlined,
+          child: Text(
+            '$studentCount '
+            '${studentCount == 1 ? 'student has' : 'students have'} '
+            'joined this course.',
+            style: const TextStyle(height: 1.5),
+          ),
+        ),
+        const SizedBox(height: 14),
+        const _SectionCard(
+          title: 'Student tracking',
+          icon: Icons.monitor_heart_outlined,
+          child: Text(
+            'Select a student later to view submitted work, '
+            'missing assignments, late submissions, average score '
+            'and learning progress.',
+            style: TextStyle(height: 1.5),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -523,7 +623,7 @@ class _CourseStatCard extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 20,
                 fontWeight: FontWeight.w900,
               ),
             ),
@@ -571,11 +671,13 @@ class _SectionCard extends StatelessWidget {
                   color: colorScheme.primary,
                 ),
                 const SizedBox(width: 9),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
+                Expanded(
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
               ],
@@ -605,7 +707,7 @@ class _CourseEmptyTab extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(28, 80, 28, 100),
+      padding: const EdgeInsets.fromLTRB(28, 76, 28, 100),
       children: [
         Icon(
           icon,
@@ -628,6 +730,66 @@ class _CourseEmptyTab extends StatelessWidget {
           style: TextStyle(
             color: colorScheme.onSurfaceVariant,
             height: 1.45,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _ActionEmptyTab extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String message;
+  final String buttonLabel;
+  final IconData buttonIcon;
+  final VoidCallback onPressed;
+
+  const _ActionEmptyTab({
+    required this.icon,
+    required this.title,
+    required this.message,
+    required this.buttonLabel,
+    required this.buttonIcon,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(28, 76, 28, 100),
+      children: [
+        Icon(
+          icon,
+          size: 65,
+          color: colorScheme.primary.withValues(alpha: 0.65),
+        ),
+        const SizedBox(height: 18),
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 19,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          message,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: colorScheme.onSurfaceVariant,
+            height: 1.45,
+          ),
+        ),
+        const SizedBox(height: 22),
+        Center(
+          child: FilledButton.icon(
+            onPressed: onPressed,
+            icon: Icon(buttonIcon),
+            label: Text(buttonLabel),
           ),
         ),
       ],

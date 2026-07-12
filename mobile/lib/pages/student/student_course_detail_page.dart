@@ -28,6 +28,10 @@ class StudentCourseDetailPage extends StatelessWidget {
       icon: Icons.assignment_outlined,
     ),
     _CourseTabData(
+      label: 'Grades',
+      icon: Icons.grade_outlined,
+    ),
+    _CourseTabData(
       label: 'Files',
       icon: Icons.folder_outlined,
     ),
@@ -74,12 +78,8 @@ class StudentCourseDetailPage extends StatelessWidget {
                     message:
                         'Lessons published by your teacher will appear here.',
                   ),
-                  const _CourseEmptyTab(
-                    icon: Icons.assignment_outlined,
-                    title: 'No assignments yet',
-                    message:
-                        'Course assignments will appear here.',
-                  ),
+                  const _StudentAssignmentsTab(),
+                  const _StudentGradesTab(),
                   const _CourseEmptyTab(
                     icon: Icons.folder_outlined,
                     title: 'No files yet',
@@ -262,11 +262,43 @@ class _StudentOverviewTab extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 14),
+        GridView.count(
+          crossAxisCount: 2,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          mainAxisSpacing: 12,
+          crossAxisSpacing: 12,
+          childAspectRatio: 1.25,
+          children: const [
+            _StudentStatCard(
+              value: '0',
+              label: 'Completed',
+              icon: Icons.task_alt_rounded,
+            ),
+            _StudentStatCard(
+              value: '0',
+              label: 'Pending',
+              icon: Icons.pending_actions_rounded,
+            ),
+            _StudentStatCard(
+              value: '0',
+              label: 'Late',
+              icon: Icons.warning_amber_rounded,
+            ),
+            _StudentStatCard(
+              value: '—',
+              label: 'Average score',
+              icon: Icons.grade_rounded,
+            ),
+          ],
+        ),
+        const SizedBox(height: 14),
         _SectionCard(
           title: 'Learning progress',
           icon: Icons.insights_outlined,
           child: Text(
-            'Your learning progress will appear here when lessons and assignments are available.',
+            'Your lesson progress, assignment completion '
+            'and grades will appear here.',
             style: TextStyle(
               color: Theme.of(context)
                   .colorScheme
@@ -295,6 +327,83 @@ class _StudentOverviewTab extends StatelessWidget {
     }
 
     return '${parts.first[0]}${parts.last[0]}'.toUpperCase();
+  }
+}
+
+class _StudentAssignmentsTab extends StatelessWidget {
+  const _StudentAssignmentsTab();
+
+  @override
+  Widget build(BuildContext context) {
+    return const _CourseEmptyTab(
+      icon: Icons.assignment_outlined,
+      title: 'No assignments yet',
+      message:
+          'Assignments from your teacher will appear here. You will be able to submit text and files.',
+    );
+  }
+}
+
+class _StudentGradesTab extends StatelessWidget {
+  const _StudentGradesTab();
+
+  @override
+  Widget build(BuildContext context) {
+    return const _CourseEmptyTab(
+      icon: Icons.grade_outlined,
+      title: 'No grades yet',
+      message:
+          'Your scores and teacher feedback will appear here after your work is graded.',
+    );
+  }
+}
+
+class _StudentStatCard extends StatelessWidget {
+  final String value;
+  final String label;
+  final IconData icon;
+
+  const _StudentStatCard({
+    required this.value,
+    required this.label,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Card(
+      margin: EdgeInsets.zero,
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(
+              icon,
+              color: colorScheme.primary,
+            ),
+            const Spacer(),
+            Text(
+              value,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+            const SizedBox(height: 3),
+            Text(
+              label,
+              style: TextStyle(
+                color: colorScheme.onSurfaceVariant,
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -327,11 +436,13 @@ class _SectionCard extends StatelessWidget {
                   color: colorScheme.primary,
                 ),
                 const SizedBox(width: 9),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
+                Expanded(
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
               ],
@@ -361,7 +472,7 @@ class _CourseEmptyTab extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(28, 80, 28, 32),
+      padding: const EdgeInsets.fromLTRB(28, 76, 28, 32),
       children: [
         Icon(
           icon,
