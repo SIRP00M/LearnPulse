@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../models/course.dart';
+import 'student_attendance_tab.dart';
 
 class StudentCourseDetailPage extends StatelessWidget {
   final Course course;
@@ -28,6 +29,10 @@ class StudentCourseDetailPage extends StatelessWidget {
       icon: Icons.assignment_outlined,
     ),
     _CourseTabData(
+      label: 'Attendance',
+      icon: Icons.fact_check_outlined,
+    ),
+    _CourseTabData(
       label: 'Grades',
       icon: Icons.grade_outlined,
     ),
@@ -43,13 +48,20 @@ class StudentCourseDetailPage extends StatelessWidget {
       length: _tabs.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(course.courseCode),
+          title: Text(
+            course.courseCode.isEmpty
+                ? course.title
+                : course.courseCode,
+          ),
         ),
         body: Column(
           children: [
-            _StudentCourseHeader(course: course),
+            _StudentCourseHeader(
+              course: course,
+            ),
             Material(
-              color: Theme.of(context).colorScheme.surface,
+              color:
+                  Theme.of(context).colorScheme.surface,
               child: TabBar(
                 isScrollable: true,
                 tabAlignment: TabAlignment.start,
@@ -65,7 +77,9 @@ class StudentCourseDetailPage extends StatelessWidget {
             Expanded(
               child: TabBarView(
                 children: [
-                  _StudentOverviewTab(course: course),
+                  _StudentOverviewTab(
+                    course: course,
+                  ),
                   const _CourseEmptyTab(
                     icon: Icons.campaign_outlined,
                     title: 'No posts yet',
@@ -73,12 +87,17 @@ class StudentCourseDetailPage extends StatelessWidget {
                         'Announcements from your teacher will appear here.',
                   ),
                   const _CourseEmptyTab(
-                    icon: Icons.play_lesson_outlined,
+                    icon:
+                        Icons.play_lesson_outlined,
                     title: 'No lessons yet',
                     message:
                         'Lessons published by your teacher will appear here.',
                   ),
                   const _StudentAssignmentsTab(),
+                 StudentAttendanceTab(
+  courseId: course.id,
+  courseTitle: course.title,
+),
                   const _StudentGradesTab(),
                   const _CourseEmptyTab(
                     icon: Icons.folder_outlined,
@@ -105,32 +124,43 @@ class _StudentCourseHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final colorScheme =
+        Theme.of(context).colorScheme;
 
-    final teacherName = course.teacherName.trim().isEmpty
-        ? 'Unknown teacher'
-        : course.teacherName.trim();
+    final teacherName =
+        course.teacherName.trim().isEmpty
+            ? 'Unknown teacher'
+            : course.teacherName.trim();
 
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.fromLTRB(16, 10, 16, 14),
+      margin: const EdgeInsets.fromLTRB(
+        16,
+        10,
+        16,
+        14,
+      ),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: colorScheme.primaryContainer,
-        borderRadius: BorderRadius.circular(24),
+        borderRadius:
+            BorderRadius.circular(24),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment:
+            CrossAxisAlignment.start,
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment:
+                CrossAxisAlignment.start,
             children: [
               Container(
                 width: 54,
                 height: 54,
                 decoration: BoxDecoration(
                   color: colorScheme.primary,
-                  borderRadius: BorderRadius.circular(17),
+                  borderRadius:
+                      BorderRadius.circular(17),
                 ),
                 child: Icon(
                   Icons.school_rounded,
@@ -141,23 +171,30 @@ class _StudentCourseHeader extends StatelessWidget {
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start,
                   children: [
                     Text(
                       course.title,
                       style: TextStyle(
-                        color: colorScheme.onPrimaryContainer,
+                        color: colorScheme
+                            .onPrimaryContainer,
                         fontSize: 22,
-                        fontWeight: FontWeight.w900,
+                        fontWeight:
+                            FontWeight.w900,
                       ),
                     ),
                     const SizedBox(height: 5),
                     Text(
                       course.courseCode,
                       style: TextStyle(
-                        color: colorScheme.onPrimaryContainer
-                            .withValues(alpha: 0.75),
-                        fontWeight: FontWeight.w700,
+                        color: colorScheme
+                            .onPrimaryContainer
+                            .withValues(
+                          alpha: 0.75,
+                        ),
+                        fontWeight:
+                            FontWeight.w700,
                         letterSpacing: 1.2,
                       ),
                     ),
@@ -166,14 +203,18 @@ class _StudentCourseHeader extends StatelessWidget {
               ),
             ],
           ),
-          if (course.description.trim().isNotEmpty) ...[
+          if (course.description
+              .trim()
+              .isNotEmpty) ...[
             const SizedBox(height: 18),
             Text(
               course.description,
               maxLines: 3,
-              overflow: TextOverflow.ellipsis,
+              overflow:
+                  TextOverflow.ellipsis,
               style: TextStyle(
-                color: colorScheme.onPrimaryContainer,
+                color: colorScheme
+                    .onPrimaryContainer,
                 height: 1.45,
               ),
             ),
@@ -184,15 +225,18 @@ class _StudentCourseHeader extends StatelessWidget {
               Icon(
                 Icons.person_outline_rounded,
                 size: 19,
-                color: colorScheme.onPrimaryContainer,
+                color: colorScheme
+                    .onPrimaryContainer,
               ),
               const SizedBox(width: 7),
               Expanded(
                 child: Text(
                   teacherName,
                   style: TextStyle(
-                    color: colorScheme.onPrimaryContainer,
-                    fontWeight: FontWeight.w700,
+                    color: colorScheme
+                        .onPrimaryContainer,
+                    fontWeight:
+                        FontWeight.w700,
                   ),
                 ),
               ),
@@ -204,7 +248,8 @@ class _StudentCourseHeader extends StatelessWidget {
   }
 }
 
-class _StudentOverviewTab extends StatelessWidget {
+class _StudentOverviewTab
+    extends StatelessWidget {
   final Course course;
 
   const _StudentOverviewTab({
@@ -213,16 +258,23 @@ class _StudentOverviewTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final overview = course.overview.trim().isNotEmpty
-        ? course.overview.trim()
-        : course.description.trim();
+    final overview =
+        course.overview.trim().isNotEmpty
+            ? course.overview.trim()
+            : course.description.trim();
 
-    final teacherName = course.teacherName.trim().isEmpty
-        ? 'Unknown teacher'
-        : course.teacherName.trim();
+    final teacherName =
+        course.teacherName.trim().isEmpty
+            ? 'Unknown teacher'
+            : course.teacherName.trim();
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 18, 16, 32),
+      padding: const EdgeInsets.fromLTRB(
+        16,
+        18,
+        16,
+        32,
+      ),
       children: [
         _SectionCard(
           title: 'About this course',
@@ -231,7 +283,9 @@ class _StudentOverviewTab extends StatelessWidget {
             overview.isEmpty
                 ? 'The teacher has not added a course overview yet.'
                 : overview,
-            style: const TextStyle(height: 1.55),
+            style: const TextStyle(
+              height: 1.55,
+            ),
           ),
         ),
         const SizedBox(height: 14),
@@ -244,7 +298,8 @@ class _StudentOverviewTab extends StatelessWidget {
                 child: Text(
                   _initials(teacherName),
                   style: const TextStyle(
-                    fontWeight: FontWeight.w800,
+                    fontWeight:
+                        FontWeight.w800,
                   ),
                 ),
               ),
@@ -254,7 +309,8 @@ class _StudentOverviewTab extends StatelessWidget {
                   teacherName,
                   style: const TextStyle(
                     fontSize: 15,
-                    fontWeight: FontWeight.w700,
+                    fontWeight:
+                        FontWeight.w700,
                   ),
                 ),
               ),
@@ -265,7 +321,8 @@ class _StudentOverviewTab extends StatelessWidget {
         GridView.count(
           crossAxisCount: 2,
           shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+          physics:
+              const NeverScrollableScrollPhysics(),
           mainAxisSpacing: 12,
           crossAxisSpacing: 12,
           childAspectRatio: 1.25,
@@ -278,12 +335,14 @@ class _StudentOverviewTab extends StatelessWidget {
             _StudentStatCard(
               value: '0',
               label: 'Pending',
-              icon: Icons.pending_actions_rounded,
+              icon:
+                  Icons.pending_actions_rounded,
             ),
             _StudentStatCard(
               value: '0',
               label: 'Late',
-              icon: Icons.warning_amber_rounded,
+              icon:
+                  Icons.warning_amber_rounded,
             ),
             _StudentStatCard(
               value: '—',
@@ -315,7 +374,9 @@ class _StudentOverviewTab extends StatelessWidget {
     final parts = fullName
         .trim()
         .split(RegExp(r'\s+'))
-        .where((part) => part.isNotEmpty)
+        .where(
+          (part) => part.isNotEmpty,
+        )
         .toList();
 
     if (parts.isEmpty) {
@@ -323,14 +384,18 @@ class _StudentOverviewTab extends StatelessWidget {
     }
 
     if (parts.length == 1) {
-      return parts.first.substring(0, 1).toUpperCase();
+      return parts.first
+          .substring(0, 1)
+          .toUpperCase();
     }
 
-    return '${parts.first[0]}${parts.last[0]}'.toUpperCase();
+    return '${parts.first[0]}${parts.last[0]}'
+        .toUpperCase();
   }
 }
 
-class _StudentAssignmentsTab extends StatelessWidget {
+class _StudentAssignmentsTab
+    extends StatelessWidget {
   const _StudentAssignmentsTab();
 
   @override
@@ -339,12 +404,14 @@ class _StudentAssignmentsTab extends StatelessWidget {
       icon: Icons.assignment_outlined,
       title: 'No assignments yet',
       message:
-          'Assignments from your teacher will appear here. You will be able to submit text and files.',
+          'Assignments from your teacher will appear here. '
+          'You will be able to submit text and files.',
     );
   }
 }
 
-class _StudentGradesTab extends StatelessWidget {
+class _StudentGradesTab
+    extends StatelessWidget {
   const _StudentGradesTab();
 
   @override
@@ -353,12 +420,14 @@ class _StudentGradesTab extends StatelessWidget {
       icon: Icons.grade_outlined,
       title: 'No grades yet',
       message:
-          'Your scores and teacher feedback will appear here after your work is graded.',
+          'Your scores and teacher feedback will appear here '
+          'after your work is graded.',
     );
   }
 }
 
-class _StudentStatCard extends StatelessWidget {
+class _StudentStatCard
+    extends StatelessWidget {
   final String value;
   final String label;
   final IconData icon;
@@ -371,14 +440,16 @@ class _StudentStatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final colorScheme =
+        Theme.of(context).colorScheme;
 
     return Card(
       margin: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(14),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment:
+              CrossAxisAlignment.start,
           children: [
             Icon(
               icon,
@@ -389,14 +460,16 @@ class _StudentStatCard extends StatelessWidget {
               value,
               style: const TextStyle(
                 fontSize: 20,
-                fontWeight: FontWeight.w900,
+                fontWeight:
+                    FontWeight.w900,
               ),
             ),
             const SizedBox(height: 3),
             Text(
               label,
               style: TextStyle(
-                color: colorScheme.onSurfaceVariant,
+                color: colorScheme
+                    .onSurfaceVariant,
                 fontSize: 12,
               ),
             ),
@@ -420,14 +493,16 @@ class _SectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final colorScheme =
+        Theme.of(context).colorScheme;
 
     return Card(
       margin: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(17),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment:
+              CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -441,7 +516,8 @@ class _SectionCard extends StatelessWidget {
                     title,
                     style: const TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w800,
+                      fontWeight:
+                          FontWeight.w800,
                     ),
                   ),
                 ),
@@ -456,7 +532,8 @@ class _SectionCard extends StatelessWidget {
   }
 }
 
-class _CourseEmptyTab extends StatelessWidget {
+class _CourseEmptyTab
+    extends StatelessWidget {
   final IconData icon;
   final String title;
   final String message;
@@ -469,15 +546,22 @@ class _CourseEmptyTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final colorScheme =
+        Theme.of(context).colorScheme;
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(28, 76, 28, 32),
+      padding: const EdgeInsets.fromLTRB(
+        28,
+        76,
+        28,
+        32,
+      ),
       children: [
         Icon(
           icon,
           size: 65,
-          color: colorScheme.primary.withValues(alpha: 0.65),
+          color: colorScheme.primary
+              .withValues(alpha: 0.65),
         ),
         const SizedBox(height: 18),
         Text(
@@ -485,7 +569,8 @@ class _CourseEmptyTab extends StatelessWidget {
           textAlign: TextAlign.center,
           style: const TextStyle(
             fontSize: 19,
-            fontWeight: FontWeight.w800,
+            fontWeight:
+                FontWeight.w800,
           ),
         ),
         const SizedBox(height: 8),
@@ -493,7 +578,8 @@ class _CourseEmptyTab extends StatelessWidget {
           message,
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: colorScheme.onSurfaceVariant,
+            color:
+                colorScheme.onSurfaceVariant,
             height: 1.45,
           ),
         ),
