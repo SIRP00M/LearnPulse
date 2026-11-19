@@ -1,0 +1,4488 @@
+{
+  "@@locale": "en",
+  "commonCancel": "Cancel",
+  "@commonCancel": {
+    "description": "Generic Cancel button"
+  },
+  "commonSave": "Save",
+  "@commonSave": {
+    "description": "Generic Save button"
+  },
+  "commonClose": "Close",
+  "@commonClose": {
+    "description": "Generic Close button"
+  },
+  "commonDelete": "Delete",
+  "@commonDelete": {
+    "description": "Generic Delete button"
+  },
+  "commonConfirm": "Confirm",
+  "@commonConfirm": {
+    "description": "Generic Confirm button"
+  },
+  "commonBack": "Go back",
+  "@commonBack": {
+    "description": "Secondary action that returns to the previous screen"
+  },
+  "commonTryAgain": "Try again",
+  "@commonTryAgain": {
+    "description": "Retry button label"
+  },
+  "commonTryingAgain": "Trying again…",
+  "@commonTryingAgain": {
+    "description": "Retry button label while the retry runs"
+  },
+  "commonLoading": "Loading",
+  "@commonLoading": {
+    "description": "Accessibility label of loading indicators and skeletons"
+  },
+  "commonStillWorking": "Still working… this is taking longer than usual.",
+  "@commonStillWorking": {
+    "description": "Shown when a load is slow"
+  },
+  "commonSignOut": "Sign out",
+  "@commonSignOut": {
+    "description": "Sign out action"
+  },
+  "commonSignInAgain": "Sign in again",
+  "@commonSignInAgain": {
+    "description": "Sign in again action"
+  },
+  "commonNoDataYet": "No data yet",
+  "@commonNoDataYet": {
+    "description": "Shown instead of a percentage when no data exists"
+  },
+  "commonUnknown": "Unknown",
+  "@commonUnknown": {
+    "description": "Value shown when something is not available"
+  },
+  "configErrorTitle": "Configuration error",
+  "@configErrorTitle": {
+    "description": "Heading of the build configuration error screen"
+  },
+  "navDashboard": "Dashboard",
+  "@navDashboard": {
+    "description": "Bottom navigation: dashboard tab"
+  },
+  "navTasks": "Tasks",
+  "@navTasks": {
+    "description": "Bottom navigation: tasks tab"
+  },
+  "navCourses": "Courses",
+  "@navCourses": {
+    "description": "Bottom navigation: courses tab"
+  },
+  "navProfile": "Profile",
+  "@navProfile": {
+    "description": "Bottom navigation: profile tab"
+  },
+  "navOpenProfile": "Open profile",
+  "@navOpenProfile": {
+    "description": "Tooltip of the avatar button in the app bar"
+  },
+  "homeNameFallback": "there",
+  "@homeNameFallback": {
+    "description": "Used in place of the name when a profile has no name (as in \"Welcome, there\")"
+  },
+  "relativeToday": "Today",
+  "@relativeToday": {
+    "description": "Relative day label"
+  },
+  "relativeTomorrow": "Tomorrow",
+  "@relativeTomorrow": {
+    "description": "Relative day label"
+  },
+  "relativeYesterday": "Yesterday",
+  "@relativeYesterday": {
+    "description": "Relative day label"
+  },
+  "roleTeacher": "Teacher",
+  "@roleTeacher": {
+    "description": "Role name"
+  },
+  "roleStudent": "Student",
+  "@roleStudent": {
+    "description": "Role name"
+  },
+  "languageTitle": "Language",
+  "@languageTitle": {
+    "description": "Heading of the language setting"
+  },
+  "languageHint": "Saved on this device only. The language never changes deadlines, schedules or time zones.",
+  "@languageHint": {
+    "description": "Explains where the language is stored"
+  },
+  "languageSelectorLabel": "Choose language",
+  "@languageSelectorLabel": {
+    "description": "Accessible label of the language selector"
+  },
+  "authPortalEyebrow": "LEARNPULSE ACADEMIC PORTAL",
+  "@authPortalEyebrow": {
+    "description": "Small uppercase label above the welcome headline"
+  },
+  "authWelcomeTitle": "Welcome to\nLearnPulse.",
+  "@authWelcomeTitle": {
+    "description": "Welcome headline on the sign-in screen (line break kept)"
+  },
+  "authTagline": "Courses, assignments and attendance. Your learning, together.",
+  "@authTagline": {
+    "description": "Tagline under the headline"
+  },
+  "authSignIn": "Sign in",
+  "@authSignIn": {
+    "description": "Sign in title and button"
+  },
+  "authEmail": "Email",
+  "@authEmail": {
+    "description": "Email field label"
+  },
+  "authPassword": "Password",
+  "@authPassword": {
+    "description": "Password field label"
+  },
+  "authShowPassword": "Show password",
+  "@authShowPassword": {
+    "description": "Tooltip to reveal the password"
+  },
+  "authHidePassword": "Hide password",
+  "@authHidePassword": {
+    "description": "Tooltip to hide the password"
+  },
+  "authForgotPassword": "Forgot password?",
+  "@authForgotPassword": {
+    "description": "Link to the reset flow"
+  },
+  "authCreateStudentAccount": "Create a student account",
+  "@authCreateStudentAccount": {
+    "description": "Button to open sign-up"
+  },
+  "authCreateYourAccount": "Create your account",
+  "@authCreateYourAccount": {
+    "description": "Sign-up screen title"
+  },
+  "authFullName": "Full name",
+  "@authFullName": {
+    "description": "Full name field label"
+  },
+  "authPasswordHelper": "10+ characters with upper case, lower case and a digit",
+  "@authPasswordHelper": {
+    "description": "Password policy helper text"
+  },
+  "authTeacherNote": "Teachers: use the email address your invitation was sent to. Your role is assigned by the school after you confirm your email.",
+  "@authTeacherNote": {
+    "description": "Note about teacher accounts on the sign-up screen"
+  },
+  "authCreateAccount": "Create account",
+  "@authCreateAccount": {
+    "description": "Create account button"
+  },
+  "authHaveAccount": "I already have an account",
+  "@authHaveAccount": {
+    "description": "Link back to sign-in"
+  },
+  "authResetTitle": "Reset your password",
+  "@authResetTitle": {
+    "description": "Forgot-password screen title"
+  },
+  "authSendResetLink": "Send reset link",
+  "@authSendResetLink": {
+    "description": "Button that emails a reset link"
+  },
+  "authBackToSignIn": "Back to sign in",
+  "@authBackToSignIn": {
+    "description": "Link back to sign-in"
+  },
+  "authCheckEmailTitle": "Check your email",
+  "@authCheckEmailTitle": {
+    "description": "Confirm-email screen title"
+  },
+  "authYourEmailAddress": "your email address",
+  "@authYourEmailAddress": {
+    "description": "Fallback when the pending email is unknown (\"your email address\")"
+  },
+  "authConfirmSent": "We sent a confirmation link to {email}. Open it on this phone to finish signing in.",
+  "@authConfirmSent": {
+    "description": "Confirm-email body",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "authResendEmail": "Resend email",
+  "@authResendEmail": {
+    "description": "Resend button"
+  },
+  "authResendEmailIn": "Resend email in {seconds}s",
+  "@authResendEmailIn": {
+    "description": "Resend button while cooling down",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "authConfirmedSignIn": "I've confirmed - sign in",
+  "@authConfirmedSignIn": {
+    "description": "Link for users who confirmed elsewhere"
+  },
+  "authNewPasswordTitle": "Choose a new password",
+  "@authNewPasswordTitle": {
+    "description": "Set-password screen title"
+  },
+  "authNewPassword": "New password",
+  "@authNewPassword": {
+    "description": "New password field label"
+  },
+  "authSavePassword": "Save password",
+  "@authSavePassword": {
+    "description": "Save password button"
+  },
+  "authSessionExpiredTitle": "Session expired",
+  "@authSessionExpiredTitle": {
+    "description": "Title of the session-expired screen"
+  },
+  "authSignedOutTitle": "You were signed out",
+  "@authSignedOutTitle": {
+    "description": "Heading in the session-expired panel"
+  },
+  "authSessionEnded": "For your security your session ended. Sign in again to pick up where you left off.",
+  "@authSessionEnded": {
+    "description": "Body in the session-expired panel"
+  },
+  "authCantReach": "Can't reach LearnPulse",
+  "@authCantReach": {
+    "description": "Profile-load error title when offline"
+  },
+  "authAccountNotReady": "Account not ready",
+  "@authAccountNotReady": {
+    "description": "Profile-load error title"
+  },
+  "noticeConfirmationSent": "Confirmation email sent to {email}.",
+  "@noticeConfirmationSent": {
+    "description": "Notice after resending the confirmation email",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "noticeResetSent": "If an account exists for that address, a reset link is on its way.",
+  "@noticeResetSent": {
+    "description": "Notice after requesting a reset link (same whether or not the address exists)"
+  },
+  "noticePasswordUpdated": "Password updated.",
+  "@noticePasswordUpdated": {
+    "description": "Notice after saving a new password"
+  },
+  "noticeNameSaved": "Display name saved.",
+  "@noticeNameSaved": {
+    "description": "Notice after saving the display name"
+  },
+  "noticePasswordLinkSent": "A password reset link is on its way to {email}.",
+  "@noticePasswordLinkSent": {
+    "description": "Notice after emailing a password reset link to the signed-in user",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "errorNetwork": "No connection to the server. Check your network and try again.",
+  "@errorNetwork": {
+    "description": "Error message"
+  },
+  "errorTimeout": "The server took too long to answer. Try again in a moment.",
+  "@errorTimeout": {
+    "description": "Error message"
+  },
+  "errorInvalidCredentials": "Email or password is incorrect.",
+  "@errorInvalidCredentials": {
+    "description": "Error message"
+  },
+  "errorEmailNotConfirmed": "Please confirm your email address first.",
+  "@errorEmailNotConfirmed": {
+    "description": "Error message"
+  },
+  "errorRateLimited": "Too many attempts. Please wait a moment and try again.",
+  "@errorRateLimited": {
+    "description": "Error message"
+  },
+  "errorRateLimitedLong": "Too many attempts. Please wait a few minutes and try again.",
+  "@errorRateLimitedLong": {
+    "description": "Error message"
+  },
+  "errorWeakPassword": "Choose a stronger password (10+ characters with upper, lower case and a digit).",
+  "@errorWeakPassword": {
+    "description": "Error message"
+  },
+  "errorSignupDisabled": "Registration is currently closed.",
+  "@errorSignupDisabled": {
+    "description": "Error message"
+  },
+  "errorFileForbidden": "You are not allowed to upload or open that file.",
+  "@errorFileForbidden": {
+    "description": "Error message"
+  },
+  "errorFileTooLarge": "That file is too large (10 MB maximum).",
+  "@errorFileTooLarge": {
+    "description": "Error message"
+  },
+  "errorFileType": "That file type is not allowed.",
+  "@errorFileType": {
+    "description": "Error message"
+  },
+  "errorForbidden": "You do not have permission to do that.",
+  "@errorForbidden": {
+    "description": "Error message"
+  },
+  "errorCourseNotFound": "That course was not found, or you no longer have access to it.",
+  "@errorCourseNotFound": {
+    "description": "Error message"
+  },
+  "errorValidation": "Please check the details and try again.",
+  "@errorValidation": {
+    "description": "Error message"
+  },
+  "errorSessionExpired": "Your session has expired. Please sign in again.",
+  "@errorSessionExpired": {
+    "description": "Error message"
+  },
+  "errorUnknown": "Something went wrong. Please try again.",
+  "@errorUnknown": {
+    "description": "Error message"
+  },
+  "errorNotSignedIn": "You are not signed in.",
+  "@errorNotSignedIn": {
+    "description": "Error message"
+  },
+  "errorNameNotSaved": "Your name could not be saved.",
+  "@errorNameNotSaved": {
+    "description": "Error message"
+  },
+  "errorProfileNotReady": "Your account is not ready yet. Please try again in a moment.",
+  "@errorProfileNotReady": {
+    "description": "Error message"
+  },
+  "stateOfflineTitle": "You are offline",
+  "@stateOfflineTitle": {
+    "description": "Offline panel title"
+  },
+  "stateOfflineMessage": "Check your connection, then try again. Anything you have already saved is safe.",
+  "@stateOfflineMessage": {
+    "description": "Offline panel text"
+  },
+  "stateTimeoutTitle": "This is taking too long",
+  "@stateTimeoutTitle": {
+    "description": "Timeout panel title"
+  },
+  "stateTimeoutMessage": "The connection looks slow. Try again, or move somewhere with a better signal.",
+  "@stateTimeoutMessage": {
+    "description": "Timeout panel text"
+  },
+  "stateExpiredTitle": "Session expired",
+  "@stateExpiredTitle": {
+    "description": "Expired-session panel title"
+  },
+  "stateExpiredMessage": "For your security you were signed out. Sign in again to carry on.",
+  "@stateExpiredMessage": {
+    "description": "Expired-session panel text"
+  },
+  "stateForbiddenTitle": "Access denied",
+  "@stateForbiddenTitle": {
+    "description": "Forbidden panel title"
+  },
+  "stateForbiddenMessage": "Your account does not have permission to open this.",
+  "@stateForbiddenMessage": {
+    "description": "Forbidden panel text"
+  },
+  "stateNotFoundTitle": "Not found",
+  "@stateNotFoundTitle": {
+    "description": "Not-found panel title"
+  },
+  "stateNotFoundMessage": "This may have been removed, or you may no longer have access to it.",
+  "@stateNotFoundMessage": {
+    "description": "Not-found panel text"
+  },
+  "stateConflictTitle": "This changed elsewhere",
+  "@stateConflictTitle": {
+    "description": "Conflict panel title"
+  },
+  "stateConflictMessage": "Refresh to see the latest version, then try again.",
+  "@stateConflictMessage": {
+    "description": "Conflict panel text"
+  },
+  "stateUnknownTitle": "Could not load this",
+  "@stateUnknownTitle": {
+    "description": "Generic failure panel title"
+  },
+  "stateUnknownMessage": "Something unexpected happened. Please try again.",
+  "@stateUnknownMessage": {
+    "description": "Generic failure panel text"
+  },
+  "stateCouldNotRefresh": "Could not refresh: {message} Showing the last loaded figures.",
+  "@stateCouldNotRefresh": {
+    "description": "Inline warning when a refresh failed but old data is shown; {message} is a localized error sentence",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "validationEmailRequired": "Enter your email address",
+  "@validationEmailRequired": {
+    "description": "Validation message"
+  },
+  "validationEmailInvalid": "Enter a valid email address",
+  "@validationEmailInvalid": {
+    "description": "Validation message"
+  },
+  "validationPasswordRequired": "Enter your password",
+  "@validationPasswordRequired": {
+    "description": "Validation message"
+  },
+  "validationPasswordShort": "Use at least 10 characters",
+  "@validationPasswordShort": {
+    "description": "Validation message"
+  },
+  "validationPasswordMix": "Include upper case, lower case and a digit",
+  "@validationPasswordMix": {
+    "description": "Validation message"
+  },
+  "validationNameRequired": "Enter your name",
+  "@validationNameRequired": {
+    "description": "Validation message"
+  },
+  "validationNameLong": "Name is too long",
+  "@validationNameLong": {
+    "description": "Validation message"
+  },
+  "profileTeachingSummary": "Teaching summary",
+  "@profileTeachingSummary": {
+    "description": "Section title"
+  },
+  "profileLearningSummary": "Learning summary",
+  "@profileLearningSummary": {
+    "description": "Section title"
+  },
+  "profileTeachingSubtitle": "Your courses. Your impact.",
+  "@profileTeachingSubtitle": {
+    "description": "Section subtitle"
+  },
+  "profileLearningSubtitle": "A clear view of how you are doing.",
+  "@profileLearningSubtitle": {
+    "description": "Section subtitle"
+  },
+  "profileTeachingIdentity": "YOUR TEACHING IDENTITY",
+  "@profileTeachingIdentity": {
+    "description": "Uppercase eyebrow on the identity card"
+  },
+  "profileLearningIdentity": "YOUR LEARNING IDENTITY",
+  "@profileLearningIdentity": {
+    "description": "Uppercase eyebrow on the identity card"
+  },
+  "profileNoName": "No name set",
+  "@profileNoName": {
+    "description": "Shown when the profile has no name"
+  },
+  "profileAccountSettings": "Account & settings",
+  "@profileAccountSettings": {
+    "description": "Button and page title"
+  },
+  "profileCoursesRosters": "My courses and rosters",
+  "@profileCoursesRosters": {
+    "description": "Teacher shortcut button"
+  },
+  "profileCoursesAttendance": "My courses and attendance",
+  "@profileCoursesAttendance": {
+    "description": "Student shortcut button"
+  },
+  "metricCoursesOwned": "Courses owned",
+  "@metricCoursesOwned": {
+    "description": "Metric label"
+  },
+  "metricArchived": "{count} archived",
+  "@metricArchived": {
+    "description": "Metric hint",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "metricActiveStudents": "Active students",
+  "@metricActiveStudents": {
+    "description": "Metric label"
+  },
+  "metricAwaitingGrading": "Awaiting grading",
+  "@metricAwaitingGrading": {
+    "description": "Metric label"
+  },
+  "metricAttendanceRate": "Attendance rate",
+  "@metricAttendanceRate": {
+    "description": "Metric label"
+  },
+  "metricOpenSessions": "{count, plural, =1{1 open session} other{{count} open sessions}}",
+  "@metricOpenSessions": {
+    "description": "Metric hint",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "metricTeacherNote": "Figures cover only your own active courses and their active students.",
+  "@metricTeacherNote": {
+    "description": "Footnote under the teacher figures"
+  },
+  "metricEnrolledCourses": "Enrolled courses",
+  "@metricEnrolledCourses": {
+    "description": "Metric label"
+  },
+  "metricAssignmentsDone": "Assignments done",
+  "@metricAssignmentsDone": {
+    "description": "Metric label"
+  },
+  "metricDoneOfPublished": "{done} of {published}",
+  "@metricDoneOfPublished": {
+    "description": "Metric value",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "published": {
+        "type": "int"
+      }
+    }
+  },
+  "metricSubmittedOrGraded": "Submitted or graded",
+  "@metricSubmittedOrGraded": {
+    "description": "Metric hint"
+  },
+  "metricAwaitingGrade": "Awaiting grade",
+  "@metricAwaitingGrade": {
+    "description": "Metric label"
+  },
+  "metricGraded": "Graded",
+  "@metricGraded": {
+    "description": "Metric label"
+  },
+  "metricNoGradesYet": "No grades yet",
+  "@metricNoGradesYet": {
+    "description": "Metric hint"
+  },
+  "metricAverage": "Average {value}",
+  "@metricAverage": {
+    "description": "Metric hint; {value} is a formatted percentage",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "metricReturnedRevision": "Returned for revision",
+  "@metricReturnedRevision": {
+    "description": "Metric label"
+  },
+  "metricStudentNote": "Done = submitted or graded, out of published assignments in your active courses. Attendance = (present + late) / (present + late + absent). Lesson completion is not tracked.",
+  "@metricStudentNote": {
+    "description": "Footnote under the student figures"
+  },
+  "accountTitle": "Account",
+  "@accountTitle": {
+    "description": "Section title"
+  },
+  "accountRegisteredEmail": "Registered email",
+  "@accountRegisteredEmail": {
+    "description": "List tile title"
+  },
+  "accountRole": "Role",
+  "@accountRole": {
+    "description": "List tile title"
+  },
+  "accountManagedNote": "Your email and role are managed by the school administrator and cannot be changed in the app.",
+  "@accountManagedNote": {
+    "description": "Note"
+  },
+  "accountPassword": "Password",
+  "@accountPassword": {
+    "description": "Section title"
+  },
+  "accountEmailResetLink": "Email me a password reset link",
+  "@accountEmailResetLink": {
+    "description": "Button"
+  },
+  "accountPrivacy": "Privacy & security",
+  "@accountPrivacy": {
+    "description": "Section title"
+  },
+  "accountPrivacyText": "Teachers see only students enrolled in their own courses; students see only their own work and their course teachers. Your data is not public and there is no public directory. Files are private and open only through short-lived links.",
+  "@accountPrivacyText": {
+    "description": "Privacy paragraph"
+  },
+  "accountAbout": "About",
+  "@accountAbout": {
+    "description": "Section title"
+  },
+  "accountVersion": "Version {version} (beta)",
+  "@accountVersion": {
+    "description": "Version line",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "accountSignOutTitle": "Sign out?",
+  "@accountSignOutTitle": {
+    "description": "Sign-out dialog title"
+  },
+  "accountSignOutBody": "You will need to sign in again to use LearnPulse.",
+  "@accountSignOutBody": {
+    "description": "Sign-out dialog text"
+  },
+  "accountEyebrow": "Profile",
+  "@accountEyebrow": {
+    "description": "Page header eyebrow"
+  },
+  "accountDescription": "Manage your identity, account access and privacy.",
+  "@accountDescription": {
+    "description": "Page header description"
+  },
+  "accountPersonalDetails": "Personal details",
+  "@accountPersonalDetails": {
+    "description": "Section title"
+  },
+  "accountDisplayName": "Display name",
+  "@accountDisplayName": {
+    "description": "Field label"
+  },
+  "accountSaveName": "Save name",
+  "@accountSaveName": {
+    "description": "Button"
+  },
+  "commonAll": "All",
+  "@commonAll": {
+    "description": "Mobile UI text (commonAll)"
+  },
+  "commonActive": "Active",
+  "@commonActive": {
+    "description": "Mobile UI text (commonActive)"
+  },
+  "commonArchived": "Archived",
+  "@commonArchived": {
+    "description": "Mobile UI text (commonArchived)"
+  },
+  "commonDraft": "Draft",
+  "@commonDraft": {
+    "description": "Mobile UI text (commonDraft)"
+  },
+  "commonPublished": "Published",
+  "@commonPublished": {
+    "description": "Mobile UI text (commonPublished)"
+  },
+  "commonPublish": "Publish",
+  "@commonPublish": {
+    "description": "Mobile UI text (commonPublish)"
+  },
+  "commonCreate": "Create",
+  "@commonCreate": {
+    "description": "Mobile UI text (commonCreate)"
+  },
+  "commonTitle": "Title",
+  "@commonTitle": {
+    "description": "Mobile UI text (commonTitle)"
+  },
+  "commonCopy": "Copy",
+  "@commonCopy": {
+    "description": "Mobile UI text (commonCopy)"
+  },
+  "commonDone": "Done",
+  "@commonDone": {
+    "description": "Mobile UI text (commonDone)"
+  },
+  "commonJoin": "Join",
+  "@commonJoin": {
+    "description": "Mobile UI text (commonJoin)"
+  },
+  "commonRemove": "Remove",
+  "@commonRemove": {
+    "description": "Mobile UI text (commonRemove)"
+  },
+  "commonChange": "Change",
+  "@commonChange": {
+    "description": "Mobile UI text (commonChange)"
+  },
+  "commonOpen": "Open",
+  "@commonOpen": {
+    "description": "Mobile UI text (commonOpen)"
+  },
+  "commonClosed": "Closed",
+  "@commonClosed": {
+    "description": "Mobile UI text (commonClosed)"
+  },
+  "commonAttendance": "Attendance",
+  "@commonAttendance": {
+    "description": "Mobile UI text (commonAttendance)"
+  },
+  "commonAssignments": "Assignments",
+  "@commonAssignments": {
+    "description": "Mobile UI text (commonAssignments)"
+  },
+  "commonLessons": "Lessons",
+  "@commonLessons": {
+    "description": "Mobile UI text (commonLessons)"
+  },
+  "commonFiles": "Files",
+  "@commonFiles": {
+    "description": "Mobile UI text (commonFiles)"
+  },
+  "commonRemoveNamed": "Remove {name}",
+  "@commonRemoveNamed": {
+    "description": "Mobile UI text (commonRemoveNamed)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "commonOpenNamed": "Open {name}",
+  "@commonOpenNamed": {
+    "description": "Mobile UI text (commonOpenNamed)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "statusSubmitted": "Submitted",
+  "@statusSubmitted": {
+    "description": "Mobile UI text (statusSubmitted)"
+  },
+  "statusReturned": "Returned",
+  "@statusReturned": {
+    "description": "Mobile UI text (statusReturned)"
+  },
+  "statusToGrade": "To grade",
+  "@statusToGrade": {
+    "description": "Mobile UI text (statusToGrade)"
+  },
+  "attPresent": "Present",
+  "@attPresent": {
+    "description": "Mobile UI text (attPresent)"
+  },
+  "attLate": "Late",
+  "@attLate": {
+    "description": "Mobile UI text (attLate)"
+  },
+  "attExcused": "Excused",
+  "@attExcused": {
+    "description": "Mobile UI text (attExcused)"
+  },
+  "attAbsent": "Absent",
+  "@attAbsent": {
+    "description": "Mobile UI text (attAbsent)"
+  },
+  "validationTitleRequired": "Enter a title",
+  "@validationTitleRequired": {
+    "description": "Mobile UI text (validationTitleRequired)"
+  },
+  "validationTitleLong": "Use at most 120 characters",
+  "@validationTitleLong": {
+    "description": "Mobile UI text (validationTitleLong)"
+  },
+  "validationMaxScoreRange": "Enter a number from 1 to 1000",
+  "@validationMaxScoreRange": {
+    "description": "Mobile UI text (validationMaxScoreRange)"
+  },
+  "validationJoinCodeRequired": "Enter the course code",
+  "@validationJoinCodeRequired": {
+    "description": "Mobile UI text (validationJoinCodeRequired)"
+  },
+  "validationJoinCodeFormat": "Codes are 8 letters/digits (no I, O, 0 or 1)",
+  "@validationJoinCodeFormat": {
+    "description": "Mobile UI text (validationJoinCodeFormat)"
+  },
+  "errorScoreWhole": "Enter a whole number",
+  "@errorScoreWhole": {
+    "description": "Mobile UI text (errorScoreWhole)"
+  },
+  "errorScoreRange": "Score must be between 0 and {max}",
+  "@errorScoreRange": {
+    "description": "Mobile UI text (errorScoreRange)",
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "errorFeedbackLong": "Feedback is too long (5000 characters maximum).",
+  "@errorFeedbackLong": {
+    "description": "Mobile UI text (errorFeedbackLong)"
+  },
+  "errorReturnReason": "Explain what the student should revise.",
+  "@errorReturnReason": {
+    "description": "Mobile UI text (errorReturnReason)"
+  },
+  "errorFileLarger": "That file is larger than 10 MB.",
+  "@errorFileLarger": {
+    "description": "Mobile UI text (errorFileLarger)"
+  },
+  "errorFileEmpty": "That file is empty.",
+  "@errorFileEmpty": {
+    "description": "Mobile UI text (errorFileEmpty)"
+  },
+  "errorWriteOrAttach": "Write an answer or attach a file.",
+  "@errorWriteOrAttach": {
+    "description": "Mobile UI text (errorWriteOrAttach)"
+  },
+  "errorUploadIncomplete": "The file didn't finish uploading. Tap Submit to try again.",
+  "@errorUploadIncomplete": {
+    "description": "Mobile UI text (errorUploadIncomplete)"
+  },
+  "errorSubmissionChanged": "Your submission was changed on another device. Reload to continue; your text is kept.",
+  "@errorSubmissionChanged": {
+    "description": "Mobile UI text (errorSubmissionChanged)"
+  },
+  "errorGradeConflict": "This submission changed (for example the student resubmitted). Reload to see the latest; your typed score and feedback are kept.",
+  "@errorGradeConflict": {
+    "description": "Mobile UI text (errorGradeConflict)"
+  },
+  "errorFileNoAccess": "You do not have access to this file.",
+  "@errorFileNoAccess": {
+    "description": "Mobile UI text (errorFileNoAccess)"
+  },
+  "errorFileTypeList": "That file type is not allowed. Use pdf, docx, zip, png, jpg, webp or txt.",
+  "@errorFileTypeList": {
+    "description": "Mobile UI text (errorFileTypeList)"
+  },
+  "errorOpenFile": "Could not open the file.",
+  "@errorOpenFile": {
+    "description": "Mobile UI text (errorOpenFile)"
+  },
+  "noticeJoinedCourse": "Joined {title}.",
+  "@noticeJoinedCourse": {
+    "description": "Mobile UI text (noticeJoinedCourse)",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "noticeTheCourse": "the course",
+  "@noticeTheCourse": {
+    "description": "Mobile UI text (noticeTheCourse)"
+  },
+  "noticeSubmissionSaved": "Submission saved.",
+  "@noticeSubmissionSaved": {
+    "description": "Mobile UI text (noticeSubmissionSaved)"
+  },
+  "noticeGradeSaved": "Grade saved.",
+  "@noticeGradeSaved": {
+    "description": "Mobile UI text (noticeGradeSaved)"
+  },
+  "noticeReturnedForRevision": "Returned to the student for revision.",
+  "@noticeReturnedForRevision": {
+    "description": "Mobile UI text (noticeReturnedForRevision)"
+  },
+  "dashHello": "Hello, {name}",
+  "@dashHello": {
+    "description": "Mobile UI text (dashHello)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dashActiveCourses": "{count, plural, =1{1 active course} other{{count} active courses}}",
+  "@dashActiveCourses": {
+    "description": "Mobile UI text (dashActiveCourses)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashTeacherHeroDetail": "{courses} · {grading} awaiting grading",
+  "@dashTeacherHeroDetail": {
+    "description": "Mobile UI text (dashTeacherHeroDetail)",
+    "placeholders": {
+      "courses": {
+        "type": "String"
+      },
+      "grading": {
+        "type": "int"
+      }
+    }
+  },
+  "dashStudentHeroDetail": "{courses} · {done} of {published} assignments done",
+  "@dashStudentHeroDetail": {
+    "description": "Mobile UI text (dashStudentHeroDetail)",
+    "placeholders": {
+      "courses": {
+        "type": "String"
+      },
+      "done": {
+        "type": "int"
+      },
+      "published": {
+        "type": "int"
+      }
+    }
+  },
+  "dashStatCourses": "Courses",
+  "@dashStatCourses": {
+    "description": "Mobile UI text (dashStatCourses)"
+  },
+  "dashStatToGrade": "To grade",
+  "@dashStatToGrade": {
+    "description": "Mobile UI text (dashStatToGrade)"
+  },
+  "dashStatStudents": "Students",
+  "@dashStatStudents": {
+    "description": "Mobile UI text (dashStatStudents)"
+  },
+  "dashStatDone": "Done",
+  "@dashStatDone": {
+    "description": "Mobile UI text (dashStatDone)"
+  },
+  "dashServices": "Academic services",
+  "@dashServices": {
+    "description": "Mobile UI text (dashServices)"
+  },
+  "dashServiceGrading": "Grading",
+  "@dashServiceGrading": {
+    "description": "Mobile UI text (dashServiceGrading)"
+  },
+  "dashServiceProfile": "My profile",
+  "@dashServiceProfile": {
+    "description": "Mobile UI text (dashServiceProfile)"
+  },
+  "dashServiceProfileDetail": "Progress & account",
+  "@dashServiceProfileDetail": {
+    "description": "Mobile UI text (dashServiceProfileDetail)"
+  },
+  "dashDetailActive": "{count} active",
+  "@dashDetailActive": {
+    "description": "Mobile UI text (dashDetailActive)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashDetailToReview": "{count} to review",
+  "@dashDetailToReview": {
+    "description": "Mobile UI text (dashDetailToReview)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashDetailOpen": "{count} open",
+  "@dashDetailOpen": {
+    "description": "Mobile UI text (dashDetailOpen)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashDetailEnrolled": "{count} enrolled",
+  "@dashDetailEnrolled": {
+    "description": "Mobile UI text (dashDetailEnrolled)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashDetailPublished": "{count} published",
+  "@dashDetailPublished": {
+    "description": "Mobile UI text (dashDetailPublished)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashEmptyTeacherTitle": "Nothing to show yet",
+  "@dashEmptyTeacherTitle": {
+    "description": "Mobile UI text (dashEmptyTeacherTitle)"
+  },
+  "dashEmptyTeacherHint": "Create a course in the Courses tab. This page fills in as students join, submit work and attend.",
+  "@dashEmptyTeacherHint": {
+    "description": "Mobile UI text (dashEmptyTeacherHint)"
+  },
+  "dashNeedsAttention": "Needs attention",
+  "@dashNeedsAttention": {
+    "description": "Mobile UI text (dashNeedsAttention)"
+  },
+  "dashAllCaughtUp": "All caught up",
+  "@dashAllCaughtUp": {
+    "description": "Mobile UI text (dashAllCaughtUp)"
+  },
+  "dashSubmissionsAwaiting": "{count, plural, =1{1 submission awaiting grading} other{{count} submissions awaiting grading}}",
+  "@dashSubmissionsAwaiting": {
+    "description": "Mobile UI text (dashSubmissionsAwaiting)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashSubmittedLine": "Submitted: {received} of {expected} · attendance {rate}",
+  "@dashSubmittedLine": {
+    "description": "Mobile UI text (dashSubmittedLine)",
+    "placeholders": {
+      "received": {
+        "type": "int"
+      },
+      "expected": {
+        "type": "int"
+      },
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "dashReviewSubmissions": "Review submissions",
+  "@dashReviewSubmissions": {
+    "description": "Mobile UI text (dashReviewSubmissions)"
+  },
+  "dashUpcomingDeadlines": "Upcoming deadlines",
+  "@dashUpcomingDeadlines": {
+    "description": "Mobile UI text (dashUpcomingDeadlines)"
+  },
+  "dashNoDeadlines": "No upcoming deadlines.",
+  "@dashNoDeadlines": {
+    "description": "Mobile UI text (dashNoDeadlines)"
+  },
+  "dashNothingDueSoon": "Nothing due soon.",
+  "@dashNothingDueSoon": {
+    "description": "Mobile UI text (dashNothingDueSoon)"
+  },
+  "dashRecentSubmissions": "Recent submissions",
+  "@dashRecentSubmissions": {
+    "description": "Mobile UI text (dashRecentSubmissions)"
+  },
+  "dashNoSubmissions": "No submissions yet.",
+  "@dashNoSubmissions": {
+    "description": "Mobile UI text (dashNoSubmissions)"
+  },
+  "dashArchivedStudents": "Archived · {students}",
+  "@dashArchivedStudents": {
+    "description": "Mobile UI text (dashArchivedStudents)",
+    "placeholders": {
+      "students": {
+        "type": "String"
+      }
+    }
+  },
+  "dashCountStudents": "{count, plural, =1{1 student} other{{count} students}}",
+  "@dashCountStudents": {
+    "description": "Mobile UI text (dashCountStudents)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashCountAssignments": "{count, plural, =1{1 assignment} other{{count} assignments}}",
+  "@dashCountAssignments": {
+    "description": "Mobile UI text (dashCountAssignments)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashCountSessions": "{count, plural, =1{1 session} other{{count} sessions}}",
+  "@dashCountSessions": {
+    "description": "Mobile UI text (dashCountSessions)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashToGradeCount": "{count} to grade",
+  "@dashToGradeCount": {
+    "description": "Mobile UI text (dashToGradeCount)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashAllFigures": "All figures",
+  "@dashAllFigures": {
+    "description": "Mobile UI text (dashAllFigures)"
+  },
+  "dashActiveCoursesLabel": "Active courses",
+  "@dashActiveCoursesLabel": {
+    "description": "Mobile UI text (dashActiveCoursesLabel)"
+  },
+  "dashOutstanding": "Outstanding work",
+  "@dashOutstanding": {
+    "description": "Mobile UI text (dashOutstanding)"
+  },
+  "dashSubmittedOf": "{received} of {expected} submitted",
+  "@dashSubmittedOf": {
+    "description": "Mobile UI text (dashSubmittedOf)",
+    "placeholders": {
+      "received": {
+        "type": "int"
+      },
+      "expected": {
+        "type": "int"
+      }
+    }
+  },
+  "dashPublishedAssignments": "Published assignments",
+  "@dashPublishedAssignments": {
+    "description": "Mobile UI text (dashPublishedAssignments)"
+  },
+  "dashGradedReturned": "{graded} graded · {returned} returned",
+  "@dashGradedReturned": {
+    "description": "Mobile UI text (dashGradedReturned)",
+    "placeholders": {
+      "graded": {
+        "type": "int"
+      },
+      "returned": {
+        "type": "int"
+      }
+    }
+  },
+  "dashTeacherFootnote": "Only active students count. Archived courses are excluded from work and attendance figures. Attendance rate = (Present + Late) ÷ (Present + Late + Absent); Excused is not counted.",
+  "@dashTeacherFootnote": {
+    "description": "Mobile UI text (dashTeacherFootnote)"
+  },
+  "dashEmptyStudentTitle": "No courses yet",
+  "@dashEmptyStudentTitle": {
+    "description": "Mobile UI text (dashEmptyStudentTitle)"
+  },
+  "dashEmptyStudentHint": "Open the Courses tab and enter the join code from your teacher.",
+  "@dashEmptyStudentHint": {
+    "description": "Mobile UI text (dashEmptyStudentHint)"
+  },
+  "dashNeedsYourAttention": "Needs your attention",
+  "@dashNeedsYourAttention": {
+    "description": "Mobile UI text (dashNeedsYourAttention)"
+  },
+  "dashYourNextStep": "Your next step",
+  "@dashYourNextStep": {
+    "description": "Mobile UI text (dashYourNextStep)"
+  },
+  "dashOverdueCount": "{count, plural, =1{1 assignment overdue} other{{count} assignments overdue}}",
+  "@dashOverdueCount": {
+    "description": "Mobile UI text (dashOverdueCount)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashReadyToLearn": "Ready to learn?",
+  "@dashReadyToLearn": {
+    "description": "Mobile UI text (dashReadyToLearn)"
+  },
+  "dashExploreCourses": "Explore your courses and pick up where you left off.",
+  "@dashExploreCourses": {
+    "description": "Mobile UI text (dashExploreCourses)"
+  },
+  "dashOpenCourses": "Open courses",
+  "@dashOpenCourses": {
+    "description": "Mobile UI text (dashOpenCourses)"
+  },
+  "dashStatusRevise": "Revise",
+  "@dashStatusRevise": {
+    "description": "Mobile UI text (dashStatusRevise)"
+  },
+  "dashStatusTodo": "To do",
+  "@dashStatusTodo": {
+    "description": "Mobile UI text (dashStatusTodo)"
+  },
+  "dashLearningProgress": "Learning progress",
+  "@dashLearningProgress": {
+    "description": "Mobile UI text (dashLearningProgress)"
+  },
+  "dashDoneOfPublished": "{done} of {published} assignments done",
+  "@dashDoneOfPublished": {
+    "description": "Mobile UI text (dashDoneOfPublished)",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "published": {
+        "type": "int"
+      }
+    }
+  },
+  "dashAttendanceValue": "Attendance {value}",
+  "@dashAttendanceValue": {
+    "description": "Mobile UI text (dashAttendanceValue)",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "dashMyCourses": "My courses",
+  "@dashMyCourses": {
+    "description": "Mobile UI text (dashMyCourses)"
+  },
+  "dashArchivedReadOnly": "Archived (read-only)",
+  "@dashArchivedReadOnly": {
+    "description": "Mobile UI text (dashArchivedReadOnly)"
+  },
+  "dashCourseProgressLine": "{done} of {total} assignments done · attendance {rate}",
+  "@dashCourseProgressLine": {
+    "description": "Mobile UI text (dashCourseProgressLine)",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "dashRecentResults": "Recent results",
+  "@dashRecentResults": {
+    "description": "Mobile UI text (dashRecentResults)"
+  },
+  "dashNoGraded": "No graded work yet.",
+  "@dashNoGraded": {
+    "description": "Mobile UI text (dashNoGraded)"
+  },
+  "dashFeedbackAvailable": "feedback available",
+  "@dashFeedbackAvailable": {
+    "description": "Mobile UI text (dashFeedbackAvailable)"
+  },
+  "dashNewLessons": "New lessons",
+  "@dashNewLessons": {
+    "description": "Mobile UI text (dashNewLessons)"
+  },
+  "dashNotStarted": "Not started",
+  "@dashNotStarted": {
+    "description": "Mobile UI text (dashNotStarted)"
+  },
+  "dashOverdueHint": "{count} overdue",
+  "@dashOverdueHint": {
+    "description": "Mobile UI text (dashOverdueHint)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashNeedsRevision": "Needs revision",
+  "@dashNeedsRevision": {
+    "description": "Mobile UI text (dashNeedsRevision)"
+  },
+  "dashStudentFootnote": "Course progress = assignments submitted or graded ÷ assignments published. Returned work is not done until you resubmit. Lessons are not tracked as completed.",
+  "@dashStudentFootnote": {
+    "description": "Mobile UI text (dashStudentFootnote)"
+  },
+  "dashNothingToShow": "Nothing to show yet.",
+  "@dashNothingToShow": {
+    "description": "Mobile UI text (dashNothingToShow)"
+  },
+  "courseEyebrowTeaching": "Teaching",
+  "@courseEyebrowTeaching": {
+    "description": "Mobile UI text (courseEyebrowTeaching)"
+  },
+  "courseEyebrowLearning": "My learning",
+  "@courseEyebrowLearning": {
+    "description": "Mobile UI text (courseEyebrowLearning)"
+  },
+  "courseYourCourses": "Your courses",
+  "@courseYourCourses": {
+    "description": "Mobile UI text (courseYourCourses)"
+  },
+  "courseDescTeacher": "Manage lessons, assignments and attendance in each course.",
+  "@courseDescTeacher": {
+    "description": "Mobile UI text (courseDescTeacher)"
+  },
+  "courseDescStudent": "Open a course to continue with lessons and assignments.",
+  "@courseDescStudent": {
+    "description": "Mobile UI text (courseDescStudent)"
+  },
+  "courseNew": "New course",
+  "@courseNew": {
+    "description": "Mobile UI text (courseNew)"
+  },
+  "courseJoin": "Join a course",
+  "@courseJoin": {
+    "description": "Mobile UI text (courseJoin)"
+  },
+  "courseServiceLabel": "Course service",
+  "@courseServiceLabel": {
+    "description": "Mobile UI text (courseServiceLabel)"
+  },
+  "courseAllContent": "All course content",
+  "@courseAllContent": {
+    "description": "Mobile UI text (courseAllContent)"
+  },
+  "courseNoInCategory": "No courses in this category. Choose another filter.",
+  "@courseNoInCategory": {
+    "description": "Mobile UI text (courseNoInCategory)"
+  },
+  "courseCouldNotRefresh": "Could not refresh: {message}",
+  "@courseCouldNotRefresh": {
+    "description": "Mobile UI text (courseCouldNotRefresh)",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "courseEmptyTeacherTitle": "No courses yet",
+  "@courseEmptyTeacherTitle": {
+    "description": "Mobile UI text (courseEmptyTeacherTitle)"
+  },
+  "courseEmptyTeacherHint": "Create your first course, then share its code with students.",
+  "@courseEmptyTeacherHint": {
+    "description": "Mobile UI text (courseEmptyTeacherHint)"
+  },
+  "courseEmptyStudentTitle": "You have not joined a course",
+  "@courseEmptyStudentTitle": {
+    "description": "Mobile UI text (courseEmptyStudentTitle)"
+  },
+  "courseEmptyStudentHint": "Ask your teacher for a course code and tap \"Join a course\".",
+  "@courseEmptyStudentHint": {
+    "description": "Mobile UI text (courseEmptyStudentHint)"
+  },
+  "courseAreaTeachingAssignments": "Teaching · Assignments",
+  "@courseAreaTeachingAssignments": {
+    "description": "Mobile UI text (courseAreaTeachingAssignments)"
+  },
+  "courseAreaLearningAssignments": "Learning · Assignments",
+  "@courseAreaLearningAssignments": {
+    "description": "Mobile UI text (courseAreaLearningAssignments)"
+  },
+  "courseAreaTeachingAttendance": "Teaching · Attendance",
+  "@courseAreaTeachingAttendance": {
+    "description": "Mobile UI text (courseAreaTeachingAttendance)"
+  },
+  "courseAreaLearningAttendance": "Learning · Attendance",
+  "@courseAreaLearningAttendance": {
+    "description": "Mobile UI text (courseAreaLearningAttendance)"
+  },
+  "courseTapToManage": "Tap to manage",
+  "@courseTapToManage": {
+    "description": "Mobile UI text (courseTapToManage)"
+  },
+  "courseTeacherName": "Teacher: {name}",
+  "@courseTeacherName": {
+    "description": "Mobile UI text (courseTeacherName)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "courseTeachingCourse": "Teaching course",
+  "@courseTeachingCourse": {
+    "description": "Mobile UI text (courseTeachingCourse)"
+  },
+  "courseEnrolledCourse": "Enrolled course",
+  "@courseEnrolledCourse": {
+    "description": "Mobile UI text (courseEnrolledCourse)"
+  },
+  "courseTeachingWorkspace": "Your teaching workspace",
+  "@courseTeachingWorkspace": {
+    "description": "Mobile UI text (courseTeachingWorkspace)"
+  },
+  "courseLearningWorkspace": "Your learning workspace",
+  "@courseLearningWorkspace": {
+    "description": "Mobile UI text (courseLearningWorkspace)"
+  },
+  "courseManage": "Manage course",
+  "@courseManage": {
+    "description": "Mobile UI text (courseManage)"
+  },
+  "courseOpen": "Open course",
+  "@courseOpen": {
+    "description": "Mobile UI text (courseOpen)"
+  },
+  "courseLearningEyebrow": "Learning workspace",
+  "@courseLearningEyebrow": {
+    "description": "Mobile UI text (courseLearningEyebrow)"
+  },
+  "courseArchivedNote": "This course is archived. It stays visible but is read-only.",
+  "@courseArchivedNote": {
+    "description": "Mobile UI text (courseArchivedNote)"
+  },
+  "courseEdit": "Edit course",
+  "@courseEdit": {
+    "description": "Mobile UI text (courseEdit)"
+  },
+  "courseDescriptionOptional": "Description (optional)",
+  "@courseDescriptionOptional": {
+    "description": "Mobile UI text (courseDescriptionOptional)"
+  },
+  "courseCreated": "Course created",
+  "@courseCreated": {
+    "description": "Mobile UI text (courseCreated)"
+  },
+  "courseShareCode": "Share this code with your students:",
+  "@courseShareCode": {
+    "description": "Mobile UI text (courseShareCode)"
+  },
+  "courseCodeLabel": "Course code",
+  "@courseCodeLabel": {
+    "description": "Mobile UI text (courseCodeLabel)"
+  },
+  "courseRemovedMsg": "You were removed from this course. Ask your teacher to add you back.",
+  "@courseRemovedMsg": {
+    "description": "Mobile UI text (courseRemovedMsg)"
+  },
+  "courseCodeInvalid": "That code is not valid, or the course is closed.",
+  "@courseCodeInvalid": {
+    "description": "Mobile UI text (courseCodeInvalid)"
+  },
+  "courseArchiveTitle": "Archive this course?",
+  "@courseArchiveTitle": {
+    "description": "Mobile UI text (courseArchiveTitle)"
+  },
+  "courseReopenTitle": "Reopen this course?",
+  "@courseReopenTitle": {
+    "description": "Mobile UI text (courseReopenTitle)"
+  },
+  "courseArchiveBody": "Students keep read-only access, but nobody new can join with the code.",
+  "@courseArchiveBody": {
+    "description": "Mobile UI text (courseArchiveBody)"
+  },
+  "courseReopenBody": "Students will be able to join with the code again.",
+  "@courseReopenBody": {
+    "description": "Mobile UI text (courseReopenBody)"
+  },
+  "courseArchiveAction": "Archive",
+  "@courseArchiveAction": {
+    "description": "Mobile UI text (courseArchiveAction)"
+  },
+  "courseReopenAction": "Reopen",
+  "@courseReopenAction": {
+    "description": "Mobile UI text (courseReopenAction)"
+  },
+  "courseRemoveTitle": "Remove student?",
+  "@courseRemoveTitle": {
+    "description": "Mobile UI text (courseRemoveTitle)"
+  },
+  "courseRemoveBody": "{name} will lose access to the course and cannot rejoin with the code.",
+  "@courseRemoveBody": {
+    "description": "Mobile UI text (courseRemoveBody)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "courseThisStudent": "This student",
+  "@courseThisStudent": {
+    "description": "Mobile UI text (courseThisStudent)"
+  },
+  "courseInviteTitle": "Invite your first students",
+  "@courseInviteTitle": {
+    "description": "Mobile UI text (courseInviteTitle)"
+  },
+  "courseInviteBody": "Share the join code below. Attendance, grading and progress fill in once students join.",
+  "@courseInviteBody": {
+    "description": "Mobile UI text (courseInviteBody)"
+  },
+  "courseSvcSubmissions": "Submissions",
+  "@courseSvcSubmissions": {
+    "description": "Mobile UI text (courseSvcSubmissions)"
+  },
+  "courseSvcReviewWork": "Review work",
+  "@courseSvcReviewWork": {
+    "description": "Mobile UI text (courseSvcReviewWork)"
+  },
+  "courseSvcRoster": "Roster",
+  "@courseSvcRoster": {
+    "description": "Mobile UI text (courseSvcRoster)"
+  },
+  "courseSvcContent": "Content",
+  "@courseSvcContent": {
+    "description": "Mobile UI text (courseSvcContent)"
+  },
+  "courseWeeklyAttendance": "Weekly attendance",
+  "@courseWeeklyAttendance": {
+    "description": "Mobile UI text (courseWeeklyAttendance)"
+  },
+  "courseAdmin": "Course administration",
+  "@courseAdmin": {
+    "description": "Mobile UI text (courseAdmin)"
+  },
+  "courseJoinCode": "Join code",
+  "@courseJoinCode": {
+    "description": "Mobile UI text (courseJoinCode)"
+  },
+  "courseCopyCode": "Copy code",
+  "@courseCopyCode": {
+    "description": "Mobile UI text (courseCopyCode)"
+  },
+  "courseCodeCopied": "Code copied",
+  "@courseCodeCopied": {
+    "description": "Mobile UI text (courseCodeCopied)"
+  },
+  "courseArchivedNoJoin": "Archived: students cannot join until you reopen the course.",
+  "@courseArchivedNoJoin": {
+    "description": "Mobile UI text (courseArchivedNoJoin)"
+  },
+  "courseReopenCourse": "Reopen course",
+  "@courseReopenCourse": {
+    "description": "Mobile UI text (courseReopenCourse)"
+  },
+  "courseArchiveCourse": "Archive course",
+  "@courseArchiveCourse": {
+    "description": "Mobile UI text (courseArchiveCourse)"
+  },
+  "courseStudentsTitle": "Students ({count})",
+  "@courseStudentsTitle": {
+    "description": "Mobile UI text (courseStudentsTitle)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "courseNoStudents": "No students yet. Share the join code above.",
+  "@courseNoStudents": {
+    "description": "Mobile UI text (courseNoStudents)"
+  },
+  "courseJoinedTap": "Joined {date} · tap for progress",
+  "@courseJoinedTap": {
+    "description": "Mobile UI text (courseJoinedTap)",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "courseRemovedCount": "{count, plural, =1{1 removed student (no access)} other{{count} removed students (no access)}}",
+  "@courseRemovedCount": {
+    "description": "Mobile UI text (courseRemovedCount)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "classYourClass": "Your class",
+  "@classYourClass": {
+    "description": "Mobile UI text (classYourClass)"
+  },
+  "classArchivedReadOnly": "Archived · read-only",
+  "@classArchivedReadOnly": {
+    "description": "Mobile UI text (classArchivedReadOnly)"
+  },
+  "classHeroSemantics": "{students} students, {sessions} open attendance sessions, {toGrade} submissions to grade",
+  "@classHeroSemantics": {
+    "description": "Mobile UI text (classHeroSemantics)",
+    "placeholders": {
+      "students": {
+        "type": "int"
+      },
+      "sessions": {
+        "type": "int"
+      },
+      "toGrade": {
+        "type": "String"
+      }
+    }
+  },
+  "classUnknownNumber": "unknown number of",
+  "@classUnknownNumber": {
+    "description": "Mobile UI text (classUnknownNumber)"
+  },
+  "classOpenSessions": "Open sessions",
+  "@classOpenSessions": {
+    "description": "Mobile UI text (classOpenSessions)"
+  },
+  "classNoSessions": "No sessions",
+  "@classNoSessions": {
+    "description": "Mobile UI text (classNoSessions)"
+  },
+  "classRateValue": "Class rate {value}",
+  "@classRateValue": {
+    "description": "Mobile UI text (classRateValue)",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "classSessions": "Sessions",
+  "@classSessions": {
+    "description": "Mobile UI text (classSessions)"
+  },
+  "classNoAttendanceSessions": "No attendance sessions yet. Create one in the Attendance section to start tracking.",
+  "@classNoAttendanceSessions": {
+    "description": "Mobile UI text (classNoAttendanceSessions)"
+  },
+  "classLatestSession": "Latest session",
+  "@classLatestSession": {
+    "description": "Mobile UI text (classLatestSession)"
+  },
+  "classSessionFallback": "Session",
+  "@classSessionFallback": {
+    "description": "Mobile UI text (classSessionFallback)"
+  },
+  "classNotMarked": "Not marked {count}",
+  "@classNotMarked": {
+    "description": "Mobile UI text (classNotMarked)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "classNothingToGrade": "Nothing to grade",
+  "@classNothingToGrade": {
+    "description": "Mobile UI text (classNothingToGrade)"
+  },
+  "classPublished": "Published",
+  "@classPublished": {
+    "description": "Mobile UI text (classPublished)"
+  },
+  "classDrafts": "Drafts",
+  "@classDrafts": {
+    "description": "Mobile UI text (classDrafts)"
+  },
+  "classNoPublished": "No published assignments yet.",
+  "@classNoPublished": {
+    "description": "Mobile UI text (classNoPublished)"
+  },
+  "classSubmissionsReceived": "Submissions received",
+  "@classSubmissionsReceived": {
+    "description": "Mobile UI text (classSubmissionsReceived)"
+  },
+  "classDueLower": "due {when}",
+  "@classDueLower": {
+    "description": "Mobile UI text (classDueLower)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "classNoRecent": "No recent activity",
+  "@classNoRecent": {
+    "description": "Mobile UI text (classNoRecent)"
+  },
+  "classNoRecentHint": "Submitted work will show here as students hand it in.",
+  "@classNoRecentHint": {
+    "description": "Mobile UI text (classNoRecentHint)"
+  },
+  "classAttendanceByStudent": "Attendance by student",
+  "@classAttendanceByStudent": {
+    "description": "Mobile UI text (classAttendanceByStudent)"
+  },
+  "classNoStudentsEnrolled": "No students enrolled yet",
+  "@classNoStudentsEnrolled": {
+    "description": "Mobile UI text (classNoStudentsEnrolled)"
+  },
+  "classShareCode": "Share the join code so students can enrol.",
+  "@classShareCode": {
+    "description": "Mobile UI text (classShareCode)"
+  },
+  "lessonFilesCount": "{count, plural, =1{1 file} other{{count} files}}",
+  "@lessonFilesCount": {
+    "description": "Mobile UI text (lessonFilesCount)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "lessonNew": "New lesson",
+  "@lessonNew": {
+    "description": "Mobile UI text (lessonNew)"
+  },
+  "lessonNoneYet": "No lessons yet",
+  "@lessonNoneYet": {
+    "description": "Mobile UI text (lessonNoneYet)"
+  },
+  "lessonEmptyTeacher": "Create a draft, add files, then publish it for students.",
+  "@lessonEmptyTeacher": {
+    "description": "Mobile UI text (lessonEmptyTeacher)"
+  },
+  "lessonEmptyStudent": "Your teacher has not published any lessons for this course.",
+  "@lessonEmptyStudent": {
+    "description": "Mobile UI text (lessonEmptyStudent)"
+  },
+  "lessonText": "Lesson text",
+  "@lessonText": {
+    "description": "Mobile UI text (lessonText)"
+  },
+  "lessonCreateDraft": "Create draft",
+  "@lessonCreateDraft": {
+    "description": "Mobile UI text (lessonCreateDraft)"
+  },
+  "lessonDeleteTitle": "Delete lesson?",
+  "@lessonDeleteTitle": {
+    "description": "Mobile UI text (lessonDeleteTitle)"
+  },
+  "lessonDeleteBody": "The lesson and its files disappear for everyone. This cannot be undone.",
+  "@lessonDeleteBody": {
+    "description": "Mobile UI text (lessonDeleteBody)"
+  },
+  "lessonTitle": "Lesson",
+  "@lessonTitle": {
+    "description": "Mobile UI text (lessonTitle)"
+  },
+  "lessonGone": "This lesson no longer exists.",
+  "@lessonGone": {
+    "description": "Mobile UI text (lessonGone)"
+  },
+  "lessonNoFilesAttached": "No files attached.",
+  "@lessonNoFilesAttached": {
+    "description": "Mobile UI text (lessonNoFilesAttached)"
+  },
+  "lessonAttach": "Attach file",
+  "@lessonAttach": {
+    "description": "Mobile UI text (lessonAttach)"
+  },
+  "lessonPublication": "Publication & access",
+  "@lessonPublication": {
+    "description": "Mobile UI text (lessonPublication)"
+  },
+  "lessonSaveFirst": "Save your content before changing its visibility.",
+  "@lessonSaveFirst": {
+    "description": "Mobile UI text (lessonSaveFirst)"
+  },
+  "lessonUnpublish": "Unpublish",
+  "@lessonUnpublish": {
+    "description": "Mobile UI text (lessonUnpublish)"
+  },
+  "lessonDelete": "Delete lesson",
+  "@lessonDelete": {
+    "description": "Mobile UI text (lessonDelete)"
+  },
+  "lessonEditEyebrow": "Edit lesson",
+  "@lessonEditEyebrow": {
+    "description": "Mobile UI text (lessonEditEyebrow)"
+  },
+  "lessonPublishedDesc": "Published · Students can read this lesson.",
+  "@lessonPublishedDesc": {
+    "description": "Mobile UI text (lessonPublishedDesc)"
+  },
+  "lessonDraftDesc": "Draft · Only you can see this lesson.",
+  "@lessonDraftDesc": {
+    "description": "Mobile UI text (lessonDraftDesc)"
+  },
+  "lessonContent": "Learning content",
+  "@lessonContent": {
+    "description": "Mobile UI text (lessonContent)"
+  },
+  "lessonSaveChanges": "Save changes",
+  "@lessonSaveChanges": {
+    "description": "Mobile UI text (lessonSaveChanges)"
+  },
+  "lessonCourseEyebrow": "{course} · Lesson",
+  "@lessonCourseEyebrow": {
+    "description": "Mobile UI text (lessonCourseEyebrow)",
+    "placeholders": {
+      "course": {
+        "type": "String"
+      }
+    }
+  },
+  "lessonReadExplore": "Read, explore, then put it into practice.",
+  "@lessonReadExplore": {
+    "description": "Mobile UI text (lessonReadExplore)"
+  },
+  "lessonNoText": "No lesson text.",
+  "@lessonNoText": {
+    "description": "Mobile UI text (lessonNoText)"
+  },
+  "lessonSupporting": "Supporting resources for this lesson.",
+  "@lessonSupporting": {
+    "description": "Mobile UI text (lessonSupporting)"
+  },
+  "lessonNoFiles": "No files for this lesson.",
+  "@lessonNoFiles": {
+    "description": "Mobile UI text (lessonNoFiles)"
+  },
+  "asgNotSubmitted": "Not submitted",
+  "@asgNotSubmitted": {
+    "description": "Mobile UI text (asgNotSubmitted)"
+  },
+  "asgGradedScore": "Graded {score}/{max}",
+  "@asgGradedScore": {
+    "description": "Mobile UI text (asgGradedScore)",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "asgReturnedForRevision": "Returned for revision",
+  "@asgReturnedForRevision": {
+    "description": "Mobile UI text (asgReturnedForRevision)"
+  },
+  "asgNone": "No assignments yet",
+  "@asgNone": {
+    "description": "Mobile UI text (asgNone)"
+  },
+  "asgStudentEmptyHint": "New work from your teacher will appear here.",
+  "@asgStudentEmptyHint": {
+    "description": "Mobile UI text (asgStudentEmptyHint)"
+  },
+  "asgNoDeadline": "No deadline",
+  "@asgNoDeadline": {
+    "description": "Mobile UI text (asgNoDeadline)"
+  },
+  "asgDue": "Due {when}",
+  "@asgDue": {
+    "description": "Mobile UI text (asgDue)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "asgResultGraded": "Graded: {score}/{max}",
+  "@asgResultGraded": {
+    "description": "Mobile UI text (asgResultGraded)",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "asgFeedbackLine": "Feedback: {text}",
+  "@asgFeedbackLine": {
+    "description": "Mobile UI text (asgFeedbackLine)",
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "asgGradedLocked": "This submission is graded and locked.",
+  "@asgGradedLocked": {
+    "description": "Mobile UI text (asgGradedLocked)"
+  },
+  "asgReviseResubmit": "Revise your work below and resubmit.",
+  "@asgReviseResubmit": {
+    "description": "Mobile UI text (asgReviseResubmit)"
+  },
+  "asgSavedSubmission": "Your saved submission",
+  "@asgSavedSubmission": {
+    "description": "Mobile UI text (asgSavedSubmission)"
+  },
+  "asgSavedLine": "Saved {when} · version {version}",
+  "@asgSavedLine": {
+    "description": "Mobile UI text (asgSavedLine)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "asgReload": "Reload my submission",
+  "@asgReload": {
+    "description": "Mobile UI text (asgReload)"
+  },
+  "asgEyebrowWorkspace": "Assignment / Your workspace",
+  "@asgEyebrowWorkspace": {
+    "description": "Mobile UI text (asgEyebrowWorkspace)"
+  },
+  "asgMaxScore": "Max score {score}",
+  "@asgMaxScore": {
+    "description": "Mobile UI text (asgMaxScore)",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      }
+    }
+  },
+  "asgDeadlinePassed": "The deadline has passed. Submissions are closed.",
+  "@asgDeadlinePassed": {
+    "description": "Mobile UI text (asgDeadlinePassed)"
+  },
+  "asgBrief": "The brief",
+  "@asgBrief": {
+    "description": "Mobile UI text (asgBrief)"
+  },
+  "asgNoInstructions": "No instructions.",
+  "@asgNoInstructions": {
+    "description": "Mobile UI text (asgNoInstructions)"
+  },
+  "asgUploading": "Uploading file…",
+  "@asgUploading": {
+    "description": "Mobile UI text (asgUploading)"
+  },
+  "asgSaving": "Saving…",
+  "@asgSaving": {
+    "description": "Mobile UI text (asgSaving)"
+  },
+  "asgSubmit": "Submit",
+  "@asgSubmit": {
+    "description": "Mobile UI text (asgSubmit)"
+  },
+  "asgResubmit": "Resubmit",
+  "@asgResubmit": {
+    "description": "Mobile UI text (asgResubmit)"
+  },
+  "asgYourResponse": "Your response",
+  "@asgYourResponse": {
+    "description": "Mobile UI text (asgYourResponse)"
+  },
+  "asgFirstHint": "Write your answer or attach your work. Submit when you are ready.",
+  "@asgFirstHint": {
+    "description": "Mobile UI text (asgFirstHint)"
+  },
+  "asgUpdateHint": "Update your answer below. Your saved version stays available until you resubmit.",
+  "@asgUpdateHint": {
+    "description": "Mobile UI text (asgUpdateHint)"
+  },
+  "asgYourAnswer": "Your answer",
+  "@asgYourAnswer": {
+    "description": "Mobile UI text (asgYourAnswer)"
+  },
+  "asgAnswerHint": "Start with your approach, then explain what you found…",
+  "@asgAnswerHint": {
+    "description": "Mobile UI text (asgAnswerHint)"
+  },
+  "asgUploadPrivately": "{size} · will be uploaded privately",
+  "@asgUploadPrivately": {
+    "description": "Mobile UI text (asgUploadPrivately)",
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "asgRemoveAttachmentTip": "Remove attachment",
+  "@asgRemoveAttachmentTip": {
+    "description": "Mobile UI text (asgRemoveAttachmentTip)"
+  },
+  "asgReplaceFile": "Replace attached file",
+  "@asgReplaceFile": {
+    "description": "Mobile UI text (asgReplaceFile)"
+  },
+  "asgAttachFile": "Attach a file",
+  "@asgAttachFile": {
+    "description": "Mobile UI text (asgAttachFile)"
+  },
+  "asgRemoveSaved": "Remove my saved attachment",
+  "@asgRemoveSaved": {
+    "description": "Mobile UI text (asgRemoveSaved)"
+  },
+  "asgSavedOnSubmit": "Your work is saved when you submit.",
+  "@asgSavedOnSubmit": {
+    "description": "Mobile UI text (asgSavedOnSubmit)"
+  },
+  "asgNewTitle": "New assignment",
+  "@asgNewTitle": {
+    "description": "Mobile UI text (asgNewTitle)"
+  },
+  "asgEditTitle": "Edit assignment",
+  "@asgEditTitle": {
+    "description": "Mobile UI text (asgEditTitle)"
+  },
+  "asgInstructions": "Instructions",
+  "@asgInstructions": {
+    "description": "Mobile UI text (asgInstructions)"
+  },
+  "asgMaxScoreLabel": "Maximum score",
+  "@asgMaxScoreLabel": {
+    "description": "Mobile UI text (asgMaxScoreLabel)"
+  },
+  "asgSetDeadline": "Set deadline",
+  "@asgSetDeadline": {
+    "description": "Mobile UI text (asgSetDeadline)"
+  },
+  "asgRemoveDeadline": "Remove deadline",
+  "@asgRemoveDeadline": {
+    "description": "Mobile UI text (asgRemoveDeadline)"
+  },
+  "asgSaveDraft": "Save draft",
+  "@asgSaveDraft": {
+    "description": "Mobile UI text (asgSaveDraft)"
+  },
+  "asgTeacherEmptyHint": "Create a draft, then publish it for students.",
+  "@asgTeacherEmptyHint": {
+    "description": "Mobile UI text (asgTeacherEmptyHint)"
+  },
+  "asgPublishTitle": "Publish assignment?",
+  "@asgPublishTitle": {
+    "description": "Mobile UI text (asgPublishTitle)"
+  },
+  "asgPublishBody": "Enrolled students will see it and can start submitting work.",
+  "@asgPublishBody": {
+    "description": "Mobile UI text (asgPublishBody)"
+  },
+  "asgGone": "This assignment is no longer available.",
+  "@asgGone": {
+    "description": "Mobile UI text (asgGone)"
+  },
+  "asgSubmissionsCount": "Submissions ({count})",
+  "@asgSubmissionsCount": {
+    "description": "Mobile UI text (asgSubmissionsCount)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "asgTeachingEyebrow": "Teaching / Assignment",
+  "@asgTeachingEyebrow": {
+    "description": "Mobile UI text (asgTeachingEyebrow)"
+  },
+  "asgReviewDesc": "Review submissions and move learning forward.",
+  "@asgReviewDesc": {
+    "description": "Mobile UI text (asgReviewDesc)"
+  },
+  "asgPrepareDesc": "Prepare your brief, then publish it to your course.",
+  "@asgPrepareDesc": {
+    "description": "Mobile UI text (asgPrepareDesc)"
+  },
+  "asgBriefTitle": "Assignment brief",
+  "@asgBriefTitle": {
+    "description": "Mobile UI text (asgBriefTitle)"
+  },
+  "asgDraftsHidden": "Students cannot see drafts. Publish to receive submissions.",
+  "@asgDraftsHidden": {
+    "description": "Mobile UI text (asgDraftsHidden)"
+  },
+  "asgNoSubmissions": "No submissions yet",
+  "@asgNoSubmissions": {
+    "description": "Mobile UI text (asgNoSubmissions)"
+  },
+  "asgNoSubmissionsHint": "Student work will appear here as it is handed in.",
+  "@asgNoSubmissionsHint": {
+    "description": "Mobile UI text (asgNoSubmissionsHint)"
+  },
+  "asgSubmittedVersion": "Submitted {when} · version {version}",
+  "@asgSubmittedVersion": {
+    "description": "Mobile UI text (asgSubmittedVersion)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "asgGrade": "Grade",
+  "@asgGrade": {
+    "description": "Mobile UI text (asgGrade)"
+  },
+  "asgReview": "Review",
+  "@asgReview": {
+    "description": "Mobile UI text (asgReview)"
+  },
+  "gradeReviewEyebrow": "Review · {title}",
+  "@gradeReviewEyebrow": {
+    "description": "Mobile UI text (gradeReviewEyebrow)",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "gradeStudentSubmission": "Student submission",
+  "@gradeStudentSubmission": {
+    "description": "Mobile UI text (gradeStudentSubmission)"
+  },
+  "gradeReadDesc": "Read the work, then give a clear next step.",
+  "@gradeReadDesc": {
+    "description": "Mobile UI text (gradeReadDesc)"
+  },
+  "gradeStatusTitle": "Submission status",
+  "@gradeStatusTitle": {
+    "description": "Mobile UI text (gradeStatusTitle)"
+  },
+  "gradeVersion": "Version",
+  "@gradeVersion": {
+    "description": "Mobile UI text (gradeVersion)"
+  },
+  "gradeMaxScore": "Max score",
+  "@gradeMaxScore": {
+    "description": "Mobile UI text (gradeMaxScore)"
+  },
+  "gradeSubmittedAt": "Submitted {when}",
+  "@gradeSubmittedAt": {
+    "description": "Mobile UI text (gradeSubmittedAt)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "gradeStudentAnswer": "Student answer",
+  "@gradeStudentAnswer": {
+    "description": "Mobile UI text (gradeStudentAnswer)"
+  },
+  "gradeNoText": "(no text)",
+  "@gradeNoText": {
+    "description": "Mobile UI text (gradeNoText)"
+  },
+  "gradeReloadLatest": "Reload latest",
+  "@gradeReloadLatest": {
+    "description": "Mobile UI text (gradeReloadLatest)"
+  },
+  "gradeWaiting": "Waiting for the student to revise and resubmit.",
+  "@gradeWaiting": {
+    "description": "Mobile UI text (gradeWaiting)"
+  },
+  "gradeYourFeedback": "Your feedback: {text}",
+  "@gradeYourFeedback": {
+    "description": "Mobile UI text (gradeYourFeedback)",
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "gradeAndFeedback": "Grade and feedback",
+  "@gradeAndFeedback": {
+    "description": "Mobile UI text (gradeAndFeedback)"
+  },
+  "gradeHint": "A score records achievement. Feedback shows what to do next.",
+  "@gradeHint": {
+    "description": "Mobile UI text (gradeHint)"
+  },
+  "gradeScore": "Score",
+  "@gradeScore": {
+    "description": "Mobile UI text (gradeScore)"
+  },
+  "gradeScoreRangeLabel": "Score (0–{max})",
+  "@gradeScoreRangeLabel": {
+    "description": "Mobile UI text (gradeScoreRangeLabel)",
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "gradeFeedbackToStudent": "Feedback to the student",
+  "@gradeFeedbackToStudent": {
+    "description": "Mobile UI text (gradeFeedbackToStudent)"
+  },
+  "gradeFeedback": "Feedback",
+  "@gradeFeedback": {
+    "description": "Mobile UI text (gradeFeedback)"
+  },
+  "gradeSaveNew": "Save new grade",
+  "@gradeSaveNew": {
+    "description": "Mobile UI text (gradeSaveNew)"
+  },
+  "gradeSave": "Save grade",
+  "@gradeSave": {
+    "description": "Mobile UI text (gradeSave)"
+  },
+  "gradeReturn": "Return for revision",
+  "@gradeReturn": {
+    "description": "Mobile UI text (gradeReturn)"
+  },
+  "gradeHistory": "History",
+  "@gradeHistory": {
+    "description": "Mobile UI text (gradeHistory)"
+  },
+  "gradeNoHistory": "No grading actions yet.",
+  "@gradeNoHistory": {
+    "description": "Mobile UI text (gradeNoHistory)"
+  },
+  "errorNoteTooLong": "Note is too long (500 characters maximum).",
+  "@errorNoteTooLong": {
+    "description": "Mobile UI text (errorNoteTooLong)"
+  },
+  "errorRecordChanged": "This record changed elsewhere. The latest values are shown; try again.",
+  "@errorRecordChanged": {
+    "description": "Mobile UI text (errorRecordChanged)"
+  },
+  "errorSessionNotFound": "Session not found.",
+  "@errorSessionNotFound": {
+    "description": "Mobile UI text (errorSessionNotFound)"
+  },
+  "errorActivityNotFound": "Activity not found.",
+  "@errorActivityNotFound": {
+    "description": "Mobile UI text (errorActivityNotFound)"
+  },
+  "errorAssignmentUnavailable": "This assignment is no longer available.",
+  "@errorAssignmentUnavailable": {
+    "description": "Mobile UI text (errorAssignmentUnavailable)"
+  },
+  "errorCourseUnavailable": "This course is no longer available.",
+  "@errorCourseUnavailable": {
+    "description": "Mobile UI text (errorCourseUnavailable)"
+  },
+  "commonLoadMore": "Load more",
+  "@commonLoadMore": {
+    "description": "Mobile UI text (commonLoadMore)"
+  },
+  "commonLoadingEllipsis": "Loading…",
+  "@commonLoadingEllipsis": {
+    "description": "Mobile UI text (commonLoadingEllipsis)"
+  },
+  "actPolicyTeacherMarked": "Teacher marked",
+  "@actPolicyTeacherMarked": {
+    "description": "Mobile UI text (actPolicyTeacherMarked)"
+  },
+  "actPolicySelfReported": "Self-reported",
+  "@actPolicySelfReported": {
+    "description": "Mobile UI text (actPolicySelfReported)"
+  },
+  "actPolicyTeacherVerified": "Teacher verified",
+  "@actPolicyTeacherVerified": {
+    "description": "Mobile UI text (actPolicyTeacherVerified)"
+  },
+  "actPolicyHintTeacherMarked": "Your teacher records completion.",
+  "@actPolicyHintTeacherMarked": {
+    "description": "Mobile UI text (actPolicyHintTeacherMarked)"
+  },
+  "actPolicyHintSelfReported": "You mark it done yourself.",
+  "@actPolicyHintSelfReported": {
+    "description": "Mobile UI text (actPolicyHintSelfReported)"
+  },
+  "actPolicyHintTeacherVerified": "You submit it and your teacher confirms.",
+  "@actPolicyHintTeacherVerified": {
+    "description": "Mobile UI text (actPolicyHintTeacherVerified)"
+  },
+  "actPolicyDetailTeacherMarked": "You record who completed it. Students only see their status.",
+  "@actPolicyDetailTeacherMarked": {
+    "description": "Mobile UI text (actPolicyDetailTeacherMarked)"
+  },
+  "actPolicyDetailSelfReported": "Students mark their own completion before the deadline.",
+  "@actPolicyDetailSelfReported": {
+    "description": "Mobile UI text (actPolicyDetailSelfReported)"
+  },
+  "actPolicyDetailTeacherVerified": "Students submit; you approve or reject with a reason.",
+  "@actPolicyDetailTeacherVerified": {
+    "description": "Mobile UI text (actPolicyDetailTeacherVerified)"
+  },
+  "actStateUpcoming": "Upcoming",
+  "@actStateUpcoming": {
+    "description": "Mobile UI text (actStateUpcoming)"
+  },
+  "actStateOpen": "To do",
+  "@actStateOpen": {
+    "description": "Mobile UI text (actStateOpen)"
+  },
+  "actStatePending": "Awaiting review",
+  "@actStatePending": {
+    "description": "Mobile UI text (actStatePending)"
+  },
+  "actStateCompleted": "Done",
+  "@actStateCompleted": {
+    "description": "Mobile UI text (actStateCompleted)"
+  },
+  "actStateRejected": "Needs another try",
+  "@actStateRejected": {
+    "description": "Mobile UI text (actStateRejected)"
+  },
+  "actStateNotDone": "Not done",
+  "@actStateNotDone": {
+    "description": "Mobile UI text (actStateNotDone)"
+  },
+  "actStateMissed": "Missed",
+  "@actStateMissed": {
+    "description": "Mobile UI text (actStateMissed)"
+  },
+  "actStateNotScheduled": "Not scheduled",
+  "@actStateNotScheduled": {
+    "description": "Mobile UI text (actStateNotScheduled)"
+  },
+  "actPaused": "Paused",
+  "@actPaused": {
+    "description": "Mobile UI text (actPaused)"
+  },
+  "actEveryDay": "Every day",
+  "@actEveryDay": {
+    "description": "Mobile UI text (actEveryDay)"
+  },
+  "actWeekdays": "Weekdays",
+  "@actWeekdays": {
+    "description": "Mobile UI text (actWeekdays)"
+  },
+  "actDeadlineAtTime": "Due {time} ({tz})",
+  "@actDeadlineAtTime": {
+    "description": "Mobile UI text (actDeadlineAtTime)",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "actDeadlineDayEnd": "Due at the end of the day ({tz})",
+  "@actDeadlineDayEnd": {
+    "description": "Mobile UI text (actDeadlineDayEnd)",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "actNoStreak": "No streak (no deadline)",
+  "@actNoStreak": {
+    "description": "Mobile UI text (actNoStreak)"
+  },
+  "actStreak": "{value} streak",
+  "@actStreak": {
+    "description": "Mobile UI text (actStreak)",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "actBest": "Best {value}",
+  "@actBest": {
+    "description": "Mobile UI text (actBest)",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "actDoneOfResolved": "{done} of {total} done",
+  "@actDoneOfResolved": {
+    "description": "Mobile UI text (actDoneOfResolved)",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "actEditDetails": "Edit details",
+  "@actEditDetails": {
+    "description": "Mobile UI text (actEditDetails)"
+  },
+  "actDescription": "Description",
+  "@actDescription": {
+    "description": "Mobile UI text (actDescription)"
+  },
+  "actDueEndOfDay": "Due end of day",
+  "@actDueEndOfDay": {
+    "description": "Mobile UI text (actDueEndOfDay)"
+  },
+  "actSubmitForReview": "Submit for review",
+  "@actSubmitForReview": {
+    "description": "Mobile UI text (actSubmitForReview)"
+  },
+  "actNoteForTeacher": "Note for your teacher (optional)",
+  "@actNoteForTeacher": {
+    "description": "Mobile UI text (actNoteForTeacher)"
+  },
+  "actSubmit": "Submit",
+  "@actSubmit": {
+    "description": "Mobile UI text (actSubmit)"
+  },
+  "actMarkDone": "Mark as done",
+  "@actMarkDone": {
+    "description": "Mobile UI text (actMarkDone)"
+  },
+  "actWithdraw": "Withdraw",
+  "@actWithdraw": {
+    "description": "Mobile UI text (actWithdraw)"
+  },
+  "actTeacherAskedRetry": "Your teacher asked for another try: {reason}",
+  "@actTeacherAskedRetry": {
+    "description": "Mobile UI text (actTeacherAskedRetry)",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "actNothingToday": "Nothing scheduled today",
+  "@actNothingToday": {
+    "description": "Mobile UI text (actNothingToday)"
+  },
+  "actNothingTodayHint": "Your teacher has not scheduled an activity for today in this course.",
+  "@actNothingTodayHint": {
+    "description": "Mobile UI text (actNothingTodayHint)"
+  },
+  "actDaily": "Daily activities",
+  "@actDaily": {
+    "description": "Mobile UI text (actDaily)"
+  },
+  "actDailyOne": "Daily activity",
+  "@actDailyOne": {
+    "description": "Mobile UI text (actDailyOne)"
+  },
+  "actTodaySubtitle": "What to do today in this course.",
+  "@actTodaySubtitle": {
+    "description": "Mobile UI text (actTodaySubtitle)"
+  },
+  "actWeekView": "Week view",
+  "@actWeekView": {
+    "description": "Mobile UI text (actWeekView)"
+  },
+  "actMyProgress": "My progress",
+  "@actMyProgress": {
+    "description": "Mobile UI text (actMyProgress)"
+  },
+  "actWeekOf": "Week of {date}",
+  "@actWeekOf": {
+    "description": "Mobile UI text (actWeekOf)",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "actThisWeek": "This week",
+  "@actThisWeek": {
+    "description": "Mobile UI text (actThisWeek)"
+  },
+  "actPrevWeek": "Previous week",
+  "@actPrevWeek": {
+    "description": "Mobile UI text (actPrevWeek)"
+  },
+  "actNextWeek": "Next week",
+  "@actNextWeek": {
+    "description": "Mobile UI text (actNextWeek)"
+  },
+  "actNoWeekTitle": "No activities this week",
+  "@actNoWeekTitle": {
+    "description": "Mobile UI text (actNoWeekTitle)"
+  },
+  "actNoWeekHint": "Nothing is scheduled for these days. Use the arrows to look at another week.",
+  "@actNoWeekHint": {
+    "description": "Mobile UI text (actNoWeekHint)"
+  },
+  "actDaysOfWeek": "Days of the week",
+  "@actDaysOfWeek": {
+    "description": "Mobile UI text (actDaysOfWeek)"
+  },
+  "actNoEndDate": "No end date",
+  "@actNoEndDate": {
+    "description": "Mobile UI text (actNoEndDate)"
+  },
+  "actEnds": "Ends {date}",
+  "@actEnds": {
+    "description": "Mobile UI text (actEnds)",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "actClearEnd": "Clear end date",
+  "@actClearEnd": {
+    "description": "Mobile UI text (actClearEnd)"
+  },
+  "actDeadline": "Deadline",
+  "@actDeadline": {
+    "description": "Mobile UI text (actDeadline)"
+  },
+  "actDlDayEnd": "End of each day",
+  "@actDlDayEnd": {
+    "description": "Mobile UI text (actDlDayEnd)"
+  },
+  "actDlDayEndHint": "Default daily cutoff at midnight in the activity timezone.",
+  "@actDlDayEndHint": {
+    "description": "Mobile UI text (actDlDayEndHint)"
+  },
+  "actDlTime": "At a set time each day",
+  "@actDlTime": {
+    "description": "Mobile UI text (actDlTime)"
+  },
+  "actDlNoneHint": "Never counts as missed and has no streak.",
+  "@actDlNoneHint": {
+    "description": "Mobile UI text (actDlNoneHint)"
+  },
+  "actDueAtPicker": "Due at {time}",
+  "@actDueAtPicker": {
+    "description": "Mobile UI text (actDueAtPicker)",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "actTimezone": "Timezone",
+  "@actTimezone": {
+    "description": "Mobile UI text (actTimezone)"
+  },
+  "actStarts": "Starts",
+  "@actStarts": {
+    "description": "Mobile UI text (actStarts)"
+  },
+  "actNewActivity": "New activity",
+  "@actNewActivity": {
+    "description": "Mobile UI text (actNewActivity)"
+  },
+  "actReviewN": "Review ({count})",
+  "@actReviewN": {
+    "description": "Mobile UI text (actReviewN)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actReviewQueue": "Review queue",
+  "@actReviewQueue": {
+    "description": "Mobile UI text (actReviewQueue)"
+  },
+  "actSectionSubtitle": "Recurring practice with a completion policy and a deadline.",
+  "@actSectionSubtitle": {
+    "description": "Mobile UI text (actSectionSubtitle)"
+  },
+  "actTodayDone": "Today {done}/{expected} done",
+  "@actTodayDone": {
+    "description": "Mobile UI text (actTodayDone)",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "expected": {
+        "type": "int"
+      }
+    }
+  },
+  "actNotScheduledToday": "Not scheduled today",
+  "@actNotScheduledToday": {
+    "description": "Mobile UI text (actNotScheduledToday)"
+  },
+  "actToReview": "{count} to review",
+  "@actToReview": {
+    "description": "Mobile UI text (actToReview)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actEmptyTitle": "No activities yet",
+  "@actEmptyTitle": {
+    "description": "Mobile UI text (actEmptyTitle)"
+  },
+  "actEmptyHint": "Create a daily activity such as Reading Practice, then choose how completion is recorded.",
+  "@actEmptyHint": {
+    "description": "Mobile UI text (actEmptyHint)"
+  },
+  "actProblemTitle": "Give the activity a title.",
+  "@actProblemTitle": {
+    "description": "Mobile UI text (actProblemTitle)"
+  },
+  "actProblemDays": "Choose at least one day of the week.",
+  "@actProblemDays": {
+    "description": "Mobile UI text (actProblemDays)"
+  },
+  "actFormDesc": "Subject-neutral practice your students repeat on the days you choose.",
+  "@actFormDesc": {
+    "description": "Mobile UI text (actFormDesc)"
+  },
+  "actDetails": "Details",
+  "@actDetails": {
+    "description": "Mobile UI text (actDetails)"
+  },
+  "actDescriptionOptional": "Description (optional)",
+  "@actDescriptionOptional": {
+    "description": "Mobile UI text (actDescriptionOptional)"
+  },
+  "actHowRecorded": "How is completion recorded?",
+  "@actHowRecorded": {
+    "description": "Mobile UI text (actHowRecorded)"
+  },
+  "actSchedule": "Schedule",
+  "@actSchedule": {
+    "description": "Mobile UI text (actSchedule)"
+  },
+  "actCreate": "Create activity",
+  "@actCreate": {
+    "description": "Mobile UI text (actCreate)"
+  },
+  "actChangeSchedule": "Change schedule",
+  "@actChangeSchedule": {
+    "description": "Mobile UI text (actChangeSchedule)"
+  },
+  "actChangeDesc": "The new schedule starts on the date you choose (tomorrow or later). Days before it keep the rules they had, so nobody's history changes.",
+  "@actChangeDesc": {
+    "description": "Mobile UI text (actChangeDesc)"
+  },
+  "actNewSchedule": "New schedule",
+  "@actNewSchedule": {
+    "description": "Mobile UI text (actNewSchedule)"
+  },
+  "actSaveSchedule": "Save schedule",
+  "@actSaveSchedule": {
+    "description": "Mobile UI text (actSaveSchedule)"
+  },
+  "actScheduleFrom": "Current schedule from {from} (version {version})",
+  "@actScheduleFrom": {
+    "description": "Mobile UI text (actScheduleFrom)",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "actScheduleFromTo": "Current schedule from {from} to {to} (version {version})",
+  "@actScheduleFromTo": {
+    "description": "Mobile UI text (actScheduleFromTo)",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "actPause": "Pause",
+  "@actPause": {
+    "description": "Mobile UI text (actPause)"
+  },
+  "actResume": "Resume",
+  "@actResume": {
+    "description": "Mobile UI text (actResume)"
+  },
+  "actArchive": "Archive",
+  "@actArchive": {
+    "description": "Mobile UI text (actArchive)"
+  },
+  "actConfirmPause": "Pause this activity from tomorrow? Past days keep their records.",
+  "@actConfirmPause": {
+    "description": "Mobile UI text (actConfirmPause)"
+  },
+  "actConfirmArchive": "Archive this activity? It is hidden from students; history is kept.",
+  "@actConfirmArchive": {
+    "description": "Mobile UI text (actConfirmArchive)"
+  },
+  "actConfirmResume": "Resume this activity from tomorrow?",
+  "@actConfirmResume": {
+    "description": "Mobile UI text (actConfirmResume)"
+  },
+  "actWeeklyRegister": "Weekly register",
+  "@actWeeklyRegister": {
+    "description": "Mobile UI text (actWeeklyRegister)"
+  },
+  "actRegisterSubtitle": "Week of {date}. Tap a cell to record or review.",
+  "@actRegisterSubtitle": {
+    "description": "Mobile UI text (actRegisterSubtitle)",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "actCouldNotRefreshWeek": "Could not refresh: {error} Showing the last loaded week.",
+  "@actCouldNotRefreshWeek": {
+    "description": "Mobile UI text (actCouldNotRefreshWeek)",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "actNoStudentsTitle": "No students enrolled yet",
+  "@actNoStudentsTitle": {
+    "description": "Mobile UI text (actNoStudentsTitle)"
+  },
+  "actNoStudentsHint": "Students appear here once they join the course.",
+  "@actNoStudentsHint": {
+    "description": "Mobile UI text (actNoStudentsHint)"
+  },
+  "actNotScheduledWeek": "Not scheduled this week",
+  "@actNotScheduledWeek": {
+    "description": "Mobile UI text (actNotScheduledWeek)"
+  },
+  "actNotScheduledWeekHint": "This activity has no scheduled day in this week. Use the arrows to look at another week.",
+  "@actNotScheduledWeekHint": {
+    "description": "Mobile UI text (actNotScheduledWeekHint)"
+  },
+  "actCellSemantics": "{name}, {date}: {state}",
+  "@actCellSemantics": {
+    "description": "Mobile UI text (actCellSemantics)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      }
+    }
+  },
+  "actStudentNote": "Student note: {note}",
+  "@actStudentNote": {
+    "description": "Mobile UI text (actStudentNote)",
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "actReasonGiven": "Reason given: {reason}",
+  "@actReasonGiven": {
+    "description": "Mobile UI text (actReasonGiven)",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "actArchivedReadOnly": "This course is archived, so records are read-only.",
+  "@actArchivedReadOnly": {
+    "description": "Mobile UI text (actArchivedReadOnly)"
+  },
+  "actReasonRequired": "Reason for the student (required)",
+  "@actReasonRequired": {
+    "description": "Mobile UI text (actReasonRequired)"
+  },
+  "actApprove": "Approve",
+  "@actApprove": {
+    "description": "Mobile UI text (actApprove)"
+  },
+  "actReject": "Reject",
+  "@actReject": {
+    "description": "Mobile UI text (actReject)"
+  },
+  "actSendRejection": "Send rejection",
+  "@actSendRejection": {
+    "description": "Mobile UI text (actSendRejection)"
+  },
+  "actFutureDays": "Future days cannot be marked yet.",
+  "@actFutureDays": {
+    "description": "Mobile UI text (actFutureDays)"
+  },
+  "actMarkCompleted": "Mark completed",
+  "@actMarkCompleted": {
+    "description": "Mobile UI text (actMarkCompleted)"
+  },
+  "actMarkNotDone": "Mark not done",
+  "@actMarkNotDone": {
+    "description": "Mobile UI text (actMarkNotDone)"
+  },
+  "actVerificationQueue": "Verification queue",
+  "@actVerificationQueue": {
+    "description": "Mobile UI text (actVerificationQueue)"
+  },
+  "actWaitingDecision": "{count} waiting for your decision.",
+  "@actWaitingDecision": {
+    "description": "Mobile UI text (actWaitingDecision)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actWaitingReview": "Waiting for review",
+  "@actWaitingReview": {
+    "description": "Mobile UI text (actWaitingReview)"
+  },
+  "actNothingToReview": "Nothing to review",
+  "@actNothingToReview": {
+    "description": "Mobile UI text (actNothingToReview)"
+  },
+  "actNothingToReviewHint": "Submissions from students appear here for approval or rejection.",
+  "@actNothingToReviewHint": {
+    "description": "Mobile UI text (actNothingToReviewHint)"
+  },
+  "actSubmittedAt": "submitted {when}",
+  "@actSubmittedAt": {
+    "description": "Mobile UI text (actSubmittedAt)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "actNoteLine": "Note: {note}",
+  "@actNoteLine": {
+    "description": "Mobile UI text (actNoteLine)",
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "actRejectTitle": "Reject submission",
+  "@actRejectTitle": {
+    "description": "Mobile UI text (actRejectTitle)"
+  },
+  "atdRateNone": "No rate yet",
+  "@atdRateNone": {
+    "description": "Mobile UI text (atdRateNone)"
+  },
+  "atdNewSession": "New session",
+  "@atdNewSession": {
+    "description": "Mobile UI text (atdNewSession)"
+  },
+  "atdWeeklyGrid": "Weekly grid",
+  "@atdWeeklyGrid": {
+    "description": "Mobile UI text (atdWeeklyGrid)"
+  },
+  "atdSummary": "Summary",
+  "@atdSummary": {
+    "description": "Mobile UI text (atdSummary)"
+  },
+  "atdNoSessions": "No attendance sessions yet",
+  "@atdNoSessions": {
+    "description": "Mobile UI text (atdNoSessions)"
+  },
+  "atdNoSessionsHint": "Create one for each class meeting.",
+  "@atdNoSessionsHint": {
+    "description": "Mobile UI text (atdNoSessionsHint)"
+  },
+  "atdNewDialogTitle": "New attendance session",
+  "@atdNewDialogTitle": {
+    "description": "Mobile UI text (atdNewDialogTitle)"
+  },
+  "atdDate": "Date",
+  "@atdDate": {
+    "description": "Mobile UI text (atdDate)"
+  },
+  "atdTime": "Time",
+  "@atdTime": {
+    "description": "Mobile UI text (atdTime)"
+  },
+  "atdNoteFor": "Note for {name}",
+  "@atdNoteFor": {
+    "description": "Mobile UI text (atdNoteFor)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "atdNote": "Note",
+  "@atdNote": {
+    "description": "Mobile UI text (atdNote)"
+  },
+  "atdSaveNote": "Save note",
+  "@atdSaveNote": {
+    "description": "Mobile UI text (atdSaveNote)"
+  },
+  "atdCloseTitle": "Close this session?",
+  "@atdCloseTitle": {
+    "description": "Mobile UI text (atdCloseTitle)"
+  },
+  "atdCloseAllMarked": "Every student is marked. You can still correct records later.",
+  "@atdCloseAllMarked": {
+    "description": "Mobile UI text (atdCloseAllMarked)"
+  },
+  "atdCloseUnmarked": "{count} unmarked student(s) will be recorded as Absent. You can still correct records later.",
+  "@atdCloseUnmarked": {
+    "description": "Mobile UI text (atdCloseUnmarked)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "atdCloseSession": "Close session",
+  "@atdCloseSession": {
+    "description": "Mobile UI text (atdCloseSession)"
+  },
+  "atdEventClosed": "Session closed · {when}",
+  "@atdEventClosed": {
+    "description": "Mobile UI text (atdEventClosed)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "atdEventCorrected": "{who}: {from} → {to} · {when}",
+  "@atdEventCorrected": {
+    "description": "Mobile UI text (atdEventCorrected)",
+    "placeholders": {
+      "who": {
+        "type": "String"
+      },
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "atdEventMarked": "{who}: {status} · {when}",
+  "@atdEventMarked": {
+    "description": "Mobile UI text (atdEventMarked)",
+    "placeholders": {
+      "who": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "atdEyebrowSession": "Attendance / Session",
+  "@atdEyebrowSession": {
+    "description": "Mobile UI text (atdEyebrowSession)"
+  },
+  "atdClassRegister": "Class register",
+  "@atdClassRegister": {
+    "description": "Mobile UI text (atdClassRegister)"
+  },
+  "atdRegisterHint": "Choose a status for each student. Changes save immediately.",
+  "@atdRegisterHint": {
+    "description": "Mobile UI text (atdRegisterHint)"
+  },
+  "atdArchivedReadOnly": "This course is archived. Attendance is read-only.",
+  "@atdArchivedReadOnly": {
+    "description": "Mobile UI text (atdArchivedReadOnly)"
+  },
+  "atdNoStudents": "No students are enrolled yet.",
+  "@atdNoStudents": {
+    "description": "Mobile UI text (atdNoStudents)"
+  },
+  "atdCloseSessionN": "Close session ({count} unmarked)",
+  "@atdCloseSessionN": {
+    "description": "Mobile UI text (atdCloseSessionN)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "atdSessionClosedNote": "Session closed. Existing records can still be corrected.",
+  "@atdSessionClosedNote": {
+    "description": "Mobile UI text (atdSessionClosedNote)"
+  },
+  "atdNoChanges": "No changes yet.",
+  "@atdNoChanges": {
+    "description": "Mobile UI text (atdNoChanges)"
+  },
+  "atdEditNoteFor": "Edit note for {name}",
+  "@atdEditNoteFor": {
+    "description": "Mobile UI text (atdEditNoteFor)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "atdNotMarkedYet": "Not marked yet",
+  "@atdNotMarkedYet": {
+    "description": "Mobile UI text (atdNotMarkedYet)"
+  },
+  "atdEyebrowTeaching": "Teaching / Attendance",
+  "@atdEyebrowTeaching": {
+    "description": "Mobile UI text (atdEyebrowTeaching)"
+  },
+  "atdEyebrowLearning": "Learning / Attendance",
+  "@atdEyebrowLearning": {
+    "description": "Mobile UI text (atdEyebrowLearning)"
+  },
+  "atdSummaryTitle": "Attendance summary",
+  "@atdSummaryTitle": {
+    "description": "Mobile UI text (atdSummaryTitle)"
+  },
+  "atdSummaryDesc": "A clear record of participation across class sessions.",
+  "@atdSummaryDesc": {
+    "description": "Mobile UI text (atdSummaryDesc)"
+  },
+  "atdClosedOfTotal": "{closed} closed of {total} session(s)",
+  "@atdClosedOfTotal": {
+    "description": "Mobile UI text (atdClosedOfTotal)",
+    "placeholders": {
+      "closed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "atdRateNote": "Rate = (Present + Late) ÷ (Present + Late + Absent). Excused is not counted.",
+  "@atdRateNote": {
+    "description": "Mobile UI text (atdRateNote)"
+  },
+  "atdSummaryEmptyHint": "Attendance rates appear once students join the course.",
+  "@atdSummaryEmptyHint": {
+    "description": "Mobile UI text (atdSummaryEmptyHint)"
+  },
+  "atdMyAttendance": "My attendance",
+  "@atdMyAttendance": {
+    "description": "Mobile UI text (atdMyAttendance)"
+  },
+  "atdWeeklyView": "Weekly view",
+  "@atdWeeklyView": {
+    "description": "Mobile UI text (atdWeeklyView)"
+  },
+  "atdNoRecords": "No attendance recorded yet",
+  "@atdNoRecords": {
+    "description": "Mobile UI text (atdNoRecords)"
+  },
+  "atdNoRecordsHint": "Your attendance will show here once a class is marked.",
+  "@atdNoRecordsHint": {
+    "description": "Mobile UI text (atdNoRecordsHint)"
+  },
+  "atdRateTitle": "Attendance rate: {rate}",
+  "@atdRateTitle": {
+    "description": "Mobile UI text (atdRateTitle)",
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "atdWeeklyAttendance": "Weekly attendance",
+  "@atdWeeklyAttendance": {
+    "description": "Mobile UI text (atdWeeklyAttendance)"
+  },
+  "atdMyWeek": "My week",
+  "@atdMyWeek": {
+    "description": "Mobile UI text (atdMyWeek)"
+  },
+  "atdGridDesc": "Names stay in view. Swipe the days to explore each session.",
+  "@atdGridDesc": {
+    "description": "Mobile UI text (atdGridDesc)"
+  },
+  "atdGlyphPresent": "P",
+  "@atdGlyphPresent": {
+    "description": "Mobile UI text (atdGlyphPresent)"
+  },
+  "atdGlyphLate": "L",
+  "@atdGlyphLate": {
+    "description": "Mobile UI text (atdGlyphLate)"
+  },
+  "atdGlyphExcused": "E",
+  "@atdGlyphExcused": {
+    "description": "Mobile UI text (atdGlyphExcused)"
+  },
+  "atdGlyphAbsent": "A",
+  "@atdGlyphAbsent": {
+    "description": "Mobile UI text (atdGlyphAbsent)"
+  },
+  "atdNotMarked": "Not marked",
+  "@atdNotMarked": {
+    "description": "Mobile UI text (atdNotMarked)"
+  },
+  "atdNoSession": "· No session",
+  "@atdNoSession": {
+    "description": "Mobile UI text (atdNoSession)"
+  },
+  "atdTwoSessions": "×2 = two sessions that day, in time order",
+  "@atdTwoSessions": {
+    "description": "Mobile UI text (atdTwoSessions)"
+  },
+  "atdCellNoSession": "{who}, {date}: no session",
+  "@atdCellNoSession": {
+    "description": "Mobile UI text (atdCellNoSession)",
+    "placeholders": {
+      "who": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "atdMe": "Me",
+  "@atdMe": {
+    "description": "Mobile UI text (atdMe)"
+  },
+  "atdStatusGuide": "Status guide",
+  "@atdStatusGuide": {
+    "description": "Mobile UI text (atdStatusGuide)"
+  },
+  "atdGridNoSessions": "No attendance sessions this week",
+  "@atdGridNoSessions": {
+    "description": "Mobile UI text (atdGridNoSessions)"
+  },
+  "atdGridNoSessionsHint": "Use the arrows to look at another week.",
+  "@atdGridNoSessionsHint": {
+    "description": "Mobile UI text (atdGridNoSessionsHint)"
+  },
+  "atdGridNoStudentsHint": "The weekly table appears once students join the course.",
+  "@atdGridNoStudentsHint": {
+    "description": "Mobile UI text (atdGridNoStudentsHint)"
+  },
+  "atdAllMarked": "All marked",
+  "@atdAllMarked": {
+    "description": "Mobile UI text (atdAllMarked)"
+  },
+  "atdUnmarkedCount": "{count} unmarked",
+  "@atdUnmarkedCount": {
+    "description": "Mobile UI text (atdUnmarkedCount)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progEyebrowTeacher": "Student progress",
+  "@progEyebrowTeacher": {
+    "description": "Mobile UI text (progEyebrowTeacher)"
+  },
+  "progEnrolledSince": "Enrolled since {date}",
+  "@progEnrolledSince": {
+    "description": "Mobile UI text (progEnrolledSince)",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "progPrivateTeacher": "Private to you and this student. Not shared with the class.",
+  "@progPrivateTeacher": {
+    "description": "Mobile UI text (progPrivateTeacher)"
+  },
+  "progPrivateStudent": "Only you and your teacher can see this.",
+  "@progPrivateStudent": {
+    "description": "Mobile UI text (progPrivateStudent)"
+  },
+  "progArchived": "This course is archived (read-only).",
+  "@progArchived": {
+    "description": "Mobile UI text (progArchived)"
+  },
+  "progCouldNotRefresh": "Could not refresh: {error} Showing the last loaded figures.",
+  "@progCouldNotRefresh": {
+    "description": "Mobile UI text (progCouldNotRefresh)",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "progAssignmentsNone": "No assignment has been published yet.",
+  "@progAssignmentsNone": {
+    "description": "Mobile UI text (progAssignmentsNone)"
+  },
+  "progAssignmentsSummary": "{done} of {published} published assignments submitted or graded.",
+  "@progAssignmentsSummary": {
+    "description": "Mobile UI text (progAssignmentsSummary)",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "published": {
+        "type": "int"
+      }
+    }
+  },
+  "progNoPublishedTitle": "No published assignments",
+  "@progNoPublishedTitle": {
+    "description": "Mobile UI text (progNoPublishedTitle)"
+  },
+  "progNoPublishedHint": "Progress appears here once the teacher publishes work.",
+  "@progNoPublishedHint": {
+    "description": "Mobile UI text (progNoPublishedHint)"
+  },
+  "progOfCount": "{a} of {b}",
+  "@progOfCount": {
+    "description": "Mobile UI text (progOfCount)",
+    "placeholders": {
+      "a": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "progOverdueHint": "{count} overdue",
+  "@progOverdueHint": {
+    "description": "Mobile UI text (progOverdueHint)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progAwaitingGrading": "Awaiting grading",
+  "@progAwaitingGrading": {
+    "description": "Mobile UI text (progAwaitingGrading)"
+  },
+  "progScore": "Score {score}/{max}",
+  "@progScore": {
+    "description": "Mobile UI text (progScore)",
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "progTruncated": "Showing the latest {shown} of {total} assignments. The counts above cover all of them.",
+  "@progTruncated": {
+    "description": "Mobile UI text (progTruncated)",
+    "placeholders": {
+      "shown": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "progActivitiesSubtitle": "Streaks count scheduled days only (last 62 days). Pending review is not counted until approved.",
+  "@progActivitiesSubtitle": {
+    "description": "Mobile UI text (progActivitiesSubtitle)"
+  },
+  "progAwaitingVerification": "{count} awaiting verification",
+  "@progAwaitingVerification": {
+    "description": "Mobile UI text (progAwaitingVerification)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progNoActivitiesHint": "No daily activity has been set up for this course.",
+  "@progNoActivitiesHint": {
+    "description": "Mobile UI text (progNoActivitiesHint)"
+  },
+  "progNoClosedDay": "No scheduled day has closed yet.",
+  "@progNoClosedDay": {
+    "description": "Mobile UI text (progNoClosedDay)"
+  },
+  "progAttNone": "No attendance session has been created.",
+  "@progAttNone": {
+    "description": "Mobile UI text (progAttNone)"
+  },
+  "progAttSummary": "{total} sessions, {closed} closed.",
+  "@progAttSummary": {
+    "description": "Mobile UI text (progAttSummary)",
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "closed": {
+        "type": "int"
+      }
+    }
+  },
+  "progNoSessionsTitle": "No sessions yet",
+  "@progNoSessionsTitle": {
+    "description": "Mobile UI text (progNoSessionsTitle)"
+  },
+  "progNoSessionsHint": "Attendance appears once the teacher creates a session.",
+  "@progNoSessionsHint": {
+    "description": "Mobile UI text (progNoSessionsHint)"
+  },
+  "progRateNone": "Attendance rate: no data yet (nothing countable)",
+  "@progRateNone": {
+    "description": "Mobile UI text (progRateNone)"
+  },
+  "progRate": "Attendance rate: {rate} ({present} of {counted} counted sessions)",
+  "@progRate": {
+    "description": "Mobile UI text (progRate)",
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      },
+      "present": {
+        "type": "int"
+      },
+      "counted": {
+        "type": "int"
+      }
+    }
+  },
+  "progNotMarkedCount": "Not marked: {count}",
+  "@progNotMarkedCount": {
+    "description": "Mobile UI text (progNotMarkedCount)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progRecentSessions": "Recent sessions",
+  "@progRecentSessions": {
+    "description": "Mobile UI text (progRecentSessions)"
+  },
+  "taskModeMonth": "Month",
+  "@taskModeMonth": {
+    "description": "Mobile UI text (taskModeMonth)"
+  },
+  "taskModeCompleted": "Completed",
+  "@taskModeCompleted": {
+    "description": "Mobile UI text (taskModeCompleted)"
+  },
+  "taskOverdue": "Overdue",
+  "@taskOverdue": {
+    "description": "Mobile UI text (taskOverdue)"
+  },
+  "taskNeedsRevision": "Needs revision",
+  "@taskNeedsRevision": {
+    "description": "Mobile UI text (taskNeedsRevision)"
+  },
+  "taskGraded": "Graded",
+  "@taskGraded": {
+    "description": "Mobile UI text (taskGraded)"
+  },
+  "taskHeld": "Held",
+  "@taskHeld": {
+    "description": "Mobile UI text (taskHeld)"
+  },
+  "taskScheduled": "Scheduled",
+  "@taskScheduled": {
+    "description": "Mobile UI text (taskScheduled)"
+  },
+  "taskHeaderTitle": "What to do",
+  "@taskHeaderTitle": {
+    "description": "Mobile UI text (taskHeaderTitle)"
+  },
+  "taskHeaderDesc": "Assignments and daily activities from all your courses, with one status each.",
+  "@taskHeaderDesc": {
+    "description": "Mobile UI text (taskHeaderDesc)"
+  },
+  "taskEmptyTodayTitle": "Nothing due today",
+  "@taskEmptyTodayTitle": {
+    "description": "Mobile UI text (taskEmptyTodayTitle)"
+  },
+  "taskEmptyTodayHint": "Enjoy it, or look at the week ahead.",
+  "@taskEmptyTodayHint": {
+    "description": "Mobile UI text (taskEmptyTodayHint)"
+  },
+  "taskEmptyWeekTitle": "Nothing this week",
+  "@taskEmptyWeekTitle": {
+    "description": "Mobile UI text (taskEmptyWeekTitle)"
+  },
+  "taskEmptyWeekHint": "No assignment deadline or activity falls in this week.",
+  "@taskEmptyWeekHint": {
+    "description": "Mobile UI text (taskEmptyWeekHint)"
+  },
+  "taskEmptyMonthTitle": "Nothing this month",
+  "@taskEmptyMonthTitle": {
+    "description": "Mobile UI text (taskEmptyMonthTitle)"
+  },
+  "taskEmptyDayTitle": "Nothing on this day",
+  "@taskEmptyDayTitle": {
+    "description": "Mobile UI text (taskEmptyDayTitle)"
+  },
+  "taskEmptyMonthHint": "No assignment deadline or activity falls here.",
+  "@taskEmptyMonthHint": {
+    "description": "Mobile UI text (taskEmptyMonthHint)"
+  },
+  "taskEmptyUpcomingTitle": "Nothing coming up",
+  "@taskEmptyUpcomingTitle": {
+    "description": "Mobile UI text (taskEmptyUpcomingTitle)"
+  },
+  "taskEmptyUpcomingHint": "New work from your teachers will appear here.",
+  "@taskEmptyUpcomingHint": {
+    "description": "Mobile UI text (taskEmptyUpcomingHint)"
+  },
+  "taskEmptyOverdueTitle": "Nothing overdue",
+  "@taskEmptyOverdueTitle": {
+    "description": "Mobile UI text (taskEmptyOverdueTitle)"
+  },
+  "taskEmptyOverdueHint": "You are up to date.",
+  "@taskEmptyOverdueHint": {
+    "description": "Mobile UI text (taskEmptyOverdueHint)"
+  },
+  "taskEmptyCompletedTitle": "Nothing completed yet",
+  "@taskEmptyCompletedTitle": {
+    "description": "Mobile UI text (taskEmptyCompletedTitle)"
+  },
+  "taskEmptyCompletedHint": "Finished work appears here.",
+  "@taskEmptyCompletedHint": {
+    "description": "Mobile UI text (taskEmptyCompletedHint)"
+  },
+  "taskCalendarEyebrow": "Calendar",
+  "@taskCalendarEyebrow": {
+    "description": "Mobile UI text (taskCalendarEyebrow)"
+  },
+  "taskCalendarTitle": "Teaching calendar",
+  "@taskCalendarTitle": {
+    "description": "Mobile UI text (taskCalendarTitle)"
+  },
+  "taskCalendarDesc": "Assignment deadlines, daily activities and attendance sessions across your courses.",
+  "@taskCalendarDesc": {
+    "description": "Mobile UI text (taskCalendarDesc)"
+  },
+  "taskNoPending": "No activity submissions waiting for review.",
+  "@taskNoPending": {
+    "description": "Mobile UI text (taskNoPending)"
+  },
+  "taskPending": "{count} activity submissions waiting for review.",
+  "@taskPending": {
+    "description": "Mobile UI text (taskPending)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "taskCouldNotRefreshTasks": "Could not refresh: {error} Showing the last loaded tasks.",
+  "@taskCouldNotRefreshTasks": {
+    "description": "Mobile UI text (taskCouldNotRefreshTasks)",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "taskCouldNotRefreshCalendar": "Could not refresh: {error} Showing the last loaded calendar.",
+  "@taskCouldNotRefreshCalendar": {
+    "description": "Mobile UI text (taskCouldNotRefreshCalendar)",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "taskNothingScheduled": "Nothing scheduled",
+  "@taskNothingScheduled": {
+    "description": "Mobile UI text (taskNothingScheduled)"
+  },
+  "taskNothingScheduledHint": "No deadline, activity or attendance session falls here.",
+  "@taskNothingScheduledHint": {
+    "description": "Mobile UI text (taskNothingScheduledHint)"
+  },
+  "taskPrevious": "Previous",
+  "@taskPrevious": {
+    "description": "Mobile UI text (taskPrevious)"
+  },
+  "taskNext": "Next",
+  "@taskNext": {
+    "description": "Mobile UI text (taskNext)"
+  },
+  "taskDayItems": "{day} {month}, {count, plural, =0{no items} =1{1 item} other{{count} items}}",
+  "@taskDayItems": {
+    "description": "Mobile UI text (taskDayItems)",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "month": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "taskUndated": "Undated",
+  "@taskUndated": {
+    "description": "Mobile UI text (taskUndated)"
+  },
+  "taskDueSubmitted": "Due {when} · {received} of {expected} submitted",
+  "@taskDueSubmitted": {
+    "description": "Mobile UI text (taskDueSubmitted)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "received": {
+        "type": "int"
+      },
+      "expected": {
+        "type": "int"
+      }
+    }
+  },
+  "taskDoneOf": "{received} of {expected} done",
+  "@taskDoneOf": {
+    "description": "Mobile UI text (taskDoneOf)",
+    "placeholders": {
+      "received": {
+        "type": "int"
+      },
+      "expected": {
+        "type": "int"
+      }
+    }
+  },
+  "taskAttendanceSession": "Attendance session {when} · {state}",
+  "@taskAttendanceSession": {
+    "description": "Mobile UI text (taskAttendanceSession)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      }
+    }
+  },
+  "taskClassSession": "Class session {when}",
+  "@taskClassSession": {
+    "description": "Mobile UI text (taskClassSession)",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "taskNothingDueToday": "Nothing is due today.",
+  "@taskNothingDueToday": {
+    "description": "Mobile UI text (taskNothingDueToday)"
+  },
+  "taskTodoDone": "{todo} to do · {rest} done or waiting",
+  "@taskTodoDone": {
+    "description": "Mobile UI text (taskTodoDone)",
+    "placeholders": {
+      "todo": {
+        "type": "int"
+      },
+      "rest": {
+        "type": "int"
+      }
+    }
+  },
+  "taskAllTasks": "All tasks",
+  "@taskAllTasks": {
+    "description": "Mobile UI text (taskAllTasks)"
+  },
+  "taskAllClear": "All clear today",
+  "@taskAllClear": {
+    "description": "Mobile UI text (taskAllClear)"
+  },
+  "taskAllClearHint": "No assignment deadline or activity is scheduled for today.",
+  "@taskAllClearHint": {
+    "description": "Mobile UI text (taskAllClearHint)"
+  },
+  "taskMoreInTasks": "{count} more in Tasks",
+  "@taskMoreInTasks": {
+    "description": "Mobile UI text (taskMoreInTasks)",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "taskReview": "Review ({count})",
+  "@taskReview": {
+    "description": "Open pending activity reviews",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actTzBangkok": "Bangkok (UTC+7)",
+  "@actTzBangkok": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzSingapore": "Singapore (UTC+8)",
+  "@actTzSingapore": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzTokyo": "Tokyo (UTC+9)",
+  "@actTzTokyo": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzIndia": "India (UTC+5:30)",
+  "@actTzIndia": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzDubai": "Dubai (UTC+4)",
+  "@actTzDubai": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzLondon": "London",
+  "@actTzLondon": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzParisBerlin": "Paris / Berlin",
+  "@actTzParisBerlin": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzNewYork": "New York",
+  "@actTzNewYork": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzChicago": "Chicago",
+  "@actTzChicago": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzLosAngeles": "Los Angeles",
+  "@actTzLosAngeles": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzSydney": "Sydney",
+  "@actTzSydney": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzAuckland": "Auckland",
+  "@actTzAuckland": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "actTzUtc": "Coordinated Universal Time (UTC)",
+  "@actTzUtc": {
+    "description": "Schedule time zone display name; IANA wire value is unchanged"
+  },
+  "welcomeTitle": "Your learning day, all in one place.",
+  "@welcomeTitle": {
+    "description": "Native signed-out welcome screen: welcomeTitle"
+  },
+  "welcomeDescription": "Bring your courses, tasks and learning progress together. Sign in to continue.",
+  "@welcomeDescription": {
+    "description": "Native signed-out welcome screen: welcomeDescription"
+  },
+  "welcomeFeatures": "Made for everyday learning",
+  "@welcomeFeatures": {
+    "description": "Native signed-out welcome screen: welcomeFeatures"
+  },
+  "welcomeProgress": "Progress",
+  "@welcomeProgress": {
+    "description": "Native signed-out welcome screen: welcomeProgress"
+  },
+  "welcomeBack": "Back to welcome",
+  "@welcomeBack": {
+    "description": "Native signed-out welcome screen: welcomeBack"
+  },
+  "profilePhotoTitle": "Profile photo",
+  "@profilePhotoTitle": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoHint": "JPEG or WebP. It is cropped to a square and shrunk to about 256 px. Only you and your course teachers can see it.",
+  "@profilePhotoHint": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoAdd": "Add photo",
+  "@profilePhotoAdd": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoChange": "Change photo",
+  "@profilePhotoChange": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoRemove": "Remove photo",
+  "@profilePhotoRemove": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoSaved": "Photo saved",
+  "@profilePhotoSaved": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoRemoved": "Photo removed",
+  "@profilePhotoRemoved": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoCropTitle": "Crop your photo",
+  "@profilePhotoCropTitle": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoCropHint": "Drag and pinch the picture to choose what shows in the circle.",
+  "@profilePhotoCropHint": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoSave": "Save photo",
+  "@profilePhotoSave": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "profilePhotoSemantics": "Profile photo of {name}",
+  "@profilePhotoSemantics": {
+    "description": "Screen-reader label for a profile photo",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "errorAvatarType": "Choose a JPEG or WebP picture.",
+  "@errorAvatarType": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "errorAvatarInputTooLarge": "That picture is too large (10 MB maximum).",
+  "@errorAvatarInputTooLarge": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "errorAvatarDecode": "That picture could not be read. Try another one.",
+  "@errorAvatarDecode": {
+    "description": "Profile photo (Stage 1 avatars)"
+  },
+  "scanTitle": "Scan attendance code",
+  "@scanTitle": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanButton": "Scan code",
+  "@scanButton": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanHint": "Point the camera at the classroom QR code, or type the code shown under it.",
+  "@scanHint": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanCameraLabel": "Camera preview for scanning the attendance QR code",
+  "@scanCameraLabel": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanManualLabel": "Attendance code",
+  "@scanManualLabel": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanSubmit": "Submit code",
+  "@scanSubmit": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanAgain": "Scan another code",
+  "@scanAgain": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanCameraDenied": "Camera access is off. Allow it in Settings, or type the code below.",
+  "@scanCameraDenied": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanNoCamera": "This device has no usable camera. Type the code below.",
+  "@scanNoCamera": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanCameraBusy": "The camera could not start (it may be in use). Type the code below, or try again.",
+  "@scanCameraBusy": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanOk": "Checked in as {status} at {time}.",
+  "@scanOk": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "status": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "scanOutOk": "Checked out at {time}.",
+  "@scanOutOk": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "scanAlready": "You were already recorded as {status}.",
+  "@scanAlready": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "scanOutAlready": "You were already checked out.",
+  "@scanOutAlready": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanReasonInvalid": "That code is not valid.",
+  "@scanReasonInvalid": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanReasonExpired": "That code has expired. Ask for the current code.",
+  "@scanReasonExpired": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanReasonClosed": "This session is closed.",
+  "@scanReasonClosed": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanReasonNotMember": "You are not an active member of this course.",
+  "@scanReasonNotMember": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanReasonTooEarly": "Check-in is not open yet.",
+  "@scanReasonTooEarly": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanReasonTooLate": "The check-in window has ended.",
+  "@scanReasonTooLate": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "scanReasonNoCheckin": "Check in before checking out.",
+  "@scanReasonNoCheckin": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "atdTimeIn": "In {time}",
+  "@atdTimeIn": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "atdTimeOut": "Out {time}",
+  "@atdTimeOut": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "atdViaQr": "QR",
+  "@atdViaQr": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffTitle": "Staff attendance",
+  "@staffTitle": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffSubtitle": "Clock in and out, see your history and ask for leave or a correction.",
+  "@staffSubtitle": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffToday": "Today",
+  "@staffToday": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffStatusIn": "Clocked in since {time}",
+  "@staffStatusIn": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "staffStatusOut": "You are not clocked in.",
+  "@staffStatusOut": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffStatusLate": "Late by {minutes} min",
+  "@staffStatusLate": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "staffClockIn": "Clock in",
+  "@staffClockIn": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffClockOut": "Clock out",
+  "@staffClockOut": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffClockedIn": "Clocked in",
+  "@staffClockedIn": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffClockedOut": "Clocked out",
+  "@staffClockedOut": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffServerTime": "Times come from the server clock, not from your device.",
+  "@staffServerTime": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffSchedule": "Working schedule",
+  "@staffSchedule": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNoSchedule": "No schedule is set for you. You can still clock in; the day is recorded as unscheduled.",
+  "@staffNoSchedule": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffScheduleLine": "{days} · {start}–{end} ({zone}), {grace} min grace",
+  "@staffScheduleLine": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      },
+      "zone": {
+        "type": "String"
+      },
+      "grace": {
+        "type": "String"
+      }
+    }
+  },
+  "staffD1": "Mon",
+  "@staffD1": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffD2": "Tue",
+  "@staffD2": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffD3": "Wed",
+  "@staffD3": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffD4": "Thu",
+  "@staffD4": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffD5": "Fri",
+  "@staffD5": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffD6": "Sat",
+  "@staffD6": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffD7": "Sun",
+  "@staffD7": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffHistory": "Last 14 days",
+  "@staffHistory": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNoRows": "No records in this period.",
+  "@staffNoRows": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffWorked": "Hours worked: {hours}",
+  "@staffWorked": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "staffOnTime": "On time",
+  "@staffOnTime": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffLate": "Late",
+  "@staffLate": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffMissingCheckout": "Missing check-out",
+  "@staffMissingCheckout": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffInProgress": "In progress",
+  "@staffInProgress": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffAbsent": "Absent",
+  "@staffAbsent": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffLeave": "On leave",
+  "@staffLeave": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffUnscheduled": "Unscheduled",
+  "@staffUnscheduled": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffUpcoming": "Upcoming",
+  "@staffUpcoming": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffRequests": "Requests",
+  "@staffRequests": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNewLeave": "Request leave",
+  "@staffNewLeave": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNewCorrection": "Request a correction",
+  "@staffNewCorrection": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffKindLeave": "Leave",
+  "@staffKindLeave": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffKindCorrection": "Correction",
+  "@staffKindCorrection": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffFromDate": "From date",
+  "@staffFromDate": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffToDate": "To date",
+  "@staffToDate": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffCorrectDate": "Day to correct",
+  "@staffCorrectDate": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffReason": "Reason (3 to 500 characters)",
+  "@staffReason": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffCorrectIn": "Correct clock-in time (optional)",
+  "@staffCorrectIn": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffCorrectOut": "Correct clock-out time (optional)",
+  "@staffCorrectOut": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffPickTime": "Pick time",
+  "@staffPickTime": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffSubmit": "Submit request",
+  "@staffSubmit": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffSubmitted": "Request submitted",
+  "@staffSubmitted": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNoRequests": "No requests yet.",
+  "@staffNoRequests": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffCancelRequest": "Cancel request",
+  "@staffCancelRequest": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffCancelled": "Request cancelled",
+  "@staffCancelled": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffStPending": "Pending",
+  "@staffStPending": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffStApproved": "Approved",
+  "@staffStApproved": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffStRejected": "Rejected",
+  "@staffStRejected": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffStCancelled": "Cancelled",
+  "@staffStCancelled": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffDecisionNote": "Decision note: {note}",
+  "@staffDecisionNote": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "staffSelfNote": "A supervisor decides your requests. You cannot approve your own.",
+  "@staffSelfNote": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNoSupervisor": "No supervisor is assigned to you yet, so requests wait until an administrator assigns one.",
+  "@staffNoSupervisor": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNeedReason": "Give a reason of at least 3 characters.",
+  "@staffNeedReason": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffFixDates": "Choose valid dates.",
+  "@staffFixDates": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNeedTime": "Give the correct clock-in or clock-out time.",
+  "@staffNeedTime": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffManager": "Supervisor tools",
+  "@staffManager": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffTeam": "Team summary",
+  "@staffTeam": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNoTeam": "You do not supervise anyone.",
+  "@staffNoTeam": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffToDecide": "Requests to decide",
+  "@staffToDecide": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNoneToDecide": "Nothing to decide.",
+  "@staffNoneToDecide": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffApprove": "Approve",
+  "@staffApprove": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffReject": "Reject",
+  "@staffReject": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffNoteOptional": "Note (optional)",
+  "@staffNoteOptional": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffDecided": "Decision saved",
+  "@staffDecided": {
+    "description": "Attendance Option E (QR scan and staff attendance)"
+  },
+  "staffTeamLine": "{name}: on time {onTime}, late {late}, missing check-out {missing}, absent {absent}",
+  "@staffTeamLine": {
+    "description": "Attendance Option E (QR scan and staff attendance)",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "onTime": {
+        "type": "String"
+      },
+      "late": {
+        "type": "String"
+      },
+      "missing": {
+        "type": "String"
+      },
+      "absent": {
+        "type": "String"
+      }
+    }
+  },
+  "demoTry": "Try LearnPulse Demo",
+  "@demoTry": {
+    "description": "Unified demo experience"
+  },
+  "demoSelectorTitle": "Try the demo",
+  "@demoSelectorTitle": {
+    "description": "Unified demo experience"
+  },
+  "demoSelectorSub": "Explore LearnPulse with no personal email and no password to type.",
+  "@demoSelectorSub": {
+    "description": "Unified demo experience"
+  },
+  "demoStudent": "Student Demo",
+  "@demoStudent": {
+    "description": "Unified demo experience"
+  },
+  "demoStudentText": "Join a live workshop with a name and a join code. You get a temporary student account.",
+  "@demoStudentText": {
+    "description": "Unified demo experience"
+  },
+  "demoPresenter": "Presenter Demo",
+  "@demoPresenter": {
+    "description": "Unified demo experience"
+  },
+  "demoPresenterText": "For the presenter: start the workshop, show the QR code and manage the session.",
+  "@demoPresenterText": {
+    "description": "Unified demo experience"
+  },
+  "demoRegularSignIn": "Regular sign in",
+  "@demoRegularSignIn": {
+    "description": "Unified demo experience"
+  },
+  "demoPresenterSignInSub": "Sign in once. This device stays signed in, so you will not need to type your details again.",
+  "@demoPresenterSignInSub": {
+    "description": "Unified demo experience"
+  },
+  "demoPresenterNeedsTeacher": "Presenter controls need a Teacher account.",
+  "@demoPresenterNeedsTeacher": {
+    "description": "Unified demo experience"
+  },
+  "demoJoinTitle": "Join the live workshop",
+  "@demoJoinTitle": {
+    "description": "Unified demo experience"
+  },
+  "demoJoinSub": "Enter your name and the workshop code. It is deleted after the event.",
+  "@demoJoinSub": {
+    "description": "Unified demo experience"
+  },
+  "demoCodeLabel": "Workshop code",
+  "@demoCodeLabel": {
+    "description": "Unified demo experience"
+  },
+  "demoCodeHint": "Shown on the presenter screen. It changes every minute.",
+  "@demoCodeHint": {
+    "description": "Unified demo experience"
+  },
+  "demoNameLabel": "Your name",
+  "@demoNameLabel": {
+    "description": "Unified demo experience"
+  },
+  "demoNameHint": "Shown to the presenter. Up to 40 characters.",
+  "@demoNameHint": {
+    "description": "Unified demo experience"
+  },
+  "demoJoinButton": "Join Demo",
+  "@demoJoinButton": {
+    "description": "Unified demo experience"
+  },
+  "demoJoining": "Getting your seat…",
+  "@demoJoining": {
+    "description": "Unified demo experience"
+  },
+  "demoSigningIn": "Signing you in…",
+  "@demoSigningIn": {
+    "description": "Unified demo experience"
+  },
+  "demoWaiting": "Many people are joining at once. Trying again in a moment…",
+  "@demoWaiting": {
+    "description": "Unified demo experience"
+  },
+  "demoScan": "Scan QR code",
+  "@demoScan": {
+    "description": "Unified demo experience"
+  },
+  "demoScanHint": "Point the camera at the QR code on the presenter screen.",
+  "@demoScanHint": {
+    "description": "Unified demo experience"
+  },
+  "demoCameraProblem": "The camera is not available. Type the code instead.",
+  "@demoCameraProblem": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgBadCode": "Enter the 12-character workshop code.",
+  "@demoMsgBadCode": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgBadName": "Use 1–40 characters without < or >.",
+  "@demoMsgBadName": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgInvalid": "This code is not valid, has expired, or the demo has not started yet. Check the presenter's screen.",
+  "@demoMsgInvalid": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgClosed": "Joining is closed for this workshop.",
+  "@demoMsgClosed": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgFull": "All seats are taken.",
+  "@demoMsgFull": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgBusy": "Too many attempts. Wait a minute and try again.",
+  "@demoMsgBusy": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgSignedIn": "You are already signed in. Sign out first.",
+  "@demoMsgSignedIn": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgAlready": "This device already joined. Credentials are shown only once.",
+  "@demoMsgAlready": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgAuthFailed": "Your seat is reserved, but sign-in did not finish. Press Join again to get the same seat.",
+  "@demoMsgAuthFailed": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgRateBusy": "Sign-in is very busy right now. Press Join again in a few seconds.",
+  "@demoMsgRateBusy": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgExpired": "This workshop session has ended.",
+  "@demoMsgExpired": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgNetwork": "No connection. Check your internet and try again.",
+  "@demoMsgNetwork": {
+    "description": "Unified demo experience"
+  },
+  "demoMsgFailed": "Something went wrong. Please try again.",
+  "@demoMsgFailed": {
+    "description": "Unified demo experience"
+  },
+  "demoHostTitle": "Live demo host",
+  "@demoHostTitle": {
+    "description": "Unified demo experience"
+  },
+  "demoHostNone": "No live demo found for this account.",
+  "@demoHostNone": {
+    "description": "Unified demo experience"
+  },
+  "demoHostTooltip": "Live demo",
+  "@demoHostTooltip": {
+    "description": "Unified demo experience"
+  },
+  "demoStatusReady": "Ready to start",
+  "@demoStatusReady": {
+    "description": "Unified demo experience"
+  },
+  "demoStatusOpen": "Open",
+  "@demoStatusOpen": {
+    "description": "Unified demo experience"
+  },
+  "demoStatusPaused": "Paused",
+  "@demoStatusPaused": {
+    "description": "Unified demo experience"
+  },
+  "demoStatusClosed": "Joining closed",
+  "@demoStatusClosed": {
+    "description": "Unified demo experience"
+  },
+  "demoStatusEnded": "Ended",
+  "@demoStatusEnded": {
+    "description": "Unified demo experience"
+  },
+  "demoReadyText": "The prepared workshop is ready. Starting it opens joining for {join} minutes and ends the session {life} hours later. This cannot be paused or undone.",
+  "@demoReadyText": {
+    "description": "Unified demo experience",
+    "placeholders": {
+      "join": {
+        "type": "int"
+      },
+      "life": {
+        "type": "String"
+      }
+    }
+  },
+  "demoStart": "Start Demo",
+  "@demoStart": {
+    "description": "Unified demo experience"
+  },
+  "demoStartConfirm": "Start the live demo now? Joining stays open for {join} minutes and the session ends {life} hours after you start.",
+  "@demoStartConfirm": {
+    "description": "Unified demo experience",
+    "placeholders": {
+      "join": {
+        "type": "int"
+      },
+      "life": {
+        "type": "String"
+      }
+    }
+  },
+  "demoEnd": "End Demo",
+  "@demoEnd": {
+    "description": "Unified demo experience"
+  },
+  "demoEndConfirm": "End the demo? Everyone loses access to the workshop immediately.",
+  "@demoEndConfirm": {
+    "description": "Unified demo experience"
+  },
+  "demoPause": "Pause joining",
+  "@demoPause": {
+    "description": "Unified demo experience"
+  },
+  "demoResume": "Resume joining",
+  "@demoResume": {
+    "description": "Unified demo experience"
+  },
+  "demoCloseJoins": "Close joining",
+  "@demoCloseJoins": {
+    "description": "Unified demo experience"
+  },
+  "demoJoinsLeft": "Joining closes in {time}",
+  "@demoJoinsLeft": {
+    "description": "Unified demo experience",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "demoLifeLeft": "Session ends in {time}",
+  "@demoLifeLeft": {
+    "description": "Unified demo experience",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "demoJoinWindowOver": "The joining window has ended.",
+  "@demoJoinWindowOver": {
+    "description": "Unified demo experience"
+  },
+  "demoCopyCode": "Copy code",
+  "@demoCopyCode": {
+    "description": "Unified demo experience"
+  },
+  "demoCopyLink": "Copy link",
+  "@demoCopyLink": {
+    "description": "Unified demo experience"
+  },
+  "demoCopied": "Copied",
+  "@demoCopied": {
+    "description": "Unified demo experience"
+  },
+  "demoProjectHint": "Show this QR code on the projector. Attendees scan it with the phone camera.",
+  "@demoProjectHint": {
+    "description": "Unified demo experience"
+  },
+  "demoCodeExpires": "New code in {seconds}s",
+  "@demoCodeExpires": {
+    "description": "Unified demo experience",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "demoSeatsTotal": "Total seats",
+  "@demoSeatsTotal": {
+    "description": "Unified demo experience"
+  },
+  "demoSeatsAvailable": "Available",
+  "@demoSeatsAvailable": {
+    "description": "Unified demo experience"
+  },
+  "demoSeatsClaimed": "Claimed",
+  "@demoSeatsClaimed": {
+    "description": "Unified demo experience"
+  },
+  "demoSeatsActive": "Active",
+  "@demoSeatsActive": {
+    "description": "Unified demo experience"
+  },
+  "demoRecent": "Last 10 minutes: {claims} joined, {refused} refused",
+  "@demoRecent": {
+    "description": "Unified demo experience",
+    "placeholders": {
+      "claims": {
+        "type": "int"
+      },
+      "refused": {
+        "type": "int"
+      }
+    }
+  },
+  "demoEndedNotice": "This demo session has ended.",
+  "@demoEndedNotice": {
+    "description": "Unified demo experience"
+  },
+  "demoOpenWorkshop": "Open the workshop",
+  "@demoOpenWorkshop": {
+    "description": "Unified demo experience"
+  },
+  "demoBack": "Back",
+  "@demoBack": {
+    "description": "Back button inside the demo screens"
+  }
+}

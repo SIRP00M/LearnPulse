@@ -1,7 +1,18 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+}
+
+val releaseKeyProperties = Properties().apply {
+    val propertiesFile = file("key.properties")
+    if (propertiesFile.exists()) propertiesFile.inputStream().use { load(it) }
+}
+val releaseSigningComplete = listOf("storeFile", "storePassword", "keyAlias", "keyPassword").all {
+    !releaseKeyProperties.getProperty(it).isNullOrBlank()
 }
 
 android {
@@ -25,11 +36,20 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        create("release") {
+            if (releaseSigningComplete) {
+                storeFile = file(releaseKeyProperties.getProperty("storeFile"))
+                storePassword = releaseKeyProperties.getProperty("storePassword")
+                keyAlias = releaseKeyProperties.getProperty("keyAlias")
+                keyPassword = releaseKeyProperties.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 }
@@ -42,4 +62,14 @@ kotlin {
 
 flutter {
     source = "../.."
+}
+
+tasks.configureEach {
+    if (name == "validateSigningRelease") {
+        doFirst {
+            check(releaseSigningComplete) {
+                "Release signing is incomplete. Configure android/app/key.properties using mobile/README.md."
+            }
+        }
+    }
 }
